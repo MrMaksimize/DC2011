@@ -2,6 +2,7 @@
 sites/default/settings.php
 sites/default/files/*
 
+
 LICENSE.txt 
 CHANGELOG.txt  
 INSTALL.mysql.txt   
