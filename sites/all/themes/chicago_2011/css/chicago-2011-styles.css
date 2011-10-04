@@ -140,7 +140,9 @@ body {
 
 #postscript-zone-wrapper {}
 
-#footer-zone-wrapper {}
+#footer-zone-wrapper {
+	background: transparent url('../images/bg/spacer_black.png') repeat left top;
+}
 
 /* ----- /Zone Wrappers */
 
