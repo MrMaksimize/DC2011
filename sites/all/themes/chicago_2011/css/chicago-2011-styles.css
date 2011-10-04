@@ -1,0 +1,662 @@
+/* Basic Typography & Colors
+-------------------------------------------------------------- */
+/* Embedded fonts
+ * --------------
+ * Check fonts.css and ../fonts
+ */
+
+
+/* Add general site styling here for typography and background */
+body {
+	color: #333;
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	/*font-size: 16px;*/
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+/* Default Link Styles */
+a,
+a:link,
+a:visited {
+}
+
+/* Hover/Active Link Styles */
+a:hover,
+a:focus,
+a:active {
+}
+
+/* Title Link Styles */
+.title a,
+.title a:link,
+.title a:visited {
+	color: #0f638d;
+	text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus {
+	text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	color: #000;
+}
+
+h1 {
+	/*font-size: 48px;*/
+	font-size: 3em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+h1.title,
+h1.page-title,
+h1.node-title {
+	font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 36px;
+	/*font-size: 2.375em;*/
+	line-height: 48px;
+	/*text-transform: uppercase;*/
+}
+
+h2.block-title,
+h2.node-title {
+	font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+h3 {
+	color: #333;
+	/*font-size: 30px;*/
+	font-size: 1.875em;
+	line-height: 1.6;
+}
+
+h4 {
+	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+	/*font-size: 24px;*/
+	font-size: 1.5em;
+	font-weight: normal;
+	line-height: 1;
+}
+
+h5 {}
+
+h6 {}
+
+
+
+/* ----- /Type & Colors */
+
+/* Base Styling - HTML, Body & Page ------------------------ */
+html {}
+
+body {
+	background: #fffefa url('../images/bg/body_bg.png') repeat left top;
+}
+
+#page {
+	background: transparent url('../images/bg/skyline.png') no-repeat center 56px;
+}
+
+/* ----- /Base Style */
+
+/* Zone Wrappers ------------------------------------------- */
+/* General */
+.zone-wrapper {
+	width: 100%;
+}
+
+/* ---------- */
+#page-outer-wrapper {
+	background: transparent url('../images/bg/page_bg.png') repeat-x left top;
+}
+
+#page-inner-wrapper {
+	background: transparent url('../images/bg/noise_burst.png') no-repeat center 216px;
+}
+
+#user-bar-zone-wrapper {
+	border-bottom: 2px solid #202020;
+	height: 46px;
+	max-height: 46px; /* overall height == 48px/2em */
+	overflow: hidden;
+}
+
+#header-zone-wrapper {}
+
+#preface-zone-wrapper {}
+
+#main-zone-wrapper {}
+
+#postscript-zone-wrapper {}
+
+#footer-zone-wrapper {}
+
+/* ----- /Zone Wrappers */
+
+/* Regions ------------------------------------------------- */
+/* User Bar */
+.user-bar-first {}
+
+.user-bar-last {}
+
+/* Header */
+#site-header {
+	margin-top: 0;
+	height: 168px;
+	max-height: 168px; /* height == 7em */
+}
+
+#header-regions {}
+
+.header-first {}
+
+.header-last {}
+
+/* Preface */
+#preface-wrapper {
+	margin-top: 1.5em;
+}
+
+.preface {}
+
+#preface-first {}
+
+#preface-middle {}
+
+#preface-last {}
+
+/* Main */
+#main-content-container {
+	margin-top: 1.5em;
+}
+
+#main-wrapper {}
+
+/* Content */
+#content-top {
+	margin-bottom: 1.5em;
+}
+
+#main-content {
+	margin-bottom: 1.5em;
+}
+
+.node {
+	margin-bottom: 0.75em;
+	padding-bottom: 1.5em;
+}
+
+#content-bottom {
+	margin-bottom: 1.5em;
+}
+
+/* Sidebars */
+.sidebar {}
+
+#sidebar-first {}
+
+#sidebar-last {}
+
+/* Postscript */
+#postscript-wrapper {
+	margin-bottom: 1.5em;
+}
+
+.postscript {}
+
+#postscript-one {}
+
+#postscript-two {}
+
+#postscript-three {}
+
+#postscript-four {}
+
+/* Footer */
+#footer-wrapper {}
+
+#footer-first {
+	margin-bottom: 1.5em;
+}
+
+#footer-last {
+	margin-bottom: 1.5em;
+}
+
+/* ----- /Regions */
+
+/* Header elements */
+/* Brading */
+#branding {
+	margin-top: 1.5em;
+}
+
+#site-name,
+#slogan {
+  display: block;
+}
+
+#site-name a:link,
+#site-name a:visited,
+#site-name a:hover,
+#site-name a:active {
+  text-decoration: none;
+}
+
+#site-name a {
+  outline: 0;
+}
+
+/* Menus --------------------------------------------------- */
+/* General Lists/Menus */
+ol {
+	list-style-type: decimal-leading-zero;
+	margin-bottom: 1.5em;
+}
+
+ul {
+	list-style-type: disc;
+	margin-bottom: 1.5em;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+.item-list ul li {
+  margin: 0;
+}
+
+.block ul,
+.block ol {
+  margin-left: 1.5em;
+  padding: 0;
+}
+
+.content ul,
+.content ol {
+  margin: 1.5em 0;
+}
+
+ul.links {
+  margin-left: 0; /* LTR */
+}
+
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em;
+}
+
+/* Content tabs */
+#content-tabs {
+	background: transparent none;
+	padding: 12px;
+}
+
+#content-tabs ul.primary,
+#content-tabs ul.secondary {
+}
+
+#content-tabs ul.secondary {
+}
+
+#content-tabs ul.primary li,
+#content-tabs ul.secondary li {
+	display: inline-block;
+	margin-right: 24px;
+}
+
+#content-tabs ul.primary li a:link,
+#content-tabs ul.primary li a:visited,
+#content-tabs ul.secondary li a:link,
+#content-tabs ul.secondary li a:visited {
+	color: #999;
+	display: inline-block;
+	line-height: 1em;
+	font-family: LeagueGothic, Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#content-tabs ul.secondary li a:link,
+#content-tabs ul.secondary li a:visited {
+}
+
+#content-tabs ul.primary li a.active:link,
+#content-tabs ul.primary li a.active:visited,
+#content-tabs ul.secondary li a.active:link,
+#content-tabs ul.secondary li a.active:visited {
+	border-bottom: 5px solid #d9362b;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+
+#content-tabs ul.primary li a:hover,
+#content-tabs ul.secondary li a:hover {
+	color: #fff;
+	border-bottom: 5px solid #d9362b;
+}
+
+/* General Menu Link Styles */
+ul.menu a:link,
+ul.menu a:visited {
+	color: #fff;
+	font-family: LeagueGothic, Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+ul.menu a:hover,
+ul.menu a:focus {
+	color: #f27c38;
+}
+
+ul.menu a.active {
+	color: #a63c24;
+}
+
+/* Primary Nav */
+#site-menu {}
+
+ul.main-menu li {
+	background: transparent url('../images/nav_sep.png') no-repeat right center;
+	display: inline-block;
+	padding: 0;
+}
+
+ul.main-menu li.first {}
+
+ul.main-menu li.first a {
+	margin-left: 0;
+}
+
+ul.main-menu li.last {
+	background-image: none;
+}
+
+ul.main-menu li.last a {
+	margin-right: 0;
+}
+
+ul.main-menu a:link,
+ul.main-menu a:visited {
+	color: #fff;
+	display: block;
+	font-family: LeagueGothic, Verdana, Geneva, sans-serif;
+	font-size: 26px;
+	font-weight: normal;
+	line-height: 48px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 22px 0 6px;
+}
+
+ul.main-menu a:hover,
+ul.main-menu a:focus {}
+
+ul.main-menu a.active,
+ul.main-menu a.active-trail {}
+
+/* Secondary Nav */
+#block-menu-secondary-links ul {
+	margin: 0.75em 0;
+}
+
+#block-menu-secondary-links li {
+	display: inline;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0 1.5em;
+}
+
+#block-menu-secondary-links a:link,
+#block-menu-secondary-links a:visited {
+	text-decoration: none;
+}
+
+#block-menu-secondary-links a:hover,
+#block-menu-secondary-links a:focus {}
+
+#block-menu-secondary-links a.active {}
+
+/* Node Links */
+
+/* ----- /Menus */
+
+/* Vertical tabs -------------------------------------- */
+.vertical-tabs {
+  margin-left: 0;
+}
+
+.vertical-tabs-list {
+  border: none;
+  left: -1.5em;
+}
+
+.vertical-tabs ul li {
+  border-left: none;
+  list-style-image: none;
+}
+
+.vertical-tabs ul li.last {
+  border-bottom: none;
+}
+
+.vertical-tabs-list li a:link,
+.vertical-tabs-list li a:visited,
+.vertical-tabs-list li a:hover,
+.vertical-tabs-list li a:active {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+}
+
+/* General Block Display Styles */
+.block,
+.sidebar .block {
+	margin-bottom: 1.5em;
+}
+
+/* Tables */
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+caption {
+  text-align: left;
+}
+
+th {
+  margin: 0;
+  padding: 0px;
+}
+
+th.active img {
+  display: inline;
+}
+
+thead th {}
+
+td {
+  margin: 0;
+  padding: 3px;
+}
+
+td.block {
+  border: none;
+  float: none;
+  margin: 0;
+}
+
+tr.drag td,
+tr.drag-previous td {
+  background: #fff;
+  color: #000;
+}
+
+/* Drupal Messages ------------------------------------- */
+div.messages,
+div.help {
+  border-style: solid;
+  border-width: 6px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+div.status {
+  background-color: #EAF8E4;
+  border-color: #8DC478;
+  color: #3E642F;
+}
+
+div.warning {
+  background: #FFFFDD;
+  border-color: #EED300;
+  color: #745500;
+}
+
+div.error {
+  background-color: #FFF2F2;
+  border-color: #CC0000;
+  color: #B20000;
+}
+
+.help,
+div.help {
+  background-color: #E4EEF8;
+  border-color: #57718A;
+  color: #292929;
+}
+
+div.messages ul,
+div.help ul {
+  list-style-position: inside;
+}
+
+div.messages a:link,
+div.messages a:visited,
+.help a:link,
+.help a:visited,
+.help .more-help-link a:link,
+.help .more-help-link a:visited {
+  color: inherit;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: LeagueGothic,Verdana,Geneva,sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 #545454;
+  padding: 0pt 0.25em;
+}
+
+div.messages a:hover,
+div.messages a:active,
+.help a:hover,
+.help a:active,
+.help .more-help-link a:hover,
+.help .more-help-link a:active,
+div.messages em {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Helper Spans */
+pre {
+	white-space: pre-wrap;
+}
+
+em {
+	font-style: italic;
+}
+
+blockquote {}
+
+.block p {
+  margin: 0;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Skinr Styles -------------------------------------------- */
+/* Layout Styles */
+.dcc-no-y-margin {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.dcc-no-x-margin {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.float-left .content-inner {
+  float: left;
+}
+
+.float-center .content-inner {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.float-right .content-inner {
+  float: right;
+}
+
+/* Text Styles */
+.dcc-title-blue .title,
+.dcc-title-blue .title a {
+	color: #0f638d;
+}
+
+.dcc-title-white .title,
+.dcc-title-white .title a {
+	color: #fff;
+}
+
+/* Block Styles */
+.dcc-raised-white {}
+
+.dcc-raised-white .block-inner {}
+
+.dcc-raised-white .block-title {}
+
+.dcc-raised-white .content {}
+
+.dcc-raised-white .content-inner {}

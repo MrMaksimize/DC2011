@@ -1,0 +1,262 @@
+; $Id: chicago_2011.info,v 1.1.2.15 2011/10/03 17:28:44 BLadwin Exp $
+
+; ------- DEFAULT THEME INFO
+
+name        = chicago_2011
+description = Omega Sub-Theme
+screenshot = screenshot.png
+core       = 6.x
+base theme = omega
+
+; ------- DEFAULT STYLESHEETS
+
+stylesheets[all][] = css/chicago-2011-styles.css
+stylesheets[all][] = css/fonts.css
+
+; ------- DEFAULT SCRIPTS
+
+;scripts[] = js/your_js_file.js
+
+
+; ------- Declare default theme regions
+
+regions[sidebar_first] = sidebar first
+regions[sidebar_last] = sidebar last
+
+regions[user_bar_first] = user bar first
+regions[user_bar_last] = user bar last
+
+regions[header_first] = header first
+regions[header_last] = header last
+
+regions[preface_first] = preface first
+regions[preface_middle] = preface middle
+regions[preface_last] = preface last
+
+regions[content_top] = content top
+regions[content_bottom] = content bottom
+
+regions[postscript_one] = postscript 1
+regions[postscript_two] = postscript 2
+regions[postscript_three] = postscript 3
+regions[postscript_four] = postscript 4
+
+regions[footer_first] = footer first
+regions[footer_last] = footer last
+
+; ------- Declare default theme features
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = primary_links
+features[] = secondary_links
+
+; ------- Set the default settings to be used in theme-settings.php
+
+; ------- Non-960gs general settings
+settings[reset_css] = 1
+settings[text_css] = 1
+settings[regions_css] = 1
+settings[defaults_css] = 1
+settings[custom_css] = 1
+
+settings[front_page_title_display] = title_slogan
+settings[page_title_display_custom] = ''
+settings[other_page_title_display] = ptitle_stitle
+settings[other_page_title_display_custom] = ''
+settings[configurable_separator] = ' | '
+
+settings[chicago_2011_breadcrumb] = 'yes'
+settings[chicago_2011_breadcrumb_separator] = ' / '
+settings[chicago_2011_breadcrumb_home] = 1
+settings[chicago_2011_breadcrumb_trailing] = 1
+settings[chicago_2011_breadcrumb_title] = 1
+
+settings[mission_statement_pages] = home
+
+settings[sidebar_combine] = 1
+settings[sidebar_contain_pages] = ''
+
+; ------- / Non-960gs general settings
+
+; ------- 960gs default region settings
+
+; ------- default_container_width applies to regions like $help, $messages
+settings[chicago_2011_default_container_width] = 12
+
+; ------- Region settings for user bar
+settings[chicago_2011_user_bar_wrapper_width] = 12
+settings[chicago_2011_user_bar_first_width] = 6
+settings[chicago_2011_user_bar_last_width] = 6
+
+; ------- Region settings for top zone (logo, menus)
+
+settings[chicago_2011_branding_wrapper_width] = 12
+settings[chicago_2011_header_logo_width] = 5
+settings[chicago_2011_header_menu_width] = 7
+
+; ------- Region settings for header regions
+
+settings[chicago_2011_header_wrapper_width] = 12
+settings[chicago_2011_header_first_width] = 6
+settings[chicago_2011_header_last_width] = 6
+
+; ------- Region settings for default breadcrumb and search box placement
+
+settings[chicago_2011_internal_nav_wrapper_width] = 12
+settings[chicago_2011_breadcrumb_slogan_width] = 9
+settings[chicago_2011_search_width] = 3
+
+; ------- Region settings for preface regions
+
+settings[chicago_2011_preface_wrapper_grids] = 12
+settings[chicago_2011_preface_first_width] = 10
+settings[chicago_2011_preface_first_prefix] = 1
+settings[chicago_2011_preface_first_suffix] = 1
+settings[chicago_2011_preface_middle_width] = 8
+settings[chicago_2011_preface_middle_prefix] = 0
+settings[chicago_2011_preface_middle_suffix] = 0
+settings[chicago_2011_preface_last_width] = 4
+settings[chicago_2011_preface_last_prefix] = 0
+settings[chicago_2011_preface_last_suffix] = 0
+
+; ------- Region settings for content regions
+
+settings[chicago_2011_content_layout] = first_content_last
+settings[chicago_2011_content_container_width] = 12
+settings[chicago_2011_sidebar_first_width] = 3
+settings[chicago_2011_content_main_width] = 5
+settings[chicago_2011_sidebar_last_width] = 4
+
+; ------- Region settings for postscript regions
+
+settings[chicago_2011_postscript_container_width] = 12
+settings[chicago_2011_postscript_one_width] = 4
+settings[chicago_2011_postscript_one_prefix] = 0
+settings[chicago_2011_postscript_one_suffix] = 0
+settings[chicago_2011_postscript_two_width] = 4
+settings[chicago_2011_postscript_two_prefix] = 0
+settings[chicago_2011_postscript_two_suffix] = 0
+settings[chicago_2011_postscript_three_width] = 4
+settings[chicago_2011_postscript_three_prefix] = 0
+settings[chicago_2011_postscript_three_suffix] = 0
+settings[chicago_2011_postscript_four_width] = 12
+settings[chicago_2011_postscript_four_prefix] = 0
+settings[chicago_2011_postscript_four_suffix] = 0
+
+; ------- Region settings for footer regions
+
+settings[chicago_2011_footer_container_width] = 12
+settings[chicago_2011_footer_first_width] = 12
+settings[chicago_2011_footer_last_width] = 12
+
+; ------- / 960gs default region settings
+
+; --------------
+; SKINr settings
+; --------------
+
+; Widths for 12 column, 960px/fluid grid
+skinr[grid-width][title] = Width (12 column grid)
+skinr[grid-width][type] = select
+skinr[grid-width][features][] = block
+skinr[grid-width][options][1][label] = 1 unit wide
+skinr[grid-width][options][1][class] = grid-1
+skinr[grid-width][options][2][label] = 2 units wide
+skinr[grid-width][options][2][class] = grid-2
+skinr[grid-width][options][3][label] = 3 units wide
+skinr[grid-width][options][3][class] = grid-3
+skinr[grid-width][options][4][label] = 4 units wide
+skinr[grid-width][options][4][class] = grid-4
+skinr[grid-width][options][5][label] = 5 units wide
+skinr[grid-width][options][5][class] = grid-5
+skinr[grid-width][options][6][label] = 6 units wide
+skinr[grid-width][options][6][class] = grid-6
+skinr[grid-width][options][7][label] = 7 units wide
+skinr[grid-width][options][7][class] = grid-7
+skinr[grid-width][options][8][label] = 8 units wide
+skinr[grid-width][options][8][class] = grid-8
+skinr[grid-width][options][9][label] = 9 units wide
+skinr[grid-width][options][9][class] = grid-9
+skinr[grid-width][options][10][label] = 10 units wide
+skinr[grid-width][options][10][class] = grid-10
+skinr[grid-width][options][11][label] = 11 units wide
+skinr[grid-width][options][11][class] = grid-11
+skinr[grid-width][options][12][label] = 12 units wide
+skinr[grid-width][options][12][class] = grid-12
+skinr[grid-width][options][13][label] = 13 units wide
+skinr[grid-width][options][13][class] = grid-13
+skinr[grid-width][options][14][label] = 14 units wide
+skinr[grid-width][options][14][class] = grid-14
+skinr[grid-width][options][15][label] = 15 units wide
+skinr[grid-width][options][15][class] = grid-15
+skinr[grid-width][options][16][label] = 16 units wide
+skinr[grid-width][options][16][class] = grid-16
+skinr[grid-width][description] = Change the width of this block. Default widths: sidebar blocks default to the sidebar width; in other regions width is divided equally among all blocks. Know which grid the theme is using. All widths are calculated by the "container-XX" class on the parent region. "container-12" with "grid-16" will NOT work!
+
+; General style - Equal heights
+skinr[dcc-equal-heights][title] = Equal heights
+skinr[dcc-equal-heights][type] = checkboxes
+skinr[dcc-equal-heights][description] = Make blocks in a region the same height
+skinr[dcc-equal-heights][features][] = block
+skinr[dcc-equal-heights][features][] = panels_display
+skinr[dcc-equal-heights][features][] = panels_pane
+skinr[dcc-equal-heights][features][] = panels_panel
+skinr[dcc-equal-heights][scripts][] = js/jquery.equalheights.js
+skinr[dcc-equal-heights][options][1][label] = Equal heights: equalize the heights of blocks with this style in the same region.
+skinr[dcc-equal-heights][options][1][class] = equal-heights
+
+; Block Layout Styles
+skinr[dcc-block-layout][title] = Block: Layout Styles
+skinr[dcc-block-layout][type] = checkboxes
+skinr[dcc-block-layout][description] = Adjust the way blocks are laid out on the page; Margins, padding & floats.
+skinr[dcc-block-layout][features][] = block
+skinr[dcc-block-layout][features][] = panels_pane
+skinr[dcc-block-layout][features][] = views_view
+skinr[dcc-block-layout][options][1][label] = Remove VERTICAL margins
+skinr[dcc-block-layout][options][1][class] = dcc-no-y-margin
+skinr[dcc-block-layout][options][2][label] = Remove HORIZONTAL margins
+skinr[dcc-block-layout][options][2][class] = dcc-no-x-margin
+skinr[dcc-block-layout][options][3][label] = Float right
+skinr[dcc-block-layout][options][3][class] = float-right
+skinr[dcc-block-layout][options][4][label] = Center Block in container
+skinr[dcc-block-layout][options][4][class] = float-center
+skinr[dcc-block-layout][options][5][label] = Float Left
+skinr[dcc-block-layout][options][5][class] = float-left
+
+; Block Text Styles
+skinr[dcc-block-text][title] = Block: Text Styles
+skinr[dcc-block-text][type] = checkboxes
+skinr[dcc-block-text][description] = Text Styles for blocks and their content
+skinr[dcc-block-text][features][] = block
+skinr[dcc-block-text][features][] = panels_pane
+skinr[dcc-block-text][features][] = views_view
+skinr[dcc-block-text][options][1][label] = Blue Title
+skinr[dcc-block-text][options][1][class] = dcc-title-blue
+skinr[dcc-block-text][options][2][label] = White Title
+skinr[dcc-block-text][options][2][class] = dcc-title-white
+
+; Block Visual Styles
+skinr[dcc-block-visual][title] = Block: Visual Styles
+skinr[dcc-block-visual][type] = checkboxes
+skinr[dcc-block-visual][description] = Visual Styles for blocks and their content
+skinr[dcc-block-visual][features][] = block
+skinr[dcc-block-visual][features][] = panels_pane
+skinr[dcc-block-visual][features][] = views_view
+skinr[dcc-block-visual][options][1][label] = White background with Dark outer glow
+skinr[dcc-block-visual][options][1][class] = dcc-raised-white
+;skinr[dcc-block-visual][options][2][label] =
+;skinr[dcc-block-visual][options][2][class] =
+
+; Information added by drupal.org packaging script on 2010-11-16
+version = "6.x-1.0"
+core = "6.x"
+project = "omega"
+datestamp = "1289918471"
+
