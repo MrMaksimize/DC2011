@@ -105,7 +105,7 @@ body {
 }
 
 #page {
-	background: transparent url('../images/bg/skyline.png') no-repeat center 56px;
+	background: transparent url('../images/bg/skyline.png') repeat-x center 56px;
 }
 
 /* ----- /Base Style */
@@ -303,6 +303,7 @@ ul.links li {
 /* Content tabs */
 #content-tabs {
 	background: transparent none;
+	border: medium none;
 	padding: 12px;
 }
 
@@ -326,7 +327,7 @@ ul.links li {
 	color: #999;
 	display: inline-block;
 	line-height: 1em;
-	font-family: LeagueGothic, Verdana, Geneva, sans-serif;
+	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
 	font-size: 24px;
 	font-weight: normal;
 }
@@ -357,7 +358,7 @@ ul.links li {
 ul.menu a:link,
 ul.menu a:visited {
 	color: #fff;
-	font-family: LeagueGothic, Verdana, Geneva, sans-serif;
+	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
 	font-size: 18px;
 	font-weight: normal;
 	text-decoration: none;
@@ -374,7 +375,10 @@ ul.menu a.active {
 }
 
 /* Primary Nav */
-#site-menu {}
+#site-menu {
+	position: relative;
+	top: 62px;
+}
 
 ul.main-menu li {
 	background: transparent url('../images/nav_sep.png') no-repeat right center;
@@ -400,7 +404,7 @@ ul.main-menu a:link,
 ul.main-menu a:visited {
 	color: #fff;
 	display: block;
-	font-family: LeagueGothic, Verdana, Geneva, sans-serif;
+	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
 	font-size: 26px;
 	font-weight: normal;
 	line-height: 48px;
@@ -563,7 +567,7 @@ div.messages a:visited,
   color: inherit;
   font-size: 24px;
   line-height: 24px;
-  font-family: LeagueGothic,Verdana,Geneva,sans-serif;
+  font-family: LeagueGothic, Verdana, Geneva, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 0 #545454;
@@ -613,6 +617,25 @@ blockquote {}
   clear: both;
 }
 
+a.callout:link,
+a.callout:visited {
+  color: #fff;
+  font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0pt 0.25em;
+}
+
+a.callout:hover,
+a.callout:focus,
+a.callout.active {
+	color: #f27c38;
+	text-decoration: underline;
+}
+
 /* Skinr Styles -------------------------------------------- */
 /* Layout Styles */
 .dcc-no-y-margin {
@@ -649,6 +672,103 @@ blockquote {}
 .dcc-title-white .title a {
 	color: #fff;
 }
+
+.dcc-text-white .content {
+	color: #fff;
+}
+
+.dcc-text-dark-grey .content {
+	color: #333;
+}
+
+.dcc-text-grey .content {
+	color: #545454;
+}
+
+.dcc-text-light-grey .content {
+	color: #b4b4b4;
+}
+
+.dcc-text-black .content {
+	color: #000;
+}
+
+.dcc-text-red .content {
+	color: #d9362b;
+}
+
+.dcc-font-bebasneue .content {
+	font-family: BebasNeue, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dcc-font-bebas .content {
+	font-family: Bebas, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dcc-font-bodidly .content {
+	font-family: Bodidly, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dcc-font-leaguegothic .content {
+	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dcc-font-trajanpro-bold .content {
+	font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.dcc-font-trajanpro .content {
+	font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dcc-font-gillsans .content {
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dcc-font-gillsans-light .content {
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-style: normal;
+}
+
+.dcc-font-gillsans-bold .content {
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.dcc-font-gillsans-italic .content {
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.dcc-font-gillsans-light-italic .content {
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	font-style: italic;
+}
+
+.dcc-font-gillsans-bold-italic .content {
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+}
+
 
 /* Block Styles */
 .dcc-raised-white {}
