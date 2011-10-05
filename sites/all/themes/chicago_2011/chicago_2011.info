@@ -15,7 +15,8 @@ stylesheets[all][] = css/fonts.css
 
 ; ------- DEFAULT SCRIPTS
 
-;scripts[] = js/your_js_file.js
+;scripts[] = theme-script.js
+;scripts[] = jquery.stepy.js
 
 
 ; ------- Declare default theme regions
