@@ -12,6 +12,7 @@ base theme = omega
 
 stylesheets[all][] = css/chicago-2011-styles.css
 stylesheets[all][] = css/fonts.css
+stylesheets[all][] = css/formalize.css
 
 ; ------- DEFAULT SCRIPTS
 

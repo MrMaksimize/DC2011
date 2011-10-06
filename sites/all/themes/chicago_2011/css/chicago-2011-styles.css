@@ -628,23 +628,24 @@ label {
 	margin-top: 0;
 	margin-bottom: 1.5em;
 	width: auto;
+	max-width: 400px;
 }
 
 .form-item .description {
-  position:absolute;
-  bottom:100%;
-  right:-15px;
-  z-index:5;
-
-  color:#687;
-  background: transparent url('images/popup.png') 50% 100% no-repeat;
-  border-top:1px solid #d8e4e0;
-
-  width:240px;
-  margin:0px 0px -15px;
-  padding:9px 10px 20px;
-  display:none;
- }
+  right: -10%;
+  z-index: 5;
+  border-bottom: 1px solid #D8E4E0;
+  width: 244px;
+  padding: 16px 9px 8px;
+  top: 100%;
+  line-height: 24px;
+  font-size: 0.875em;
+  text-align: justify;
+  color: #545454;
+  background: url("../images/popup.png") no-repeat scroll center top transparent;
+  display: none;
+  position: absolute;
+}
 
 .form-item:hover {
 	z-index:1;
@@ -660,34 +661,8 @@ input.form-autocomplete,
 input.form-text,
 textarea.form-textarea,
 select.form-select {
-  padding:2px;
-  border-width:2px;
-  border-style:solid;
-  border-color:#e8e8e8 #f0f0f0 #f8f8f8;
-  background:#fff;
-  color:#666;
   max-width:100%;
 }
-
-input.form-autocomplete:hover,
-input.form-text:hover,
-textarea.form-textarea:hover,
-select.form-select:hover,
-input.form-autocomplete:focus,
-input.form-text:focus,
-textarea.form-textarea:focus,
-select.form-select:focus {
-	color:#333;
-	border-color:#ace;
-}
-
-input[type=text],
-input[type=password] {
-	width: 300px;
-	padding: 5px;
-	border: solid 1px #000;
-}
-
 /* From Wizard - Step Process */
 ul#steps {
 	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
@@ -737,7 +712,8 @@ ul#steps li:after {
   top: 0;
 }
 
-ul#steps li.current:after {
+ul#steps li.current:after,
+ul#steps li.current.last:after {
 	background-position: left -80px;
 }
 
