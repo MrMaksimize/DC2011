@@ -202,6 +202,20 @@ skinr[grid-width][options][16][label] = 16 units wide
 skinr[grid-width][options][16][class] = grid-16
 skinr[grid-width][description] = Change the width of this block. Default widths: sidebar blocks default to the sidebar width; in other regions width is divided equally among all blocks. Know which grid the theme is using. All widths are calculated by the "container-XX" class on the parent region. "container-12" with "grid-16" will NOT work!
 
+; General Grid Classes
+skinr[grid-classes][title] = Grid Classes
+skinr[grid-classes][type] = checkboxes
+skinr[grid-classes][description] = use these to adjust blocks inside of regions.
+skinr[grid-classes][features][] = block
+skinr[grid-classes][features][] = panels_display
+skinr[grid-classes][features][] = panels_pane
+skinr[grid-classes][features][] = panels_panel
+skinr[grid-classes][features][] = views_view
+skinr[grid-classes][options][1][label] = Alpha Class - Remove left margin
+skinr[grid-classes][options][1][class] = alpha
+skinr[grid-classes][options][2][label] = Omega Class - Remove right margin
+skinr[grid-classes][options][2][class] = omega
+
 ; General style - Equal heights
 skinr[dcc-equal-heights][title] = Equal heights
 skinr[dcc-equal-heights][type] = checkboxes
