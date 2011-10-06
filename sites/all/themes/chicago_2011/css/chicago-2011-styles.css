@@ -599,11 +599,10 @@ div.messages em {
 }
 
 /* Forms --------------------------------------------- */
-form {
-	background-color: #fff;
-}
+form {}
 
 fieldset {
+	background-color: #fff;
 	border: none;
 	width: auto;
 }
