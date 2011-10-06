@@ -773,6 +773,11 @@ form .buttons .next {
 	float: right;
 }
 
+form#user-register .form-submit {
+	display: inline-block;
+	float: right;
+}
+
 /* Helper Spans --------------------------------------- */
 pre {
 	white-space: pre-wrap;
