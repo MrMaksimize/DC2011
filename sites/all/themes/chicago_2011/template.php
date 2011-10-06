@@ -154,12 +154,14 @@ function chicago_2011_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  *
+	
 
 function chicago_2011_preprocess_page(&$vars, $hook) {
-	$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
-	$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
-}
-*/
+	//dpm($vars);
+	//$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
+	//$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
+}*/
+
 
 /**
  * Override or insert variables into the node templates.

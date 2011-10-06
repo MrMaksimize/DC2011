@@ -333,6 +333,7 @@ ul.links li {
 	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
 	font-size: 24px;
 	font-weight: normal;
+	padding-bottom: 8px;
 }
 
 #content-tabs ul.secondary li a:link,
@@ -355,6 +356,7 @@ ul.links li {
 #content-tabs ul.secondary li a:hover {
 	color: #fff;
 	border-bottom: 5px solid #d9362b;
+	padding-bottom: 2px;
 }
 
 /* General Menu Link Styles */
@@ -525,10 +527,17 @@ div.messages,
 div.help {
   border-style: solid;
   border-width: 6px;
+	font-size: 1em;
   font-weight: normal;
+	line-height: 24px;
   margin-bottom: 12px;
   overflow: hidden;
   padding: 12px;
+}
+
+div.messages p,
+div.help p {
+	margin: 0.75em 0 1.5em ;
 }
 
 div.status {
@@ -554,6 +563,7 @@ div.help {
   background-color: #E4EEF8;
   border-color: #57718A;
   color: #292929;
+	padding-bottom: 18px;
 }
 
 div.messages ul,
@@ -588,7 +598,207 @@ div.messages em {
   text-decoration: underline;
 }
 
-/* Helper Spans */
+/* Forms --------------------------------------------- */
+form {
+	background-color: #fff;
+}
+
+fieldset {
+	border: none;
+	width: auto;
+}
+
+fieldset legend {
+	/*font-size: 1em;
+	margin: 0px;
+	padding: 0;
+	color: #b4b4b4;
+	font-weight: bold;*/
+	display: none;
+}
+
+label {
+	display: block;
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.form-item {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	width: auto;
+}
+
+.form-item .description {
+  position:absolute;
+  bottom:100%;
+  right:-15px;
+  z-index:5;
+
+  color:#687;
+  background: transparent url('images/popup.png') 50% 100% no-repeat;
+  border-top:1px solid #d8e4e0;
+
+  width:240px;
+  margin:0px 0px -15px;
+  padding:9px 10px 20px;
+  display:none;
+ }
+
+.form-item:hover {
+	z-index:1;
+	position: relative;
+	height:auto; /* Fix for flicker in IE7 */
+}
+
+.form-item:hover > .description {
+	display:block;
+}
+
+input.form-autocomplete,
+input.form-text,
+textarea.form-textarea,
+select.form-select {
+  padding:2px;
+  border-width:2px;
+  border-style:solid;
+  border-color:#e8e8e8 #f0f0f0 #f8f8f8;
+  background:#fff;
+  color:#666;
+  max-width:100%;
+}
+
+input.form-autocomplete:hover,
+input.form-text:hover,
+textarea.form-textarea:hover,
+select.form-select:hover,
+input.form-autocomplete:focus,
+input.form-text:focus,
+textarea.form-textarea:focus,
+select.form-select:focus {
+	color:#333;
+	border-color:#ace;
+}
+
+input[type=text],
+input[type=password] {
+	width: 300px;
+	padding: 5px;
+	border: solid 1px #000;
+}
+
+/* From Wizard - Step Process */
+ul#steps {
+	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+	text-transform: uppercase;
+	list-style: none;
+	width: auto;
+	overflow: hidden;
+	margin: 0px;
+	padding: 6px 0;
+}
+
+ul#steps li {
+  background: url("../images/process_bg/step_bg.png") repeat-x scroll left top transparent;
+  color: #666;
+  display: inline-block;
+  padding: 0 0 0 24px;
+  min-height: 36px;
+  max-height: 36px;
+  position: relative;
+}
+
+ul#steps li#stepDesc0 {
+	padding-left: 0;
+}
+
+ul#steps li.current { 
+	background-position: left -40px;
+	color:#000;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+ul#steps li.completed {
+	background-position: left -80px;
+	color: #fff;
+	text-shadow: -1px -1px 0 #000;
+}
+
+ul#steps li:after {
+  content: "";
+  display: inline-block;
+  background: url("../images/process_bg/step_cap.png") no-repeat scroll left top transparent;
+  width: 24px;
+  height: 36px;
+  padding: 0px;
+  position: absolute;
+  right: -24px;
+  top: 0;
+}
+
+ul#steps li.current:after {
+	background-position: left -80px;
+}
+
+ul#steps li.completed:after {
+	background-position: left -120px;
+}
+
+ul#steps li.last:after {
+	background-position: left -40px;
+}
+
+ul#steps li.current span.stepNum {
+	background: transparent url('../images/process_bg/current_num.png') no-repeat center center;
+}
+
+ul#steps li span {
+	font-size: 1.125em;
+	line-height: 24px;
+	padding-top: 6px;
+}
+
+#steps li span.stepNum {
+	background-image: none;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+#steps li span.stepName {
+	padding-left: 6px;
+	padding-right: 12px;
+}
+
+form .buttons {}
+
+form .buttons .prev,
+form .buttons .next {
+	background-color: #b0232a;
+	padding: 5px 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+form .buttons .prev:hover,
+form .buttons .next:hover {
+	background-color: #000;
+	text-decoration: none;
+}
+
+form .buttons .prev {
+	float: left;
+}
+
+form .buttons .next {
+	float: right;
+}
+
+/* Helper Spans --------------------------------------- */
 pre {
 	white-space: pre-wrap;
 }
@@ -653,6 +863,10 @@ a.callout.active {
 
 .float-left .content-inner {
   float: left;
+}
+
+.float-center {
+	text-align: center;
 }
 
 .float-center .content-inner {
