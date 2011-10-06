@@ -11,9 +11,11 @@
 
 		var steps = $(element).find("fieldset");
 		var count = steps.size();
-		var submmitButtonName = "#" + options.submitButton;
+		var submitButtonName = "#" + options.submitButton;
 		
-		$(submmitButtonName).hide();
+		if ($(this).length > 0) {
+			$(submitButtonName).hide();
+		};
 
 		$(element).before("<div id='steps-wrapper'><ul id='steps'></ul></div>");
 
@@ -50,7 +52,7 @@
 			$("#" + stepName + "Prev").bind("click", function(e) {
 				$("#" + stepName).hide();
 				$("#step" + (i - 1)).show();
-				$(submmitButtonName).hide();
+				$(submitButtonName).hide();
 				selectStep(i - 1);
 			});
 		}
@@ -63,7 +65,7 @@
 				$("#" + stepName).hide();
 				$("#step" + (i + 1)).show();
 				if (i + 2 == count)
-					$(submmitButtonName).show();
+					$(submitButtonName).show();
 				selectStep(i + 1);
 			});
 		}
