@@ -15,11 +15,11 @@
 		
 		$(submmitButtonName).hide();
 
-		$(element).before("<ul id='steps'></ul>");
+		$(element).before("<div id='steps-wrapper'><ul id='steps'></ul></div>");
 
 		steps.each(function(i) {
 			$(this).wrap("<div id='step" + i + "' class='step'></div>");
-			$(this).append("<p id='step" + i + "buttons' class='buttons'></p>");
+			$(this).append("<div id='step" + i + "buttons' class='buttons'></div>");
 
 			var name = $(this).find("legend").html();
 			$("#steps").append("<li id='stepDesc" + i + "' class='' style='z-index: " + (count - i) + ";'><span class='stepNum'>" + (i + 1) + "</span><span class='stepName'>" + name + "</span></li>");
@@ -45,7 +45,7 @@
 
 		function createPrevButton(i) {
 			var stepName = "step" + i;
-			$("#" + stepName + "buttons").append("<a href='#stepDesc" + (i - 1) + "' id='" + stepName + "Prev' class='button prev'>" + options.prevLabel + "</a>");
+			$("#" + stepName + "buttons").append("<a href='javascript:void(0);' id='" + stepName + "Prev' class='button prev'>" + options.prevLabel + "</a>"); //HREF => #stepDesc" + (i - 1) + " -- removed because it doesn't work on all forms
 
 			$("#" + stepName + "Prev").bind("click", function(e) {
 				$("#" + stepName).hide();
@@ -57,7 +57,7 @@
 
 		function createNextButton(i) {
 			var stepName = "step" + i;
-			$("#" + stepName + "buttons").append("<a href='#stepDesc" + (i + 1) + "' id='" + stepName + "Next' class='button next'>" + options.nextLabel + "</a>");
+			$("#" + stepName + "buttons").append("<a href='javascript:void(0);' id='" + stepName + "Next' class='button next'>" + options.nextLabel + "</a>");//HREF => #stepDesc" + (i + 1) + " -- removed because it doesn't work on all forms
 
 			$("#" + stepName + "Next").bind("click", function(e) {
 				$("#" + stepName).hide();

@@ -55,10 +55,11 @@ h1 {
 h1.title,
 h1.page-title,
 h1.node-title {
-	color: #0f638d;
+	color: #fff;
 	font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
 	font-style: normal;
 	font-weight: bold;
+	text-shadow: 1px 3px 2px #333;
 }
 
 h2 {
@@ -604,7 +605,13 @@ form {}
 fieldset {
 	background-color: #fff;
 	border: none;
-	width: auto;
+	width: 94%;
+	margin: 1.5em 0;
+	padding: 1.5em 3%;
+}
+
+.fieldset-wrapper {
+	padding: 0 1em;
 }
 
 fieldset legend {
@@ -663,11 +670,16 @@ select.form-select {
   max-width:100%;
 }
 /* From Wizard - Step Process */
+div#steps-wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
 ul#steps {
 	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
 	text-transform: uppercase;
 	list-style: none;
-	width: auto;
+	width: 3000px;
 	overflow: hidden;
 	margin: 0px;
 	padding: 6px 0;
@@ -734,7 +746,7 @@ ul#steps li span {
 	padding-top: 6px;
 }
 
-#steps li span.stepNum {
+ul#steps li span.stepNum {
 	background-image: none;
 	display: inline-block;
 	width: 30px;
@@ -744,17 +756,32 @@ ul#steps li span {
 	padding-right: 6px;
 }
 
-#steps li span.stepName {
+ul#steps li span.stepName {
 	padding-left: 6px;
 	padding-right: 12px;
 }
 
-form .buttons {}
+ul#steps li.completed .stepName {
+	display: none;
+}
+
+ul#steps a:link,
+ul#steps a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul#steps a:hover {
+	cursor: default;
+}
+
+form .buttons {
+	margin-top: 1.5em;
+}
 
 form .buttons .prev,
 form .buttons .next {
 	background-color: #b0232a;
-	padding: 5px 10px;
 	color: #fff;
 	text-decoration: none;
 }

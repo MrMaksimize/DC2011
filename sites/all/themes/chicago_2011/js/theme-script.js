@@ -20,7 +20,12 @@ $(document).ready(function() {
 						prevLabel: "" // DEFAULT == < Back
 						nextLabel: "" //DEFAULT == Next >
  */
-	jQuery("#user-register").formToWizard({ submitButton: 'edit-submit', prevLabel: '< Previous', nextLabel: 'Proceed >' });
+	jQuery("#user-register, #uc-cart-checkout-form").formToWizard({
+		submitButton: 'edit-submit',
+		prevLabel: '< Previous',
+		nextLabel: 'Proceed >'
+	});
+	//jQuery("#uc-cart-checkout-form").formToWizard({ prevLabel: '< Previous', nextLabel: 'Proceed >' });
 	 
 });
 //}(jQuery);
