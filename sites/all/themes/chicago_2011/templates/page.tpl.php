@@ -130,12 +130,13 @@
             <?php print $content_top; ?>
           </div><!-- /#content-top -->
           <?php endif; ?>
-          <?php if ($tabs): ?>
-            <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
-          <?php endif; ?>
       
           <?php if ($title): ?>
             <h1 id="page-title" class="title page-title"><?php print $title; ?></h1>
+          <?php endif; ?>
+          
+          <?php if ($tabs): ?>
+            <div id="content-tabs" class=""><?php print $tabs; ?></div><!-- /#content-tabs -->
           <?php endif; ?>
       
           <div id="main-content" class="region clearfix">

@@ -60,6 +60,7 @@ h1.node-title {
 	font-style: normal;
 	font-weight: bold;
 	text-shadow: 1px 3px 2px #333;
+	text-transform: capitalize;
 }
 
 h2 {
@@ -91,7 +92,13 @@ h4 {
 	line-height: 1;
 }
 
-h5 {}
+h5 {
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	/*font-size: 16px*/
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5em;
+}
 
 h6 {}
 
@@ -334,7 +341,6 @@ ul.links li {
 	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
 	font-size: 24px;
 	font-weight: normal;
-	padding-bottom: 8px;
 }
 
 #content-tabs ul.secondary li a:link,
@@ -357,7 +363,6 @@ ul.links li {
 #content-tabs ul.secondary li a:hover {
 	color: #fff;
 	border-bottom: 5px solid #d9362b;
-	padding-bottom: 2px;
 }
 
 /* General Menu Link Styles */
@@ -387,7 +392,7 @@ ul.menu a.active {
 }
 
 ul.main-menu li {
-	background: transparent url('../images/nav_sep.png') no-repeat right center;
+	background: transparent url('../images/nav_sep.png') no-repeat right 1em;
 	display: inline-block;
 	padding: 0;
 }
@@ -423,7 +428,10 @@ ul.main-menu a:hover,
 ul.main-menu a:focus {}
 
 ul.main-menu a.active,
-ul.main-menu a.active-trail {}
+ul.main-menu a.active-trail {
+	border-bottom: 10px solid #29ABE1;
+	text-shadow: 0 1px 0 #000;
+}
 
 /* Secondary Nav */
 #block-menu-secondary-links ul {
@@ -489,6 +497,7 @@ ul.main-menu a.active-trail {}
 table {
   border-spacing: 0;
   width: 100%;
+	margin-bottom: 1.5em;
 }
 
 caption {
