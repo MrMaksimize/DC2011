@@ -442,7 +442,7 @@ ul.main-menu a.active-trail {
 	display: inline;
 	list-style: none outside none;
 	margin: 0;
-	padding: 0 1.5em;
+	padding: 0 1em;
 }
 
 #block-menu-secondary-links a:link,
