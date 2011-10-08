@@ -927,7 +927,7 @@ form#user-register .form-submit {
 
 .views-slideshow-controls-bottom a:link,
 .views-slideshow-controls-bottom a:visited {
-	background-image: transparent url('../images/bg/slide_pager.png') no-repeat center top;
+	background: transparent url('../images/bg/slide_pager.png') no-repeat center top;
 	display: inline-block;
 	text-indent: -9999px;
 	font-size: 0;
