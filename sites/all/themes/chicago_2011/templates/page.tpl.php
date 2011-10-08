@@ -199,15 +199,15 @@
             <?php print $footer_first; ?>
           </div><!-- /#footer-first -->
         <?php endif; ?>
-        <?php if($footer_last || $footer_message): ?>
+        <?php if($footer_last): ?>
           <div id="footer-last" class="<?php print $footer_last_classes; ?>">
             <?php print $footer_last; ?>
-            <?php if ($footer_message): ?>
-              <div id="footer-message">
-                <?php print $footer_message; ?>
-              </div><!-- /#footer-message -->
-            <?php endif; ?>
           </div><!-- /#footer-last -->
+        <?php endif; ?>
+				<?php if ($footer_message): ?>
+          <div id="footer-message">
+            <?php print $footer_message; ?>
+          </div><!-- /#footer-message -->
         <?php endif; ?>
       </div><!-- /#footer-wrapper -->
     </div><!-- /#footer-zone-wrapper -->
