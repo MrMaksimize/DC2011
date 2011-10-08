@@ -898,22 +898,29 @@ form#user-register .form-submit {
 .view-front-page-slideshow {
 	margin-left: -10px;
 	position: relative;
+	overflow: hidden;
+	width: 960px;
+	height: 400px;
 }
 
 .view-front-page-slideshow .slide {
-	position: relative;
+	position: absolute;
+	z-index: 1;
 }
 
 .view-front-page-slideshow .title {
 	position: absolute;
+	z-index: 2;
 }
 
 .view-front-page-slideshow .body {
 	position: absolute;
+	z-index: 3;
 }
 
 .view-front-page-slideshow .more {
 	position: absolute;
+	z-index: 4;
 }
 
 .views-slideshow-controls-bottom {
