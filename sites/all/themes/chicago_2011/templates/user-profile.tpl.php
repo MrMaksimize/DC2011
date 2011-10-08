@@ -41,5 +41,5 @@
  */
 ?>
 <div class="profile">
-  <?php print $user_profile; dpm($user_profile); ?>
+  <?php print $user_profile; dpm($profile); ?>
 </div>
