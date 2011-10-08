@@ -903,22 +903,37 @@ form#user-register .form-submit {
 	height: 400px;
 }
 
+.view-front-page-slideshow .views-row {
+	position: relative;
+	width: 960px;
+	height: 400px;
+}
+
 .view-front-page-slideshow .slide {
 	position: absolute;
 	z-index: 1;
 }
 
 .view-front-page-slideshow .title {
+	top: 20px;
+	left: 0;
 	position: absolute;
 	z-index: 2;
 }
 
 .view-front-page-slideshow .body {
+	background-color: #fff;
+	top: 230px;
+	left: 0;
 	position: absolute;
 	z-index: 3;
+	width: 620px;
+	height: 150px;
 }
 
 .view-front-page-slideshow .more {
+	top: 350px;
+	right: 360px;
 	position: absolute;
 	z-index: 4;
 }
