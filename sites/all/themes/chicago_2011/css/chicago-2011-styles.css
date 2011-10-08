@@ -890,6 +890,57 @@ form#user-register .form-submit {
 }
 
 /* View Displays */
+/* Front Page: Slideshow */
+.views_slideshow_singleframe_main {
+	height: 400px;
+}
+
+.view-front-page-slideshow {
+	margin-left: -10px;
+	position: relative;
+}
+
+.view-front-page-slideshow .slide {
+	position: relative;
+}
+
+.view-front-page-slideshow .title {
+	position: absolute;
+}
+
+.view-front-page-slideshow .body {
+	position: absolute;
+}
+
+.view-front-page-slideshow .more {
+	position: absolute;
+}
+
+.views-slideshow-controls-bottom {
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+	z-index: 50;
+}
+
+.views-slideshow-controls-bottom .pager-item {}
+
+.views-slideshow-controls-bottom a:link,
+.views-slideshow-controls-bottom a:visited {
+	background-image: transparent url('../images/bg/slide_pager.png') no-repeat center top;
+	display: inline-block;
+	text-indent: -9999px;
+	font-size: 0;
+	width: 20px;
+	height: 25px;
+}
+
+.views-slideshow-controls-bottom a:hover,
+.views-slideshow-controls-bottom a:focus,
+.views-slideshow-controls-bottom .activeSlide a {
+	background-position: center bottom;
+}
+
 /* QuickTabs: Sessions */
 .schedule-tabs {}
 
