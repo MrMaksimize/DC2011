@@ -43,6 +43,7 @@ a:active {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	color: #000;
+	text-transform: capitalize;
 }
 
 h1 {
@@ -60,7 +61,6 @@ h1.node-title {
 	font-style: normal;
 	font-weight: bold;
 	text-shadow: 1px 3px 2px #333;
-	text-transform: capitalize;
 }
 
 h2 {
@@ -79,6 +79,7 @@ h2.node-title {
 
 h3 {
 	color: #333;
+	font-family: Bebas, Arial, Helvetica, sans-serif;
 	/*font-size: 30px;*/
 	font-size: 1.875em;
 	line-height: 1.6;
@@ -102,7 +103,11 @@ h5 {
 
 h6 {}
 
-
+/* Content */
+p {
+	font-size: 1em;
+	line-height: 1.5em;
+}
 
 /* ----- /Type & Colors */
 
@@ -132,6 +137,10 @@ body {
 
 #page-inner-wrapper {
 	background: transparent url('../images/bg/noise_burst.png') no-repeat center 216px;
+}
+
+body.front #page-inner-wrapper {
+	min-height: 800px;
 }
 
 #user-bar-zone-wrapper {
@@ -335,7 +344,7 @@ ul.links li {
 #content-tabs ul.primary li a:visited,
 #content-tabs ul.secondary li a:link,
 #content-tabs ul.secondary li a:visited {
-	color: #999;
+	color: #666;
 	display: inline-block;
 	line-height: 1em;
 	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
@@ -363,6 +372,59 @@ ul.links li {
 #content-tabs ul.secondary li a:hover {
 	color: #fff;
 	border-bottom: 5px solid #d9362b;
+}
+
+/* QuickTabs */
+.quicktabs_main {
+  background-color: #fff;
+  border-top: none;
+  padding: 1.5em 10px;
+  clear: both;
+}
+
+ul.quicktabs_tabs {
+  padding: 0;
+  height: auto;
+  margin: 0;
+}
+
+ul.quicktabs_tabs li {
+	background-color: #545454;
+	border: medium none;
+	display: inline-block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+ul.quicktabs_tabs li:hover {
+	background-color: #666;
+}
+
+ul.quicktabs_tabs li.active {
+  background-color:#fff;
+}
+
+ul.quicktabs_tabs li.active a,
+ul.quicktabs_tabs li.active a:hover {
+  color: #0f638d;
+}
+
+ul.quicktabs_tabs a {
+  color: #fff;
+	display: inline-block;
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: capitalize;
+	line-height: 24px;
+  text-decoration: none;
+	padding: 12px 16px;
+}
+
+ul.quicktabs_tabs a:hover {
+  color: #f27c38;
 }
 
 /* General Menu Link Styles */
@@ -447,17 +509,30 @@ ul.main-menu a.active-trail {
 
 #block-menu-secondary-links a:link,
 #block-menu-secondary-links a:visited {
+	color: #f27c38;
 	text-decoration: none;
 }
 
 #block-menu-secondary-links a:hover,
-#block-menu-secondary-links a:focus {}
+#block-menu-secondary-links a:focus {
+	color: #fff;
+}
 
-#block-menu-secondary-links a.active {}
+#block-menu-secondary-links a.active,
+#block-menu-secondary-links a.active-trail {
+	color: #A63C24;
+}
 
 /* Node Links */
 
 /* ----- /Menus */
+
+/* Footer Elements ------------------------------------ */
+#footer-message {
+	line-height: 24px;
+	margin: 0;
+	padding: 1.5em 0;
+}
 
 /* Vertical tabs -------------------------------------- */
 .vertical-tabs {
@@ -814,6 +889,179 @@ form#user-register .form-submit {
 	float: right;
 }
 
+/* View Displays */
+/* Front Page: Slideshow */
+.views_slideshow_singleframe_main {
+	height: 400px;
+}
+
+.view-front-page-slideshow {
+	margin-left: -10px;
+	position: relative;
+	overflow: hidden;
+	width: 960px;
+	height: 400px;
+}
+
+.view-front-page-slideshow .views-row {
+	position: relative;
+	width: 960px;
+	height: 400px;
+}
+
+.view-front-page-slideshow .slide {
+	position: absolute;
+	z-index: 1;
+}
+
+.view-front-page-slideshow .title {
+	top: 20px;
+	left: 0;
+	position: absolute;
+	z-index: 2;
+}
+
+.view-front-page-slideshow .body {
+	background-color: #fff;
+	top: 230px;
+	left: 0;
+	position: absolute;
+	z-index: 3;
+	width: 620px;
+	height: 150px;
+}
+
+.view-front-page-slideshow .more {
+	top: 350px;
+	right: 360px;
+	position: absolute;
+	z-index: 4;
+}
+
+.views-slideshow-controls-bottom {
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+	z-index: 50;
+}
+
+.views-slideshow-controls-bottom .pager-item {}
+
+.views-slideshow-controls-bottom a:link,
+.views-slideshow-controls-bottom a:visited {
+	background: transparent url('../images/bg/slide_pager.png') no-repeat center top;
+	display: inline-block;
+	text-indent: -9999px;
+	font-size: 0;
+	width: 20px;
+	height: 25px;
+}
+
+.views-slideshow-controls-bottom a:hover,
+.views-slideshow-controls-bottom a:focus,
+.views-slideshow-controls-bottom .activeSlide a {
+	background-position: center bottom;
+}
+
+/* QuickTabs: Sessions */
+.schedule-tabs {}
+
+.presentation {
+	width: 100%;
+	height: 60px;
+	margin-bottom: 12px;
+}
+
+.presentation.first {
+	margin-top: 0;
+}
+
+.presentation.last {
+	margin-bottom: 0;
+}
+
+.presentation div {
+	display: inline-block;
+}
+
+.presentation-inner-wrapper {
+	width: 100%;
+	height: 60px;
+}
+
+.presentation-inner {
+	padding: 0 10px;
+	width: 760px;
+}
+
+.session-info {
+	float: left;
+	margin-right: 10px;
+	width: 400px;
+	padding-top: 6px;
+}
+
+.session-meta {
+	float: right;
+	margin-left: 10px;
+	width: 320px;
+	height: 60px;
+}
+
+.presentation .time {
+	font-size: 0.875em;
+	text-align: center;
+	line-height: 24px;
+	float: left;
+	margin: 0;
+	padding-top: 18px;
+	width: 140px;
+}
+
+.presentation .title {}
+
+.presentation .presenter {
+	display: inline-block;
+	float: left;
+}
+
+.presentation .schedule-add.button {
+  display: inline-block;
+	float: right;
+  padding-left: 30px;
+	position: relative;
+	top: 11px;
+  width: 60px;
+}
+
+.schedule-add.button img {
+}
+
+.schedule-add span.flag-wrapper {
+	position: relative;
+	float: right;
+	width: 100%;
+	height: 30px;
+}
+
+.schedule-add a:link,
+.schedule-add a:visited {
+	color: inherit;
+	display: inline-block;
+  font-size: 10px;
+  line-height: 1.5em;
+  text-align: center;
+	text-decoration: none;
+  text-transform: uppercase;
+}
+
+.schedule-add a:hover,
+.schedule-add a:focus {}
+
+.presentation .exp-lvl {
+	display: none;
+}
+
 /* Helper Spans --------------------------------------- */
 pre {
 	white-space: pre-wrap;
@@ -848,7 +1096,7 @@ blockquote {}
 
 a.callout:link,
 a.callout:visited {
-  color: #fff;
+  color: #F27C38;
   font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
   font-weight: normal;
   font-size: 1.25em;
@@ -859,9 +1107,12 @@ a.callout:visited {
 }
 
 a.callout:hover,
-a.callout:focus,
+a.callout:focus {
+	color: #fff;
+}
+
 a.callout.active {
-	color: #f27c38;
+	color: #A63C24;
 	text-decoration: underline;
 }
 

@@ -1,5 +1,14 @@
 //Drupal.behaviors.drupalCampChicago = function (context) {
 $(document).ready(function() {
+
+/**
+ * Hide Front Page items then fadeIn();
+ */
+	jQuery('body.front .container-12').hide();
+	// show the logo and nav before fading everything in
+	jQuery('#page-outer-wrapper, #page, #page-inner-wrapper, #site-header.container-12').show();
+	// fadeIn the rest of the stuff
+	jQuery('body.front .container-12').delay(2000).fadeIn('slow');
 	
 /**
  * Move Mollom to Account Info Fieldset.

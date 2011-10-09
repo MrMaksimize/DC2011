@@ -18,6 +18,7 @@ stylesheets[all][] = css/formalize.css
 ; ------- DEFAULT SCRIPTS
 
 scripts[] = js/formToWizard.js
+scripts[] = js/jquery.delay.plugin.js
 scripts[] = js/theme-script.js
 
 
