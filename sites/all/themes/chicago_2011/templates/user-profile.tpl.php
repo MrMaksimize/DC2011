@@ -72,25 +72,5 @@
     <?php if($profile['user_picture']): ?>
       <?php print $profile['user_picture']; ?>
     <?php endif; ?>
-    <?php $social=$account->profile_website?TRUE:$account->profile_twitter?TRUE:$account->profile_do_name?TRUE:FALSE ?>
-    <?php if($social): ?>
-      <div id="user-social-block">
-      <h2> 'ROUND THE WEB</h2>
-      <ul>
-      <?php if($account->profile_website): ?>
-        <li><?php print "<a href='$account->profile_website'>Website</a>" ?></li>
-      <?php endif; ?>
-      <?php if($account->profile_do_name): ?>
-        <li><?php print "<a href='http://www.drupal.org/user/$account->profile_do_name'>Drupal.org</a>" ?></li>
-      <?php endif; ?>
-      <?php if($account->profile_twitter): ?>
-        <li><?php print "<a href='http://www.twitter.com/".trim($account->profile_twitter, "@")."'>Twitter</a>" ?></li>
-      <?php endif; ?>
-      </ul>
-      </div>  
-    <?php endif; ?>
   </div>
 </div>
-  <div id="user-bottom">
-  <?php print $profile['activitystream'] ?>
-  </div>
