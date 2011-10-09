@@ -1,3 +1,32 @@
 .attendee  {
 float:left;
+padding:15px 15px;
+}
+#user-location, #user-org, #user-title {
+display:inline; 
+padding:15px 15px;
+}
+#user-main {
+width:600px;
+float:left;
+padding:10px;
+}
+#user-right  {
+}
+.picture img  {
+border: 5px solid #ffffff;
+
+}
+#user-social-block  {
+float:right;
+}
+#user-social-block li {
+list-style-type:none;
+}
+#user-info p
+{
+padding:10px;
+}
+.section-users .title  {
+display:none;
 }
