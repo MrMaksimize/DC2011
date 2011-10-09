@@ -1,0 +1,15 @@
+<?php 
+function dc2011_form_alters_form_alter(&$form, &$form_state, $form_id)  {
+  if($form_id=='user_profile_form')  {
+    $form['#validate'][]='dc2011_form_alters_form_validate';
+  }
+}
+
+function dc2011_form_alters_form_validate($form, &$form_state)  {
+  if(strlen($form_state['values']['profile_bio'])>800)
+  {
+    form_set_error('title', t('Please limit your bio to 800 chars.'));
+  }
+}
+
+

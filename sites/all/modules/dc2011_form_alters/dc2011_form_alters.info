@@ -1,0 +1,8 @@
+name = "dcc2011 for alters"
+description = "all necessary form alters for drupal camp 2011 site"
+project = "Drupal Camp Chicago"
+core = 6.x
+
+
+
+

@@ -40,6 +40,32 @@
  * @see template_preprocess_user_profile()
  */
 ?>
-<div class="profile">
-  <?php print $user_profile; ?>
+    <?php /*dpm($profile); profile_load_profile($account); dpm($account, 'account'); */ ?>
+<div class="profile">  
+  <div id="user-main">
+    <div id="full-name">
+      <h2>
+      <?php print "$account->profile_first $account->profile_last"; ?>
+      </h2>
+    </div>
+    <div id="username">
+      <h3>
+      <?php print "[aka $account->name]"; ?>
+      </h3>
+    </div>
+    <div id="user-info">
+      <div id="user-location">
+        <?php print "Location: $account->profile_location"; ?>
+      </div>
+      <div id="user-org">
+        <?php print "Company/Org: $account->profile_org"; ?>
+      </div>
+      <div id="user-title">
+        <?php print "Job Title: $account->profile_job_title"; ?>
+      </div>
+      <div id="user-bio">
+        <?php print  "<p>$account->profile_bio</p>"; ?>
+      </div>
+    </div>
+  </div>
 </div>
