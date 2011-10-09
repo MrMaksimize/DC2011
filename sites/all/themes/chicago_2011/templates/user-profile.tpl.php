@@ -40,7 +40,7 @@
  * @see template_preprocess_user_profile()
  */
 ?>
-    <?php /*dpm($profile); profile_load_profile($account); dpm($account, 'account'); */ ?>
+    <?php /*dpm($profile); profile_load_profile($account); */dpm($account, 'account');  ?>
 <div class="profile">  
   <div id="user-main">
     <div id="full-name">
