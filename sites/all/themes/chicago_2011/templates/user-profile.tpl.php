@@ -68,9 +68,4 @@
       </div>
     </div>
   </div>
-  <div id="user-right">
-    <?php if($profile['user_picture']): ?>
-      <?php print $profile['user_picture']; ?>
-    <?php endif; ?>
-  </div>
 </div>
