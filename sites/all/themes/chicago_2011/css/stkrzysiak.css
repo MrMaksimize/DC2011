@@ -27,6 +27,6 @@ list-style-type:none;
 {
 padding:10px;
 }
-.section-users #page-title .title  {
+.section-users h1#page-title.title  {
 display:none;
 }
