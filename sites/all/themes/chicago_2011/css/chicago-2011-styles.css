@@ -753,6 +753,7 @@ textarea.form-textarea,
 select.form-select {
   max-width:100%;
 }
+
 /* From Wizard - Step Process */
 div#steps-wrapper {
 	width: 100%;
@@ -841,12 +842,17 @@ ul#steps li span.stepNum {
 }
 
 ul#steps li span.stepName {
-	padding-left: 6px;
-	padding-right: 12px;
 }
 
-ul#steps li.completed .stepName {
+
+ul#steps li .stepName {
 	display: none;
+}
+
+ul#steps li.current .stepName {
+	display: inline-block;
+	padding-left: 6px;
+	padding-right: 12px;
 }
 
 ul#steps a:link,
@@ -1021,11 +1027,17 @@ form#user-register .form-submit {
 .presentation .title {}
 
 .presentation .presenter {
-	display: inline-block;
-	float: left;
+  display: inline-block;
+  float: left;
+  font-size: 0.625em;
+  max-width: 200px;
 }
 
 .presentation .schedule-add.button {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #b4b4b4));
+  background: -moz-linear-gradient(top center, #fff 0%, #b4b4b4 100%);
+  border-color: #ececec #ccc #a1a1a1;
+	color: #333;
   display: inline-block;
 	float: right;
   padding-left: 30px;
@@ -1034,9 +1046,12 @@ form#user-register .form-submit {
   width: 60px;
 }
 
-.schedule-add.button img {
+.presentation .exp-lvl {
+	display: none;
 }
 
+/* Flags */
+/* Add To My Schedule */
 .schedule-add span.flag-wrapper {
 	position: relative;
 	float: right;
@@ -1044,23 +1059,29 @@ form#user-register .form-submit {
 	height: 30px;
 }
 
+.schedule-add span.flag-wrapper:before {
+	content: url('../images/btn/add.png');
+	width: 16px;
+	height: 17px;
+	position: absolute;
+	left: -23px;
+	top: 7px;
+}
+
 .schedule-add a:link,
 .schedule-add a:visited {
-	color: inherit;
+	color: #0F638D;
 	display: inline-block;
   font-size: 10px;
   line-height: 1.5em;
   text-align: center;
 	text-decoration: none;
+	text-shadow: 0 1px 1px #fff;
   text-transform: uppercase;
 }
 
 .schedule-add a:hover,
 .schedule-add a:focus {}
-
-.presentation .exp-lvl {
-	display: none;
-}
 
 /* Helper Spans --------------------------------------- */
 pre {
