@@ -968,7 +968,7 @@ form#user-register .form-submit {
 }
 
 .view-front-page-slideshow .title h5 {
-	background: transparent url('../images/title_pointer.png') no-repeat 9px 9px;
+	background: transparent url('../images/title_pointer.png') no-repeat 9px center;
 	padding-left: 24px;
 }
 
