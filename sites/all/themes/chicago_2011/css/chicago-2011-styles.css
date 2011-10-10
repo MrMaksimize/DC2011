@@ -1096,7 +1096,7 @@ form#user-register .form-submit {
 
 .attendee-overlay .fullname a:hover,
 .attendee-overlay .fullname a:focus {
-	text-shadow: 1px 1px 1px #000;
+	text-shadow: 1px 1px 0 #000;
 	text-decoration: none;
 }
 
