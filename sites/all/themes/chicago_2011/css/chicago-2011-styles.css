@@ -945,7 +945,7 @@ form#user-register .form-submit {
 
   border-color: #005d8f #005d8f transparent transparent;
   border-style: solid;
-  border-width: 11px;
+  border-width: 8px 11px;
   content: "";
   position: absolute;
   left: 0px;
@@ -983,10 +983,23 @@ form#user-register .form-submit {
 	padding-left: 24px;
 }
 
+.view-front-page-slideshow .body:before {
+	content: "";
+	border-color: transparent #ccc #ccc transparent;
+	border-style: solid;
+	border-width: 8px 11px;
+	position: absolute;
+	left: 0;
+	top: -16px;
+	width: 0;
+	height: 0;
+}
+
 .view-front-page-slideshow .body {
 	background-color: #fff;
+	box-shadow: 5px 5px 12px -5px rgba(0, 0, 0, 0.8);
 	top: 230px;
-	left: 0;
+	left: -22px;
 	position: absolute;
 	width: 620px;
 	height: 150px;
@@ -996,7 +1009,7 @@ form#user-register .form-submit {
 .view-front-page-slideshow .body p {
 	position: relative;
 	top: 44px;
-	padding-left: 12px;
+	padding: 0 12px;
 	line-height: 24px;
 }
 
