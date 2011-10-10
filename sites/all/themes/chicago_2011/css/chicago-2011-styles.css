@@ -1053,11 +1053,10 @@ form#user-register .form-submit {
 
 .view-user-picture .picture a {
 	display: inline-block;
-	float: left;
 }
 
 .view-user-picture .picture img {
-	float: left;
+	vertical-align: bottom;
 }
 
 /* QuickTabs: Sessions */
