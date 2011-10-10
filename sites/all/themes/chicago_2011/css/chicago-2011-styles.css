@@ -1052,8 +1052,12 @@ form#user-register .form-submit {
 	margin-right: 16px;
 }
 
-.attendee.yes #attendee-overlay {
+.attendee.pro-1 #attendee-overlay {
 	background: #fff url('../images/bg/druplicon_pro.png') no-repeat center center;
+}
+
+.attendee.pro-0 #attendee-overlay {
+	background-image: none;
 }
 
 #attendee-overlay {
