@@ -71,7 +71,8 @@ h2 {
 }
 
 h2.block-title,
-h2.node-title {
+h2.node-title,
+h2.slide-title {
 	font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
 	font-style: normal;
 	font-weight: normal;
@@ -94,6 +95,7 @@ h4 {
 }
 
 h5 {
+	color: #29736b;
 	font-family: GillSans, Helvetica, Arial, sans-serif;
 	/*font-size: 16px*/
 	font-size: 1em;
@@ -904,7 +906,6 @@ form#user-register .form-submit {
 .view-front-page-slideshow {
 	margin-left: -10px;
 	position: relative;
-	overflow: hidden;
 	width: 960px;
 	height: 400px;
 }
@@ -920,11 +921,55 @@ form#user-register .form-submit {
 	z-index: 1;
 }
 
-.view-front-page-slideshow .title {
-	top: 20px;
-	left: 0;
+.view-front-page-slideshow div.slide-title:before {
+	/* Rotations */
+  -webkit-transform: rotate(-45deg);  
+     -moz-transform: rotate(-45deg);  
+      -ms-transform: rotate(-45deg);  
+       -o-transform: rotate(-45deg);  
+          transform: rotate(-45deg);  
+             filter: progid:DXImageTransform.Microsoft.Matrix( 
+                     M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
+               zoom: 1;
+							 /* /rotations */
+	content: "";
 	position: absolute;
-	z-index: 2;
+	left: 6px;
+	top: 46px;
+	border-color: transparent transparent transparent #005d8f;
+	border-style: solid;
+	border-width: 16px;
+	width: 0;
+	height: 0;
+}
+
+.view-front-page-slideshow div.slide-title {
+  background-color: #29abe1;
+	box-shadow: 5px 5px 12px -5px rgba(0, 0, 0, 0.8);
+  position: absolute;
+	left: -16px;
+  top: 20px;
+  height: 62px;
+  z-index: 2;
+}
+
+.view-front-page-slideshow h2.slide-title  {
+	background: #fff url('../images/star.png') no-repeat 12px center;
+  padding: 0 30px 0 50px;
+	position: relative;
+	top: 6px;
+}
+
+.view-front-page-slideshow .title {
+	position: absolute;
+	top: 242px;
+	padding-left: 12px;
+	z-index: 4;
+}
+
+.view-front-page-slideshow .title h5 {
+	background: transparent url('../images/title_pointer.png') no-repeat 9px 9px;
+	padding-left: 24px;
 }
 
 .view-front-page-slideshow .body {
@@ -932,16 +977,23 @@ form#user-register .form-submit {
 	top: 230px;
 	left: 0;
 	position: absolute;
-	z-index: 3;
 	width: 620px;
 	height: 150px;
+	z-index: 3;
+}
+
+.view-front-page-slideshow .body p {
+	position: relative;
+	top: 44px;
+	padding-left: 12px;
+	line-height: 24px;
 }
 
 .view-front-page-slideshow .more {
 	top: 350px;
 	right: 360px;
 	position: absolute;
-	z-index: 4;
+	z-index: 5;
 }
 
 .views-slideshow-controls-bottom {

@@ -171,11 +171,10 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
+
 function chicago_2011_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+  //dpm($vars);
 }
-// */
 
 /**
  * Override or insert variables into the comment templates.
@@ -226,3 +225,11 @@ function chicago_2011_render_attributes($attributes) {
   return $output;
 	//return omega_render_attributes($attributes);  
 }
+
+/* function chicago_2011_links(&$links, $node) {
+  foreach ($links as $module => $link) {
+    if (strstr($module, 'flag')) {
+			dpm(get_defined_vars());
+    }
+  }
+}*/
