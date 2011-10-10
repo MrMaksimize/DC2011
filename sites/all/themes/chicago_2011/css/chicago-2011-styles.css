@@ -1065,14 +1065,30 @@ form#user-register .form-submit {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 5px;
-	width: 186px;
-	height: 186px;
+	padding: 15px;
+	width: 166px;
+	height: 166px;
 	font-size: 12px;
 	line-height: 24px;
 }
 
-.attendee-overlay . {
+.attendee-overlay .username {
+	text-align: right;
+}
+
+.attendee-overlay .fullname {
+  font-family: TrajanPro;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+	min-height: 48px;
+}
+
+.attendee-overlay .title,
+.attendee-overlay .org {
+	text-align: center;
 }
 
 .attendee:hover .attendee-overlay {
