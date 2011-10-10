@@ -1,7 +1,4 @@
-.attendee  {
-float:left;
-padding:15px 15px;
-}
+
 #user-location, #user-org, #user-title {
 display:inline; 
 padding:15px 15px;
@@ -13,8 +10,12 @@ padding:10px;
 }
 #user-right  {
 }
+/*.attendee  {
+float:left;
+padding:0 16px 24px 0;
+}
 .picture img  {
-border: 5px solid #ffffff;
+border: 5px solid #ffffff;*/
 
 }
 #user-social-block  {
@@ -27,6 +28,6 @@ list-style-type:none;
 {
 padding:10px;
 }
-.section-users h1#page-title.title  {
+/*.section-users h1#page-title.title  {
 display:none;
-}
+}*/
