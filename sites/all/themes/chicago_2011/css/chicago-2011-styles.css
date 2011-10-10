@@ -1045,6 +1045,31 @@ form#user-register .form-submit {
 	background-position: center bottom;
 }
 
+/* Attendees List */
+.attendee {
+	display: inline-block;
+	position: relative;
+	margin-right: 16px;
+}
+
+.attendee.yes #attendee-overlay {
+	background: #fff url('../images/bg/druplicon_pro.png') no-repeat center center;
+}
+
+#attendee-overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	width: 186px;
+	height: 186px;
+}
+
+.attendee:hover #attendee-overlay {
+	display: block;
+}
+
 /* User Profile */
 .view-user-picture .views-field-picture {
 	box-shadow: 0 0 3px 0 #000;
@@ -1227,6 +1252,11 @@ a.callout:focus {
 a.callout.active {
 	color: #A63C24;
 	text-decoration: underline;
+	text-shadow: none;
+}
+
+a.callout.login:link {
+	text-shadow: none;
 }
 
 /* Skinr Styles -------------------------------------------- */
