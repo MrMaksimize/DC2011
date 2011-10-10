@@ -1052,15 +1052,15 @@ form#user-register .form-submit {
 	margin-right: 16px;
 }
 
-.attendee.pro-1 #attendee-overlay {
+.attendee.pro-1 .attendee-overlay {
 	background: #fff url('../images/bg/druplicon_pro.png') no-repeat center center;
 }
 
-.attendee.pro-0 #attendee-overlay {
+.attendee.pro-0 .attendee-overlay {
 	background-image: none;
 }
 
-#attendee-overlay {
+.attendee-overlay {
 	display: none;
 	position: absolute;
 	top: 0;
@@ -1068,9 +1068,14 @@ form#user-register .form-submit {
 	padding: 5px;
 	width: 186px;
 	height: 186px;
+	font-size: 12px;
+	line-height: 24px;
 }
 
-.attendee:hover #attendee-overlay {
+.attendee-overlay . {
+}
+
+.attendee:hover .attendee-overlay {
 	display: block;
 }
 
