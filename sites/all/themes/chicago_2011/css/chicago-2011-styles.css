@@ -1175,6 +1175,7 @@ a.callout:visited {
   font-size: 1.25em;
   line-height: 24px;
   text-decoration: none;
+	text-shadow: 1px 1px 0px #005D8F;
   text-transform: uppercase;
   padding: 0pt 0.25em;
 }
@@ -1182,6 +1183,7 @@ a.callout:visited {
 a.callout:hover,
 a.callout:focus {
 	color: #fff;
+	text-shadow: 1px 1px 0px #000;
 }
 
 a.callout.active {
