@@ -1045,6 +1045,21 @@ form#user-register .form-submit {
 	background-position: center bottom;
 }
 
+/* User Profile */
+.view-user-picture .views-field-picture {
+	box-shadow: 0 0 3px 0 #000;
+	float: none;
+}
+
+.view-user-picture .picture a {
+	display: inline-block;
+	float: left;
+}
+
+.view-user-picture .picture img {
+	float: left;
+}
+
 /* QuickTabs: Sessions */
 .schedule-tabs {}
 
@@ -1369,7 +1384,7 @@ a.callout.active {
 .dcc-raised-white .content {}
 
 .dcc-raised-white .content-inner {
-	padding: 0 12px;
+	padding: 0 12px 1.5em;
 }
 
 /* Grid reset for blocks */
