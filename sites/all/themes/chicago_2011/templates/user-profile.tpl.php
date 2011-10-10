@@ -41,31 +41,27 @@
  */
 ?>
     <?php /*dpm($profile); profile_load_profile($account); dpm($account, 'account'); */ ?>
-<div class="profile">  
+<div class="profile">
+      <h5 class="fullname">
+      <?php print "[aka $account->profile_first $account->profile_last]"; ?>
+      </h5>  
   <div id="user-main">
-    <div id="full-name">
-      <h2>
-      <?php print "$account->profile_first $account->profile_last"; ?>
-      </h2>
+    <div class="info">
+      <span class="location">
+      	<label>Location:</label>
+        <?php print " $account->profile_location"; ?>
+      </span>
+      <span class="org">
+      	<label>Company/Org:</label>
+        <?php print " $account->profile_org"; ?>
+      </span>
+      <span class="title">
+      <label>Job Title:</label>
+        <?php print " $account->profile_job_title"; ?>
+      </span>
     </div>
-    <div id="username">
-      <h3>
-      <?php print "[aka $account->name]"; ?>
-      </h3>
-    </div>
-    <div id="user-info">
-      <div id="user-location">
-        <?php print "Location: $account->profile_location"; ?>
-      </div>
-      <div id="user-org">
-        <?php print "Company/Org: $account->profile_org"; ?>
-      </div>
-      <div id="user-title">
-        <?php print "Job Title: $account->profile_job_title"; ?>
-      </div>
-      <div id="user-bio">
-        <?php print  "<p>$account->profile_bio</p>"; ?>
-      </div>
+    <div id="user-bio">
+      <?php print  "<p>$account->profile_bio</p>"; ?>
     </div>
   </div>
 </div>

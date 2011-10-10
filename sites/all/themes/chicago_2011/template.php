@@ -153,14 +153,14 @@ function chicago_2011_preprocess(&$vars, $hook) {
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
- *
+ */
 	
 
 function chicago_2011_preprocess_page(&$vars, $hook) {
 	//dpm($vars);
 	//$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
 	//$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
-}*/
+}
 
 
 /**
@@ -175,6 +175,11 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
 function chicago_2011_preprocess_node(&$vars, $hook) {
   //dpm($vars);
 }
+
+function chicago_2011_preprocess_user_profile(&$vars) {
+	//dpm($vars);
+}
+
 
 /**
  * Override or insert variables into the comment templates.

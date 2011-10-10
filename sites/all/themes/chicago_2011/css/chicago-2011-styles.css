@@ -82,6 +82,12 @@ h2.slide-title {
 	font-weight: normal;
 }
 
+h2.block-title,
+h2.node-title {
+	font-size: 28px;
+	padding: 0 10px;
+}
+
 h3 {
 	color: #333;
 	font-family: Bebas, Arial, Helvetica, sans-serif;
@@ -1110,6 +1116,45 @@ form#user-register .form-submit {
 }
 
 /* User Profile */
+.profile {
+	margin: 0 0 1.5em;
+}
+
+.profile .info {
+	text-align: center;
+}
+
+.profile .info span {
+	color: #0f638d;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 24px;
+	padding: 12px 24px;
+}
+
+.profile .info label {
+	color: #545454;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+h5.fullname {
+	color: #545454;
+	font-size: 22px;
+	font-weight: 100;
+	line-height: 48px;
+	text-transform: none;
+}
+
+.profile #user-main {
+	background: transparent url('../images/bg/spacer_white.png') repeat left top;
+}
+
+.profile #user-bio {
+	padding: 0 16px;
+}
+
 .view-user-picture .views-field-picture {
 	box-shadow: 0 0 3px 0 #000;
 	float: none;
