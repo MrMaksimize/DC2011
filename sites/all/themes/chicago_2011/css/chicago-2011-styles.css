@@ -64,7 +64,7 @@ h1.node-title {
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 32px;
 	/*font-size: 2.375em;*/
 	line-height: 48px;
 	/*text-transform: uppercase;*/
@@ -1354,15 +1354,23 @@ a.callout.active {
 
 
 /* Block Styles */
-.dcc-raised-white {}
+.dcc-raised-white {
+	background-color: #FFF;
+	box-shadow: 0 0 3px 0 #000;
+	color: #545454;
+}
 
 .dcc-raised-white .block-inner {}
 
-.dcc-raised-white .block-title {}
+.dcc-raised-white .block-title {
+	color: #0f638d;
+}
 
 .dcc-raised-white .content {}
 
-.dcc-raised-white .content-inner {}
+.dcc-raised-white .content-inner {
+	padding: 0 12px;
+}
 
 /* Grid reset for blocks */
 .block.grid-1,
