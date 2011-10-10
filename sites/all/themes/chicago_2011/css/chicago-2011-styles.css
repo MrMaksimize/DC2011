@@ -19,12 +19,16 @@ body {
 a,
 a:link,
 a:visited {
+	color: #0f638d;
+	text-decoration: none;
 }
 
 /* Hover/Active Link Styles */
 a:hover,
 a:focus,
 a:active {
+	color: #d9362b;
+	text-decoration: underline;
 }
 
 /* Title Link Styles */
@@ -1084,6 +1088,15 @@ form#user-register .form-submit {
   position: relative;
   text-align: center;
 	min-height: 72px;
+}
+
+.attendee-overlay .fullname a:link,
+.attendee-overlay .fullname a:visited {
+}
+
+.attendee-overlay .fullname a:hover,
+.attendee-overlay .fullname a:focus {
+	text-shadow: 1px 1px 1px 0 #000;
 }
 
 .attendee-overlay .title,
