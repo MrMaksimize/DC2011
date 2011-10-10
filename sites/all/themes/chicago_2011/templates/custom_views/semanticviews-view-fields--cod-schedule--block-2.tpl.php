@@ -25,6 +25,7 @@
  *  $field_slot_datetime_value == Content: Date and time (field_slot_datetime) - From date
     $title == Node: Title
     $body == Node: Body
+		$field_questions_answered_value == Content: What questions will your session answer? (field_questions_answered)
     $field_speakers_uid == Content: Speaker(s) (field_speakers)
     $picture == User: Picture
     $ops == Flags: Flag link
@@ -101,7 +102,7 @@
     
   	<?php endif; ?>
     
-    <?php if($id == 'body'): ?>
+    <?php if($id == 'field_questions_answered_value'): ?>
     
       <?php if ($field->element_type): ?>
       <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>

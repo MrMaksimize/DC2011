@@ -1194,9 +1194,36 @@ h5.fullname {
 	height: 60px;
 }
 
+.presentation.Build .presentation-inner {
+	border-right-color: #114ba7;
+}
+
+.presentation.Code .presentation-inner {
+	border-right-color: #fe6e05;
+}
+
+.presentation.Design .presentation-inner {
+	border-right-color: #d9362b;
+}
+
+.presentation.Business .presentation-inner {
+	border-right-color: #29abe1;
+}
+
+.presentation.Community .presentation-inner {
+	border-right-color: #11a72d;
+}
+
 .presentation-inner {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eaeaea));
+  background: -moz-linear-gradient(top center, #fff 0%, #eaeaea 100%);
+	border-color: #dfdfdf transparent #9d9d9d #cacaca;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px 5px 1px 1px;
+	box-shadow: 0 1px 1px 0 #999;
 	padding: 0 10px;
-	width: 760px;
+	width: 750px;
 }
 
 .session-info {
@@ -1225,6 +1252,10 @@ h5.fullname {
 
 .presentation .title {}
 
+.presentation .question {
+	font-size: 12px;
+}
+
 .presentation .presenter {
   display: inline-block;
   float: left;
@@ -1236,6 +1267,7 @@ h5.fullname {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #b4b4b4));
   background: -moz-linear-gradient(top center, #fff 0%, #b4b4b4 100%);
   border-color: #ececec #ccc #a1a1a1;
+	box-shadow: 0 0 0 4px #ececec;
 	color: #333;
   display: inline-block;
 	float: right;
