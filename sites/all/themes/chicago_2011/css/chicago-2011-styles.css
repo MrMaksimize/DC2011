@@ -922,7 +922,7 @@ form#user-register .form-submit {
 }
 
 .view-front-page-slideshow div.slide-title:before {
-	/* Rotations */
+	/* Rotations 
   -webkit-transform: rotate(-45deg);  
      -moz-transform: rotate(-45deg);  
       -ms-transform: rotate(-45deg);  
@@ -931,7 +931,7 @@ form#user-register .form-submit {
              filter: progid:DXImageTransform.Microsoft.Matrix( 
                      M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
                zoom: 1;
-							 /* /rotations */
+							  /rotations
 	content: "";
 	position: absolute;
 	left: 6px;
@@ -941,6 +941,17 @@ form#user-register .form-submit {
 	border-width: 16px;
 	width: 0;
 	height: 0;
+} */
+
+  border-color: #005d8f #005d8f transparent transparent;
+  border-style: solid;
+  border-width: 11px;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 62px;
+  width: 0;
+  height: 0;
 }
 
 .view-front-page-slideshow div.slide-title {
