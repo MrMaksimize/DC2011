@@ -1158,15 +1158,6 @@ h5.fullname {
 
 .view-user-picture .views-field-picture {
 	box-shadow: 0 0 3px 0 #000;
-	float: none;
-}
-
-.view-user-picture .picture a {
-	display: inline-block;
-}
-
-.view-user-picture .picture img {
-	vertical-align: bottom;
 }
 
 /* QuickTabs: Sessions */
@@ -1291,8 +1282,17 @@ h5.fullname {
 	height: 30px;
 }
 
-.schedule-add span.flag-wrapper:before {
+.schedule-add span.flag-wrapper a.flag-action:before {
 	content: url('../images/btn/add.png');
+	width: 16px;
+	height: 17px;
+	position: absolute;
+	left: -23px;
+	top: 7px;
+}
+
+.schedule-add span.flag-wrapper a.unflag-action:before {
+	content: url('../images/btn/remove.png');
 	width: 16px;
 	height: 17px;
 	position: absolute;
@@ -1325,6 +1325,10 @@ em {
 }
 
 blockquote {}
+
+img {
+	vertical-align: bottom;
+}
 
 .block p {
   margin: 0;
