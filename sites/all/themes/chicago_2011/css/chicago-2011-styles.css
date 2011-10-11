@@ -511,10 +511,12 @@ ul.main-menu a.active-trail {
 }
 
 /* Secondary Nav */
+#block-menu-accountmenu ul,
 #block-menu-secondary-links ul {
 	margin: 0.75em 0;
 }
 
+#block-menu-accountmenu li,
 #block-menu-secondary-links li {
 	display: inline;
 	list-style: none outside none;
@@ -522,17 +524,23 @@ ul.main-menu a.active-trail {
 	padding: 0 1em;
 }
 
+#block-menu-accountmenu a:link,
+#block-menu-accountmenu a:visited,
 #block-menu-secondary-links a:link,
 #block-menu-secondary-links a:visited {
 	color: #f27c38;
 	text-decoration: none;
 }
 
+#block-menu-accountmenu a:hover,
+#block-menu-accountmenu a:focus,
 #block-menu-secondary-links a:hover,
 #block-menu-secondary-links a:focus {
 	color: #fff;
 }
 
+#block-menu-accountmenu a.active,
+#block-menu-accountmenu a.active-trail,
 #block-menu-secondary-links a.active,
 #block-menu-secondary-links a.active-trail {
 	color: #A63C24;
