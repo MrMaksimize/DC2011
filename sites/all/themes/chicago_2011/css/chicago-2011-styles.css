@@ -1544,6 +1544,7 @@ a.callout.login:link {
 .dcc-raised-white .block-title {
 	border: medium none;
 	color: #0f638d;
+	margin: 0 12px;
 }
 
 .dcc-raised-white .content {}
