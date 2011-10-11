@@ -1544,6 +1544,14 @@ a.callout.login:link {
 	padding: 0 12px 1.5em;
 }
 
+.dcc-front-feature {}
+
+.dcc-front-feature .block-title {
+	font-family: Bodidly, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* Login Overlay */
 
 /* Grid reset for blocks */
