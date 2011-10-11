@@ -1566,7 +1566,7 @@ a.callout.login:link {
 
 /* Login Overlay */
 
-/* Grid reset for blocks */
+/* Grid reset for blocks
 .block.grid-1,
 .block.grid-2,
 .block.grid-3,
@@ -1593,7 +1593,7 @@ a.callout.login:link {
 .block.grid-24 {
 	margin-left: 0;
 	margin-right: 0;
-}
+} */
 
 .jcarousel-skin-ie7 .jcarousel-clip-horizontal, .jcarousel-skin-ie7 .jcarousel-container-horizontal {
     width: 540px;
