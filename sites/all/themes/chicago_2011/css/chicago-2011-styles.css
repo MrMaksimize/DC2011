@@ -1547,9 +1547,13 @@ a.callout.login:link {
 .dcc-front-feature {}
 
 .dcc-front-feature .block-title {
+	color: #29736b;
 	font-family: Bodidly, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 32px;
 	font-weight: normal;
 	font-style: normal;
+	line-height: 48px;
+	text-shadow: 1px 1px 1px #fff;
 }
 
 /* Login Overlay */
