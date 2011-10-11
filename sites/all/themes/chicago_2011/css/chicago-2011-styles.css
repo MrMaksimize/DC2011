@@ -1565,3 +1565,7 @@ a.callout.login:link {
 	margin-left: 0;
 	margin-right: 0;
 }
+
+.jcarousel-skin-ie7 .jcarousel-clip-horizontal, .jcarousel-skin-ie7 .jcarousel-container-horizontal {
+    width: 540px;
+}
