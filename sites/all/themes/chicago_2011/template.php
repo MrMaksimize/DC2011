@@ -35,6 +35,10 @@ function chicago_2011_theme(&$existing, $type, $theme, $path) {
       'arguments' => array('attributes'),
     ),
   );
+	
+	// Custom hook for user account links block creation
+	$hooks['user_account_links'] = omega_theme($existing, $type, $theme, $path);
+	
   $hooks = omega_theme($existing, $type, $theme, $path);
   // Add your theme hooks like this:
   /*
@@ -43,6 +47,14 @@ function chicago_2011_theme(&$existing, $type, $theme, $path) {
   // @TODO: Needs detailed comments. Patches welcome!
   return $hooks;
 }
+
+/*function chicago_2011_user_account_links(&$vars, $user) {
+	if (user_is_annonymous) {
+	};
+	
+	if (user_is_logged_in) {
+	};
+}*/
 
 /**
  * The region_builder function will create the variables needed to create
