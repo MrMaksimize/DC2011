@@ -1552,6 +1552,10 @@ a.callout.login:link {
 	padding: 0 12px 1.5em;
 }
 
+.dcc-raised-white .content-inner img.full-width {
+	margin-left: -12px;
+}
+
 .dcc-front-feature {}
 
 .dcc-front-feature .block-title {
