@@ -25,7 +25,17 @@
  * @see template_preprocess_block()
  */
 ?>
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module ?> <?php print $skinr; ?>">
+<?php 
+  if($block->bid=='block-1')  {
+    global $user; 
+    profile_load_profile($user); 
+    $logged_in_copy="Welcome, $user->profile_first $user->profile_last" . l("Buy a ticket", "content/drupalcamp-chicago-2011") . " " . l("My Account", "user/".$user->uid."edit") . " " .  l("Logout", "logout");   
+    $block->content=$logged_in?$logged_in_copy:$block->content;
+  }
+?>
+
+<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module ?> <?php print $skinr;  ?>">
+
   <div class="block-inner">
   
 		<?php if ($block->subject): ?>
