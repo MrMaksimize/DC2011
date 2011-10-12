@@ -1606,7 +1606,7 @@ a.callout.login:link {
 	color: #f27c38;
 	text-decoration: none;
 	text-transform: uppercase;
-	padding: 0 1em;
+	margin: 0 1em;
 }
 
 .dcc-user-welcome a:hover,
