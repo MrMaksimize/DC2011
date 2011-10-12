@@ -1403,6 +1403,7 @@ a.callout:visited {
   text-decoration: none;
 	text-shadow: 1px 1px 0px #005D8F;
   text-transform: uppercase;
+	margin: 0 !important;
   padding: 0pt 0.25em;
 }
 
