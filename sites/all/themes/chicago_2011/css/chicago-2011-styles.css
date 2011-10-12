@@ -99,13 +99,13 @@ h3 {
 
 /* Sponsor Signup Headings */
 .pt {
-	color: #ccc;
-	text-shadow: 1px 1px 0 #666;
+	color: #545454;
+	text-shadow: 1px 1px 0 #ccc;
 }
 
 .au {
-	color: #FC0;
-	text-shadow: 1px 1px 0 #960;
+	color: #960;
+	text-shadow: 1px 1px 0 #fc0;
 }
 
 .ag {
@@ -115,7 +115,7 @@ h3 {
 
 .blue {
 	color: #039;
-	text-shadow: 1px 1px 0 #39F;
+	text-shadow: 1px 1px 0 #39f;
 }
 
 h4 {
