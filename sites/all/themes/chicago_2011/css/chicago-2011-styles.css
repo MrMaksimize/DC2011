@@ -1595,6 +1595,28 @@ a.callout.login:link {
 	text-shadow: 1px 1px 1px #fff;
 }
 
+.dcc-user-welcome .content-inner {
+	margin: 0.75em 0;
+}
+
+.dcc-user-welcome a:link,
+.dcc-user-welcome a:visited {
+	color: #f27c38;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0 1em;
+}
+
+.dcc-user-welcome a:hover,
+.dcc-user-welcome a:focus {
+	color: #fff;
+}
+
+.dcc-user-welcome a.active,
+.dcc-user-welcome a.active-trail {
+	color: #A63C24;
+}
+
 /* Twitter Widget - Style Override */
 .block .twtr-widget {
     font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;

@@ -307,6 +307,8 @@ skinr[dcc-block-visual][options][1][label] = White background with Dark outer gl
 skinr[dcc-block-visual][options][1][class] = dcc-raised-white
 skinr[dcc-block-visual][options][2][label] = Front Page Feature: Welcome Message
 skinr[dcc-block-visual][options][2][class] = dcc-front-feature
+skinr[dcc-block-visual][options][3][label] = User Welcome Message
+skinr[dcc-block-visual][options][3][class] = dccc-user-welcome
 
 ; Information added by drupal.org packaging script on 2010-11-16
 version = "6.x-1.0"
