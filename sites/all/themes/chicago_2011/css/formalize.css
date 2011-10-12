@@ -126,12 +126,12 @@ input[type="week"] {
   color: #000;
   outline: 0;
   padding: 2px 3px;
-  font-size: 13px;
+  font-size: 16px;
   /*
     Leaving out Helvetica Neue, to not throw off size="..."
     on inputs. Arial is more reliable, on Windows and OS X.
   */
-  font-family: Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font-family: GillSans, Arial, 'Liberation Sans', FreeSans, sans-serif;
   height: 1.8em;
 
   /* IE7 */
