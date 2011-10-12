@@ -1945,7 +1945,7 @@ form.fivestar-widget div.description {
 	padding: 16px;
 }
 
-#fancy_login_form_contents ul.item-list {
+#fancy_login_form_contents div.item-list {
 	font-size: 10px;
 	line-height: 24px;
 	text-shadow: 1px 1px 0 #9ADCED;
