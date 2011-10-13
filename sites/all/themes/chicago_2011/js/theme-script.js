@@ -1,27 +1,5 @@
 //Drupal.behaviors.drupalCampChicago = function (context) {
 
-Drupal.behaviors.themeEqualheights = function (context) {
-  if (jQuery().equalHeights) {
-    $("#user-bar-first div.equal-heights div.content-inner").equalHeights();
-    $("#user-bar-last div.equal-heights div.content-inner").equalHeights();
-    $("#header-first div.equal-heights div.content-inner").equalHeights();
-    $("#header-last div.equal-heights div.content-inner").equalHeights();
-    $("#sidebar-first div.equal-heights div.content-inner").equalHeights();
-    $("#sidebar-last div.equal-heights div.content-inner").equalHeights();
-    $("#preface-first div.equal-heights div.content-inner").equalHeights();
-    $("#preface-middle div.equal-heights div.content-inner").equalHeights();
-    $("#preface-last div.equal-heights div.content-inner").equalHeights();
-    $("#content-top div.equal-heights div.content-inner").equalHeights();
-    $("#content-bottom div.equal-heights div.content-inner").equalHeights();
-    $("#postscript-one div.equal-heights div.content-inner").equalHeights();
-    $("#postscript-two div.equal-heights div.content-inner").equalHeights();
-    $("#postscript-three div.equal-heights div.content-inner").equalHeights();
-    $("#postscript-four div.equal-heights div.content-inner").equalHeights();
-    $("#footer-first div.equal-heights div.content-inner").equalHeights();
-    $("#footer-last div.equal-heights div.content-inner").equalHeights();
-  }
-};
-
 $(document).ready(function() {
 
 /**
@@ -58,6 +36,27 @@ $(document).ready(function() {
 		nextLabel: 'Proceed >'
 	});
 	//jQuery("#uc-cart-checkout-form").formToWizard({ prevLabel: '< Previous', nextLabel: 'Proceed >' });
-	 
+
+
+//jQuery EqualHeights plugin
+	if (jQuery().equalHeights) {
+    $("#user-bar-first div.equal-heights div.content-inner").equalHeights();
+    $("#user-bar-last div.equal-heights div.content-inner").equalHeights();
+    $("#header-first div.equal-heights div.content-inner").equalHeights();
+    $("#header-last div.equal-heights div.content-inner").equalHeights();
+    $("#sidebar-first div.equal-heights div.content-inner").equalHeights();
+    $("#sidebar-last div.equal-heights div.content-inner").equalHeights();
+    $("#preface-first div.equal-heights div.content-inner").equalHeights();
+    $("#preface-middle div.equal-heights div.content-inner").equalHeights();
+    $("#preface-last div.equal-heights div.content-inner").equalHeights();
+    $("#content-top div.equal-heights div.content-inner").equalHeights();
+    $("#content-bottom div.equal-heights div.content-inner").equalHeights();
+    $("#postscript-one div.equal-heights div.content-inner").equalHeights();
+    $("#postscript-two div.equal-heights div.content-inner").equalHeights();
+    $("#postscript-three div.equal-heights div.content-inner").equalHeights();
+    $("#postscript-four div.equal-heights div.content-inner").equalHeights();
+    $("#footer-first div.equal-heights div.content-inner").equalHeights();
+    $("#footer-last div.equal-heights div.content-inner").equalHeights();
+  } 
 });
 //}(jQuery);
