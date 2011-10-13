@@ -35,7 +35,7 @@
   }
 ?>
 
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module ?> <?php print $skinr; ?> <?php if (user_is_logged_in): ?> <?php print $skinr_welcome_message ?> <?php endif; ?>">
+<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block block-<?php print $block->module ?> <?php print $skinr; ?> <?php if (user_is_logged_in): ?><?php print $skinr_welcome_message ?><?php endif; ?>">
 
   <div class="block-inner">
   

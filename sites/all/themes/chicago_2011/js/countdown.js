@@ -4,53 +4,60 @@
 * Visit http://www.dynamicdrive.com/ for this script and 100s more.
 ***********************************************/
 function cdtime(container, targetdate){
-if (!document.getElementById || !document.getElementById(container)) return
-this.container=document.getElementById(container)
-this.currentTime=new Date()
-this.targetdate=new Date(targetdate)
-this.timesup=false
-this.updateTime()
+	if (!document.getElementById || !document.getElementById(container)) return
+		this.container=document.getElementById(container)
+		this.currentTime=new Date()
+		this.targetdate=new Date(targetdate)
+		this.timesup=false
+		this.updateTime()
+	}
+	
+	cdtime.prototype.updateTime=function(){
+		var thisobj=this
+		this.currentTime.setSeconds(this.currentTime.getSeconds()+1)
+		setTimeout(function(){thisobj.updateTime()}, 1000) //update time every second
+	}
+	
+	cdtime.prototype.displaycountdown=function(baseunit, functionref){
+		this.baseunit=baseunit
+		this.formatresults=functionref
+		this.showresults()
+	}
+	
+	cdtime.prototype.showresults=function(){
+		var thisobj=this
+		var timediff=(this.targetdate-this.currentTime)/1000 //difference btw target date and current date, in seconds
+		
+		if (timediff<0){ //if time is up
+			this.timesup=true
+			this.container.innerHTML=this.formatresults()
+			return
+		}
+		
+		var oneMinute=60 //minute unit in seconds
+		var oneHour=60*60 //hour unit in seconds
+		var oneDay=60*60*24 //day unit in seconds
+		var dayfield=Math.floor(timediff/oneDay)
+		var hourfield=Math.floor((timediff-dayfield*oneDay)/oneHour)
+		var minutefield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour)/oneMinute)
+		var secondfield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour-minutefield*oneMinute))
+		
+		if (this.baseunit=="hours"){ //if base unit is hours, set "hourfield" to be topmost level
+			hourfield=dayfield*24+hourfield
+			dayfield="n/a"
+		}
+		else if (this.baseunit=="minutes"){ //if base unit is minutes, set "minutefield" to be topmost level
+			minutefield=dayfield*24*60+hourfield*60+minutefield
+			dayfield=hourfield="n/a"
+		}
+		else if (this.baseunit=="seconds"){ //if base unit is seconds, set "secondfield" to be topmost level
+			var secondfield=timediff
+			dayfield=hourfield=minutefield="n/a"
+		}
+		this.container.innerHTML=this.formatresults(dayfield, hourfield, minutefield, secondfield)
+		setTimeout(function(){thisobj.showresults()}, 1000) //update results every second
 }
-cdtime.prototype.updateTime=function(){
-var thisobj=this
-this.currentTime.setSeconds(this.currentTime.getSeconds()+1)
-setTimeout(function(){thisobj.updateTime()}, 1000) //update time every second
-}
-cdtime.prototype.displaycountdown=function(baseunit, functionref){
-this.baseunit=baseunit
-this.formatresults=functionref
-this.showresults()
-}
-cdtime.prototype.showresults=function(){
-var thisobj=this
-var timediff=(this.targetdate-this.currentTime)/1000 //difference btw target date and current date, in seconds
-if (timediff<0){ //if time is up
-this.timesup=true
-this.container.innerHTML=this.formatresults()
-return
-}
-var oneMinute=60 //minute unit in seconds
-var oneHour=60*60 //hour unit in seconds
-var oneDay=60*60*24 //day unit in seconds
-var dayfield=Math.floor(timediff/oneDay)
-var hourfield=Math.floor((timediff-dayfield*oneDay)/oneHour)
-var minutefield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour)/oneMinute)
-var secondfield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour-minutefield*oneMinute))
-if (this.baseunit=="hours"){ //if base unit is hours, set "hourfield" to be topmost level
-hourfield=dayfield*24+hourfield
-dayfield="n/a"
-}
-else if (this.baseunit=="minutes"){ //if base unit is minutes, set "minutefield" to be topmost level
-minutefield=dayfield*24*60+hourfield*60+minutefield
-dayfield=hourfield="n/a"
-}
-else if (this.baseunit=="seconds"){ //if base unit is seconds, set "secondfield" to be topmost level
-var secondfield=timediff
-dayfield=hourfield=minutefield="n/a"
-}
-this.container.innerHTML=this.formatresults(dayfield, hourfield, minutefield, secondfield)
-setTimeout(function(){thisobj.showresults()}, 1000) //update results every second
-}
+
 /////CUSTOM FORMAT OUTPUT FUNCTIONS BELOW//////////////////////////////
 //Create your own custom format function to pass into cdtime.displaycountdown()
 //Use arguments[0] to access "Days" left
@@ -61,11 +68,14 @@ setTimeout(function(){thisobj.showresults()}, 1000) //update results every secon
 //For example, if "baseunit" is set to "hours", arguments[0] becomes meaningless and contains "n/a"
 //For example, if "baseunit" is set to "minutes", arguments[0] and arguments[1] become meaningless etc
 function displayCountDown(){
-if (this.timesup==false){ //if target date/time not yet met
-var displaystring="<span class='count_down'><span class='days'"+arguments[0]+"<span class='label'>days</span></span><span class='hours'>"+arguments[1]+"<span class='label'>hours</span></span><span class='minutes'>"+arguments[2]+"<span class='label'>minutes</span></span><span class='seconds'>"+arguments[3]+"<span class='label'>seconds</span></span></span>"
-}
-else{ //else if target date/time met
-var displaystring="" //Don't display any text
-}
-return displaystring
+	if (this.timesup==false){ //if target date/time not yet met
+		var displaystring="<div class='countdown'><div class='days'><div class='num'>"+arguments[0]+"</div><div class='label'>days</div></div><div class='hours'><div class='num'>"+arguments[1]+"</div><div class='label'>hours</div></div><div class='minutes'><div class='num'>"+arguments[2]+"</div><div class='label'>mins</div></div></div>"
+												// REMEMBER TO REMOVE THIRD ENDING div BEFORE PUTTING THE BACK IN!!!<div class='seconds'><div class='num'>"+arguments[3]+"</div><div class='label'>seconds</div></div></span>"
+	}
+	
+	else { //else if target date/time met
+		var displaystring="" //Don't display any text
+	}
+	
+	return displaystring
 }
