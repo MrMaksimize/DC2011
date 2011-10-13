@@ -7,7 +7,7 @@ $(document).ready(function() {
  */
 	jQuery('body.front .container-12').hide();
 	// show the logo and nav before fading everything in
-	jQuery('#page-outer-wrapper, #page, #page-inner-wrapper, #site-header.container-12, #preface-wrapper.container-12').show();
+	jQuery('body.front #page-outer-wrapper, body.front #page, body.front #page-inner-wrapper, body.front #site-header.container-12, body.front #preface-wrapper.container-12').show();
 	// fadeIn the rest of the stuff
 	jQuery('body.front .container-12').delay(2000).fadeIn('slow');
 	
