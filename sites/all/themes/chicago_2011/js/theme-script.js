@@ -1,5 +1,6 @@
 //Drupal.behaviors.drupalCampChicago = function (context) {
 
+
 $(document).ready(function() {
 
 /**
@@ -36,10 +37,12 @@ $(document).ready(function() {
 		nextLabel: 'Proceed >'
 	});
 	//jQuery("#uc-cart-checkout-form").formToWizard({ prevLabel: '< Previous', nextLabel: 'Proceed >' });
+	 
+});
+//}(jQuery);
 
-
-//jQuery EqualHeights plugin
-	if (jQuery().equalHeights) {
+Drupal.behaviors.themeEqualheights = function (context) {
+  if (jQuery().equalHeights) {
     $("#user-bar-first div.equal-heights div.content-inner").equalHeights();
     $("#user-bar-last div.equal-heights div.content-inner").equalHeights();
     $("#header-first div.equal-heights div.content-inner").equalHeights();
@@ -57,6 +60,5 @@ $(document).ready(function() {
     $("#postscript-four div.equal-heights div.content-inner").equalHeights();
     $("#footer-first div.equal-heights div.content-inner").equalHeights();
     $("#footer-last div.equal-heights div.content-inner").equalHeights();
-  } 
-});
-//}(jQuery);
+  }
+};
