@@ -1665,7 +1665,7 @@ a.callout.login:link {
 	font-weight: 100;
 	line-height: 48px;
 	text-shadow: 1px 1px 2px #fff;
-	padding-top: 24px;
+	padding-top: 22px;
 }
 
 .register-cta .buy-now {
@@ -1674,9 +1674,11 @@ a.callout.login:link {
 
 .register-cta .buy {
 	color: #f27c38;
+	display: inline-block;
 	font-size: 28px;
 	font-weight: bold;
 	line-height: 48px;
+	text-decoration: none;
 	text-shadow: 1px 1px 1px #274150;
 }
 
@@ -1685,7 +1687,7 @@ a.callout.login:link {
 	font-size: 12px;
 	position: absolute;
 	right: 10px;
-	bottom: -6px;
+	bottom: -8px;
 }
 
 /* Countdown Timer */
