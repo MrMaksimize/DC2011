@@ -1638,6 +1638,56 @@ a.callout.login:link {
 	color: #A63C24;
 }
 
+/* Stock Available - Register CTA */
+.register-cta {
+	position: relative;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.register-cta .stock {
+	color: #29736b;
+	display: inline-block;
+	float: left;
+	font-family:  Bodidly, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 138px;
+	line-height: 144px;
+	text-shadow: 1px 1px 2px #fff;
+	padding-right: 16px;
+}
+
+.register-cta .avail {
+	border-bottom: 2px solid #274150;
+	box-shadow: 0 1px 0 #e6e6e6;
+	color: #5a2b2b;
+	display: inline-block;
+	font-size: 32px;
+	font-weight: 100;
+	line-height: 48px;
+	text-shadow: 1px 1px 2px #fff;
+	padding-top: 24px;
+}
+
+.register-cta .buy-now {
+	display: inline-block;
+}
+
+.register-cta .buy {
+	color: #f27c38;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 48px;
+	text-shadow: 1px 1px 1px #274150;
+}
+
+.register-cta .scare-tactic {
+	color: #274150;
+	font-size: 12px;
+	position: absolute;
+	right: 10;
+	bottom: -6px;
+}
+
 /* Countdown Timer */
 #countdown-container {
 	background: transparent url("../images/bg/spacer_black.png") repeat left top;
@@ -1647,6 +1697,7 @@ a.callout.login:link {
 	-webkit-border-radius: 8px;
 	box-shadow: 1px 1px 5px #333333 inset;
 	display: inline-block;
+	margin-top: 12px;
 }
 
 .countdown {
