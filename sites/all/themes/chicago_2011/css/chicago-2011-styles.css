@@ -1675,8 +1675,7 @@ a.callout.login:link {
 .register-cta .buy {
 	color: #f27c38;
 	display: inline-block;
-	font-size: 28px;
-	font-weight: bold;
+	font-size: 33px;
 	line-height: 48px;
 	text-decoration: none;
 	text-shadow: 1px 1px 1px #274150;
@@ -1684,10 +1683,11 @@ a.callout.login:link {
 
 .register-cta .scare-tactic {
 	color: #274150;
-	font-size: 12px;
+	font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+	font-size: 14px;
 	position: absolute;
-	right: 10px;
-	bottom: -8px;
+	right: 12px;
+	bottom: -10px;
 }
 
 /* Countdown Timer */
