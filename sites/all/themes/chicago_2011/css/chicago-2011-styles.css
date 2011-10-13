@@ -254,7 +254,8 @@ body.front #page-inner-wrapper {
 	margin-bottom: 1.5em;
 }
 
-.node {
+.node,
+.faq-content {
 	background: transparent url("../images/bg/spacer_white.png") repeat 0 0;
 	border: medium none;
 	margin-bottom: 0.75em;
