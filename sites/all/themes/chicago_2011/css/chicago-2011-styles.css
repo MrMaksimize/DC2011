@@ -1131,7 +1131,8 @@ form#user-register .form-submit {
 }
 
 .view-news .views-field-created,
-.view-news .views-field-name {
+.view-news .views-field-name label,
+.view-news .views-field-name .field-content {
 	font-size: 0.8em;
 }
 
