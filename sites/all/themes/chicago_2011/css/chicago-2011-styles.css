@@ -1123,6 +1123,15 @@ form#user-register .form-submit {
 	background-position: center bottom;
 }
 
+.view-news {
+  background: url("../images/bg/spacer_white.png") repeat scroll 0 0 transparent;
+  border: medium none;
+  margin-bottom: 0.75em;
+  padding: 0.75em 16px 1.5em;
+}
+
+
+
 /* Attendees List */
 .attendee {
 	display: inline-block;
