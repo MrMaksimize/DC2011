@@ -1130,9 +1130,9 @@ form#user-register .form-submit {
   padding: 0.75em 16px 1.5em;
 }
 
-.view-news .views-field-title a:link,
-.view-news .views-field-title a:visited,
-.view-news .views-field-title a:active, {
+.view-news .view-content .views-row .views-field-title .field-content a:link,
+.view-news .view-content .views-row .views-field-title .field-content a:visited,
+.view-news .view-content .views-row .views-field-title .field-content a:active {
   color: #F27C38;
   font-family: LeagueGothic,Tahoma,Geneva,sans-serif;
   font-size: 1.25em;
@@ -1143,6 +1143,11 @@ form#user-register .form-submit {
   text-decoration: none;
   text-shadow: 1px 1px 0 #005D8F;
   text-transform: uppercase;
+}
+
+.view-news .views-field-name label,
+.view-news .views-field-name .field-content { 
+  display: inline-block; 
 }
 
 /* Attendees List */
