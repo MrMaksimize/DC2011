@@ -1130,7 +1130,20 @@ form#user-register .form-submit {
   padding: 0.75em 16px 1.5em;
 }
 
-
+.view-news .views-field-title a:link,
+.view-news .views-field-title a:visited,
+.view-news .views-field-title a:active, {
+  color: #F27C38;
+  font-family: LeagueGothic,Tahoma,Geneva,sans-serif;
+  font-size: 1.25em;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 !important;
+  padding: 0 0.25em;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #005D8F;
+  text-transform: uppercase;
+}
 
 /* Attendees List */
 .attendee {
