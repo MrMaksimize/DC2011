@@ -335,6 +335,15 @@ ul {
 	margin-bottom: 1.5em;
 }
 
+ul.short {
+	margin: 1.5em 3em 0;
+	max-width: 23em;
+}
+
+ul.short li {
+	margin-bottom: 1.5em;
+}
+
 li ul,
 li ol {
   margin-bottom: 0;
