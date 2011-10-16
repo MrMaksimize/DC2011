@@ -1127,6 +1127,39 @@ form#user-register .form-submit {
 	background-position: center bottom;
 }
 
+.view-news .view-content .views-row {
+  background: url("../images/bg/spacer_white.png") repeat scroll 0 0 transparent;
+  border: medium none;
+  margin-bottom: 0.75em;
+  padding: 0.75em 16px 1.5em;
+}
+
+.view-news .views-field-created,
+.view-news .views-field-name label,
+.view-news .views-field-name .field-content {
+	font-size: 0.8em;
+}
+
+.view-news .view-content .views-row .views-field-title .field-content a:link,
+.view-news .view-content .views-row .views-field-title .field-content a:visited,
+.view-news .view-content .views-row .views-field-title .field-content a:active {
+  color: #F27C38;
+  font-family: LeagueGothic,Tahoma,Geneva,sans-serif;
+  font-size: 1.25em;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0 !important;
+  padding: 0;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #005D8F;
+  text-transform: uppercase;
+}
+
+.view-news .views-field-name label,
+.view-news .views-field-name .field-content { 
+  display: inline-block; 
+}
+
 /* Attendees List */
 .attendee {
 	display: inline-block;
