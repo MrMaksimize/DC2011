@@ -151,6 +151,10 @@ p {
 	line-height: 1.5em;
 }
 
+hr {
+	margin: 1.5em auto;
+}
+
 /* ----- /Type & Colors */
 
 /* Base Styling - HTML, Body & Page ------------------------ */
