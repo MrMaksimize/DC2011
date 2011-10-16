@@ -1,0 +1,12 @@
+name = Views random seed
+description = "Adds a random order handler with seed so random order listings with paging works."
+package = Views
+core = 6.x
+dependencies[] = views
+
+; Information added by drupal.org packaging script on 2011-08-29
+version = "6.x-1.4"
+core = "6.x"
+project = "views_random_seed"
+datestamp = "1314613321"
+

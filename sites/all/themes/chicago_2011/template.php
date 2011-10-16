@@ -35,6 +35,10 @@ function chicago_2011_theme(&$existing, $type, $theme, $path) {
       'arguments' => array('attributes'),
     ),
   );
+	
+	// Custom hook for user account links block creation
+	$hooks['user_account_links'] = omega_theme($existing, $type, $theme, $path);
+	
   $hooks = omega_theme($existing, $type, $theme, $path);
   // Add your theme hooks like this:
   /*
@@ -43,6 +47,14 @@ function chicago_2011_theme(&$existing, $type, $theme, $path) {
   // @TODO: Needs detailed comments. Patches welcome!
   return $hooks;
 }
+
+/*function chicago_2011_user_account_links(&$vars, $user) {
+	if (user_is_annonymous) {
+	};
+	
+	if (user_is_logged_in) {
+	};
+}*/
 
 /**
  * The region_builder function will create the variables needed to create
@@ -153,13 +165,15 @@ function chicago_2011_preprocess(&$vars, $hook) {
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
- *
+ */
+	
 
 function chicago_2011_preprocess_page(&$vars, $hook) {
-	$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
-	$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
+	//dpm($vars);
+	//$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
+	//$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
 }
-*/
+
 
 /**
  * Override or insert variables into the node templates.
@@ -169,11 +183,15 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
+
 function chicago_2011_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+  //dpm($vars);
 }
-// */
+
+function chicago_2011_preprocess_user_profile(&$vars) {
+	//dpm($vars);
+}
+
 
 /**
  * Override or insert variables into the comment templates.
@@ -224,3 +242,11 @@ function chicago_2011_render_attributes($attributes) {
   return $output;
 	//return omega_render_attributes($attributes);  
 }
+
+/* function chicago_2011_links(&$links, $node) {
+  foreach ($links as $module => $link) {
+    if (strstr($module, 'flag')) {
+			dpm(get_defined_vars());
+    }
+  }
+}*/
