@@ -259,12 +259,15 @@ body.front #page-inner-wrapper {
 }
 
 .node,
-.faq-content {
+.faq-content,
+.page-sponsors #main-content {
 	background: transparent url("../images/bg/spacer_white.png") repeat 0 0;
 	border: medium none;
 	margin-bottom: 0.75em;
 	padding: 0.75em 16px 1.5em;
 }
+
+.page-sponsors .node {display: none;}
 
 #content-bottom {
 	margin-bottom: 1.5em;
