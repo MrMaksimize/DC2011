@@ -37,6 +37,7 @@ regions[preface_first] = preface first
 regions[preface_middle] = preface middle
 regions[preface_last] = preface last
 
+regions[content] = content
 regions[content_top] = content top
 regions[content_bottom] = content bottom
 
