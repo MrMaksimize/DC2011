@@ -1060,7 +1060,7 @@ form#user-register .form-submit {
 .view-front-page-slideshow .title {
 	position: absolute;
 	top: 242px;
-	padding-left: 12px;
+	padding-left: 16px;
 	z-index: 4;
 }
 
@@ -1082,7 +1082,7 @@ form#user-register .form-submit {
 }
 
 .view-front-page-slideshow .body {
-	background-color: #fff;
+	background: transparent url("../images/bg/spacer_white.png") repeat left top;
 	box-shadow: 5px 5px 12px -5px rgba(0, 0, 0, 0.8);
 	top: 230px;
 	left: -22px;
@@ -1095,13 +1095,13 @@ form#user-register .form-submit {
 .view-front-page-slideshow .body p {
 	position: relative;
 	top: 44px;
-	padding: 0 12px;
+	padding: 0 12px 0 48px;
 	line-height: 24px;
 }
 
 .view-front-page-slideshow .more {
 	top: 350px;
-	right: 360px;
+	right: 480px;
 	position: absolute;
 	z-index: 5;
 }
@@ -1126,7 +1126,10 @@ form#user-register .form-submit {
 }
 
 .views-slideshow-controls-bottom a:hover,
-.views-slideshow-controls-bottom a:focus,
+.views-slideshow-controls-bottom a:focus {
+	background-position: center -25px;
+}
+
 .views-slideshow-controls-bottom .activeSlide a {
 	background-position: center bottom;
 }
@@ -1383,6 +1386,27 @@ h5.fullname {
 
 .presentation .exp-lvl {
 	display: none;
+}
+
+/* Proposed Sessions - Block */
+.block .sessions-list .proposed-session {
+	border-bottom: 1px solid #333;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+}
+
+.block .sessions-list .proposed-session.last {
+	border-bottom: medium none;
+	margin-bottom: 0;
+}
+
+.proposed-session .speaker {
+	display: inline-block;
+}
+
+.proposed-session .vote {
+	display: inline-block;
+	float: right;
 }
 
 /* Flags */
@@ -1801,202 +1825,206 @@ a.callout.login:link {
 
 /* Twitter Widget - Style Override */
 .block .twtr-widget {
-    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
-    font-size: 12px !important;
-    position: relative;
+	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif !important;
+	font-size: 12px !important;
+	position: relative;
 }
 .block .twtr-fullscreen {
-    font-size: 220% !important;
+	font-size: 220% !important;
 }
 .block .twtr-fullscreen .twtr-new-results {
 }
 .block .twtr-inactive {
-    display: none;
+	display: none;
 }
 .block .twtr-widget a img {
-    border: 0 none !important;
+	border: 0 none !important;
 }
 .block .twtr-doc {
-    border-radius: 5px 5px 5px 5px;
-    font-weight: normal;
-    overflow: hidden;
-    text-align: left;
-    width: 100%;
+	border-radius: 5px 5px 5px 5px;
+	font-weight: normal;
+	overflow: hidden;
+	text-align: left;
+	width: 100%;
 }
 .block .twtr-bd {
-    padding: 0 1px;
+  padding: 0; /* edit */
 }
 .block .twtr-widget .twtr-tweet-wrap {
-    overflow: hidden;
-    padding: 6px 8px;
+	background: transparent url("../images/bg/spacer_white.png") repeat left top;
+	overflow: hidden;
+	padding: 6px 8px;
 }
 .block .twtr-fullscreen .twtr-tweet-wrap {
-    padding: 20px;
+	padding: 20px;
 }
 .block .twtr-widget .twtr-tweet {
-    border-bottom: medium none;
-    overflow: hidden;
-    width: 400px;
+	border-bottom: medium none;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 2px 2px 2px #333333;
+	margin: 0 10px 16px;
+	overflow: hidden;
+	width: 440px;
 }
 .block .twtr-widget-profile img.twtr-profile-img {
-    border: 0 none !important;
-    display: block;
-    float: left;
-    height: 31px;
-    width: 31px;
+	border: 0 none !important;
+	display: block;
+	float: left;
+	height: 31px;
+	width: 31px;
 }
-.twtr-widget h3, .twtr-widget h4, .twtr-widget p {
-.block     line-height: 1.2 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: auto !important;
+.block .twtr-widget h3,
+.block .twtr-widget h4,
+.block .twtr-widget p {
+	line-height: 1.2 !important;
+	margin: 0 !important; 
+	padding: 0 !important;
+	width: auto !important;
 }
 .block .twtr-widget-profile h3, .twtr-widget-profile h4 {
-    margin: 0 0 0 40px !important;
+	margin: 0 0 0 40px !important;
 }
 .block .twtr-widget h3 {
-    font-size: 11px !important;
-    font-weight: normal !important;
+	font-size: 11px !important;
+	font-weight: normal !important;
 }
 .block .block .twtr-widget h4 {
-    font-size: 16px !important;
+	font-size: 16px !important;
 }
 .block .twtr-widget em, .twtr-widget .twtr-new-results {
-    display: block;
-    font-size: 9px;
-    font-style: normal;
-    margin-top: 2px;
+	display: block;
+	font-size: 9px;
+	font-style: normal;
+	margin-top: 2px;
 }
 .block .twtr-widget .twtr-new-results {
-    bottom: 5px;
-    display: block;
-    line-height: 0.9;
-    margin: 0 auto -10px !important;
-    padding: 3px;
-    position: relative;
-    text-align: center;
+	bottom: 5px;
+	display: block;
+	line-height: 0.9;
+	margin: 0 auto -10px !important;
+	padding: 3px;
+	position: relative;
+	text-align: center;
 }
 .block .twtr-results-inner {
-    bottom: -2px;
-    font-size: 100%;
-    line-height: 1;
-    margin: 0 auto;
-    padding: 4px 0;
-    position: relative;
-    text-align: center;
-    width: 40%;
-    z-index: 2;
+	bottom: -2px;
+	font-size: 100%;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 4px 0;
+	position: relative;
+	text-align: center;
+	width: 40%;
+	z-index: 2;
 }
 .block .twtr-results-hr {
-    background: none repeat scroll 0 0 transparent;
-    border-bottom: 1px dotted #DDDDDD;
-    bottom: 7px;
-    height: 1px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    z-index: 1;
+	background: none repeat scroll 0 0 transparent;
+	border-bottom: 1px dotted #DDDDDD;
+	bottom: 7px;
+	height: 1px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	z-index: 1;
 }
 .block .twtr-new-results span {
-    display: block;
-    font-size: 9px !important;
-    position: relative;
-    top: -14px;
-    z-index: 3;
+	display: block;
+	font-size: 9px !important;
+	position: relative;
+	top: -14px;
+	z-index: 3;
 }
 .block .twtr-fullscreen .twtr-new-results span {
-    font-size: 24px !important;
+	font-size: 24px !important;
 }
-.block .twtr-hd {
-    overflow: hidden;
-    padding: 10px;
-    position: relative;
+.block .twtr-hd /* edit */{
+	display: none;
 }
 .block .twtr-fullscreen .twtr-hd {
-    height: 0;
-    padding: 0;
+	height: 0;
+	padding: 0;
 }
 .block .twtr-timeline {
-    border-radius: 6px 6px 6px 6px;
-    height: 225px;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
+	border-radius: 0;
+	height: 225px;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
 }
 .block .twtr-scroll .twtr-timeline {
-    overflow-x: hidden;
-    overflow-y: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 .block .twtr-widget .twtr-tweet:last-child {
-    border-bottom-width: 0;
+	border-bottom-width: 0;
 }
 .block .twtr-ft {
-    position: relative;
+	position: relative;
 }
 .block .twtr-ft div {
-    overflow: hidden;
-    padding: 10px;
+	overflow: hidden;
+	padding: 10px;
 }
 .block .twtr-ft span {
-    float: right;
-    text-align: right;
+	float: right;
+	text-align: right;
 }
 .block .twtr-ft a {
-    display: block;
-    float: left;
+	display: block;
+	float: left;
 }
 .block .twtr-ft a img {
-    position: relative;
-    top: 2px;
+	position: relative;
+	top: 2px;
 }
 .block .twtr-ft span a {
-    float: none;
+	float: none;
 }
 .block .twtr-avatar {
-    display: block;
-    float: left;
-    height: 40px;
-    overflow: hidden;
-    width: 40px;
+	display: block;
+	float: left;
+	height: 40px;
+	overflow: hidden;
+	width: 40px;
 }
 .block .twtr-fullscreen .twtr-avatar {
-    height: 80px;
-    width: 80px;
+	height: 80px;
+	width: 80px;
 }
 .block .twtr-img {
-    height: 25px;
-    width: 25px;
+	height: 25px;
+	width: 25px;
 }
 .block .twtr-img img {
-    height: 30px;
-    width: 30px;
+	height: 30px;
+	width: 30px;
 }
 .block .twtr-fullscreen .twtr-img img {
-    height: 72px;
-    width: 72px;
+	height: 72px;
+	width: 72px;
 }
 .block .twtr-fullscreen a.twtr-join-conv {
-    display: none;
+	display: none;
 }
 .block .twtr-tweet-text {
-    margin-left: 40px;
+	margin-left: 40px;
 }
 .block .twtr-fullscreen .twtr-tweet-text {
-    margin-left: 90px;
+	margin-left: 90px;
 }
 .block .twtr-popular {
-    border-radius: 3px 3px 3px 3px;
-    display: inline-block;
-    font-size: 10px;
-    margin-top: 3px;
-    opacity: 0.8;
-    padding: 3px;
+	border-radius: 3px 3px 3px 3px;
+	display: inline-block;
+	font-size: 10px;
+	margin-top: 3px;
+	opacity: 0.8;
+	padding: 3px;
 }
 .block .twtr-doc a {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 .block .twtr-doc a:hover {
-    text-decoration: underline !important;
+	text-decoration: underline !important;
 }
 
 /* FiveStar Widget */
@@ -2254,7 +2282,3 @@ form#user-login #edit-submit {
 	margin-left: 0;
 	margin-right: 0;
 } */
-
-.jcarousel-skin-ie7 .jcarousel-clip-horizontal, .jcarousel-skin-ie7 .jcarousel-container-horizontal {
-    width: 540px;
-}
