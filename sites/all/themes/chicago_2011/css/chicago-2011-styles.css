@@ -1178,7 +1178,7 @@ form#user-register .form-submit {
 	background: #fff url('../images/bg/druplicon_pro.png') no-repeat center center;
 }
 
-.attendee.pro-0 .attendee-overlay {
+.attendee.pro- .attendee-overlay {
 	background-image: none;
 }
 
@@ -1848,7 +1848,7 @@ a.callout.login:link {
 	width: 100%;
 }
 .block .twtr-bd {
-  padding: 0; /* edit */
+  padding: 0;
 }
 .block .twtr-widget .twtr-tweet-wrap {
 	background: transparent url("../images/bg/spacer_white.png") repeat left top;
@@ -1937,7 +1937,7 @@ a.callout.login:link {
 .block .twtr-fullscreen .twtr-new-results span {
 	font-size: 24px !important;
 }
-.block .twtr-hd /* edit */{
+.block .twtr-hd {
 	display: none;
 }
 .block .twtr-fullscreen .twtr-hd {
@@ -1959,7 +1959,7 @@ a.callout.login:link {
 	border-bottom-width: 0;
 }
 .block .twtr-ft {
-	position: relative;
+	display: none;
 }
 .block .twtr-ft div {
 	overflow: hidden;
@@ -2282,3 +2282,13 @@ form#user-login #edit-submit {
 	margin-left: 0;
 	margin-right: 0;
 } */
+
+#webform-client-form-67 {
+	coumn-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+}
+
+#webform-client-form-67 #edit-logo-wrapper {
+	max-width: 100%;
+}
