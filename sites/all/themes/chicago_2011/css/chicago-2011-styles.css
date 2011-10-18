@@ -1401,12 +1401,104 @@ h5.fullname {
 }
 
 .proposed-session .speaker {
+	border-bottom: 2px solid transparent;
 	display: inline-block;
+}
+
+.proposed-session .speaker a:link,
+.proposed-session .speaker a:visited {
+	color: #f27c38;
+	font-weight: bold;
+}
+
+.proposed-session .speaker:hover {
+	border-bottom-color: #f27c38;
+}
+
+.proposed-session .speaker a:hover,
+.proposed-session .speaker a:focus {
+	text-decoration: none;
 }
 
 .proposed-session .vote {
 	display: inline-block;
 	float: right;
+}
+
+/* Session List
+ *
+ * Exposed Filters ------------------------------------------------ */
+.view.sessions-list .views-exposed-widget {
+	display: inline-block;
+	float: none;
+	padding: 0 10px 0 0;
+	vertical-align: bottom;
+}
+
+.view.sessions-list .views-exposed-widget label {
+	border-bottom: 2px solid #545454;
+	margin-bottom: 0.5em;
+	padding-bottom: 3px;
+}
+
+.view.sessions-list .bef-select-as-checkboxes {
+	margin: 0;
+}
+
+.view.sessions-list .bef-checkboxes div {
+	box-shadow: 2px 2px 2px #333333;
+	-moz-box-shadow: 2px 2px 2px #333333;
+	-webkit-box-shadow: 2px 2px 2px #333333;
+	display: inline-block;
+	margin-right: 8px;
+	padding: 3px 3px 2px 0;
+}
+
+.view.sessions-list .bef-checkboxes div.form-item.highlight {
+	box-shadow: 2px 2px 2px #333333 inset;
+	-moz-box-shadow: 2px 2px 2px #333333 inset;
+	-webkit-box-shadow: 2px 2px 2px #333333 inset;
+}
+
+.view.sessions-list .bef-checkboxes div input[type="checkbox"] {
+	margin: 2px 0 0 5px;
+}
+
+.view.sessions-list .bef-checkboxes div label {
+	border: medium none;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-shadow: -1px -1px 0px #545454;
+	text-transform: uppercase;
+	margin-right: 7px;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+/* Specific Filter Options: Session Track*/
+.view.sessions-list #edit-field-track-value-many-to-one-Code-wrapper {
+	background-color: #fe6e05;
+}
+
+.view.sessions-list #edit-field-track-value-many-to-one-Build-wrapper {
+	background-color: #114ba7;
+}
+
+.view.sessions-list #edit-field-track-value-many-to-one-Design-wrapper {
+	background-color: #d9362b;
+}
+
+.view.sessions-list #edit-field-track-value-many-to-one-Business-wrapper {
+	background-color: #29abe1;
+}
+
+.view.sessions-list #edit-field-track-value-many-to-one-Community-wrapper {
+	background-color: #11a72d;
+}
+
+.view.sessions-list .views-exposed-widgets #edit-submit-sessions {
+	margin: 0;
 }
 
 /* Flags */
@@ -1946,7 +2038,7 @@ a.callout.login:link {
 }
 .block .twtr-timeline {
 	border-radius: 0;
-	height: 225px;
+	height: auto !important;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
@@ -2195,6 +2287,7 @@ form.fivestar-widget div.description {
 
 #fancy_login_ajax_loader {
 	display:none;
+	width: 300px !important;
 }
 
 #ssl_icon {

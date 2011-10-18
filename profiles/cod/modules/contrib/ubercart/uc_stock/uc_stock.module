@@ -302,6 +302,7 @@ function uc_stock_decrement_product_stock($product, $key, $order) {
  *   Order object.
  */
 function uc_stock_adjust_product_stock($product, $key, $order) {
+var_dump($order);
   // Product has an active stock?
   if (!uc_stock_is_active($product->model)) {
     return;
