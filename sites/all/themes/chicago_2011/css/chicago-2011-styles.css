@@ -520,12 +520,12 @@ ul.quicktabs_tabs a:hover {
 
 .block-menu_block ul.menu li a:link,
 .block-menu_block ul.menu li a:visited {
-	background: transparent url('../images/star.png') no-repeat left center;
+	background: transparent url('../images/star.png') no-repeat 12px center;
 	color: #545454;
 	font-family: TrajanPro;
 	font-size: 16px;
 	line-height: 24px;
-	padding: 3px 0 3px 32px;
+	padding: 3px 0 3px 48px;
 	text-transform: none;
 }
 
