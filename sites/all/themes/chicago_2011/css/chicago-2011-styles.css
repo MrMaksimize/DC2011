@@ -1106,6 +1106,13 @@ form#user-register .form-submit {
 	z-index: 5;
 }
 
+.view-front-page-slideshow .credit {
+	top: 10px;
+	right: 10px;
+	position: absolute;
+	z-index: 6;
+}
+
 .views-slideshow-controls-bottom {
 	position: absolute;
 	right: 1em;
