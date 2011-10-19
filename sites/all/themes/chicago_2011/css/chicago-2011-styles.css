@@ -490,13 +490,13 @@ ul.quicktabs_tabs a:hover {
 }
 
 /* Menu Blocks */
-.block-menu_block ul {
+.block-menu_block ul.menu {
 	background-color: #29ABE1;
 	margin: 0 0 0 24px;
 	padding: 8px 0;
 }
 
-.block-menu_block li {
+.block-menu_block ul.menu li {
 	background-color: #FFFFFF;
 	box-shadow: 3px 3px 3px 0 #0178A3;
 	list-style: none outside none;
@@ -507,7 +507,7 @@ ul.quicktabs_tabs a:hover {
 	width: auto;
 }
 
-.block-menu_block li:before {
+.block-menu_block ul.menu li:before {
   border-color: #ECECEC #ECECEC transparent transparent;
   border-style: solid;
   border-width: 4px 8px;
@@ -518,8 +518,8 @@ ul.quicktabs_tabs a:hover {
   width: 0;
 }
 
-.block-menu_block li a:link,
-.block-menu_block li a:visited {
+.block-menu_block ul.menu li a:link,
+.block-menu_block ul.menu li a:visited {
 	background: transparent url('../images/star.png') no-repeat left center;
 	color: #545454;
 	font-family: TrajanPro;
@@ -529,9 +529,9 @@ ul.quicktabs_tabs a:hover {
 	text-transform: none;
 }
 
-.block-menu_block li a:hover,
-.block-menu_block li a:focus,
-.block-menu_block li a.active {
+.block-menu_block ul.menu li a:hover,
+.block-menu_block ul.menu li a:focus,
+.block-menu_block ul.menu li a.active {
 	color: #d9362b;
 }
 
