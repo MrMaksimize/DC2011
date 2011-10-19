@@ -62,7 +62,14 @@
 			<?php print $submitted ?>
     </div><!-- /.submitted -->
   <?php endif; ?>
-  
+
+    <?php if ($node_top && !$teaser): ?>
+    <div id="node-top" class="node-top">
+      <div id="node-top-inner" class="node-top-inner inner">
+        <?php print $node_top; ?>
+      </div><!-- /node-top-inner -->
+    </div><!-- /node-top -->
+    <?php endif; ?>  
 
   <?php print $content ?>
   
@@ -72,5 +79,13 @@
   
   <?php if ($links):?>
   	<div class="node-links"><?php print $links; ?></div>
+  <?php endif; ?>
+
+  <?php if ($node_bottom && !$teaser): ?>
+  <div id="node-bottom" class="node-bottom">
+    <div id="node-bottom-inner" class="node-bottom-inner">
+      <?php print $node_bottom; ?>
+    </div><!-- /node-bottom-inner -->
+  </div><!-- /node-bottom -->
   <?php endif; ?>
 </div>
