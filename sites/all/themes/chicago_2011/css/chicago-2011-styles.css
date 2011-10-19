@@ -1368,6 +1368,11 @@ h5.fullname {
   float: left;
   font-size: 0.625em;
   max-width: 200px;
+	padding: 10px 0;
+}
+
+.presentation .presenter .picture {
+	padding-right: 10px;
 }
 
 .presentation .schedule-add.button {
@@ -1454,7 +1459,7 @@ h5.fullname {
 	padding: 3px 3px 2px 0;
 }
 
-.view.sessions-list .bef-checkboxes div.form-item.highlight {
+.view.sessions-list .bef-checkboxes div.highlight {
 	box-shadow: 2px 2px 2px #333333 inset;
 	-moz-box-shadow: 2px 2px 2px #333333 inset;
 	-webkit-box-shadow: 2px 2px 2px #333333 inset;
@@ -1474,6 +1479,10 @@ h5.fullname {
 	margin-right: 7px;
 	margin-bottom: 0;
 	padding: 0;
+}
+
+.view.sessions-list .bef-checkboxes div.highlight label {
+	text-shadow: 1px 1px 0px #000;
 }
 
 /* Specific Filter Options: Session Track*/
