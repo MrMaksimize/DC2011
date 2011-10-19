@@ -489,6 +489,52 @@ ul.quicktabs_tabs a:hover {
   color: #f27c38;
 }
 
+/* Menu Blocks */
+.block-menu_block ul {
+	background-color: #29ABE1;
+	margin: 0 0 0 24px;
+	padding: 8px 0;
+}
+
+.block-menu_block li {
+	background-color: #FFFFFF;
+	box-shadow: 3px 3px 3px 0 #0178A3;
+	list-style: none outside none;
+	margin: 8px 0 !important;
+	padding: 6px 0;
+	position: relative;
+	left: -16px;
+	width: auto;
+}
+
+.block-menu_block li:before {
+  border-color: #ECECEC #ECECEC transparent transparent;
+  border-style: solid;
+  border-width: 4px 8px;
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 100%;
+  width: 0;
+}
+
+.block-menu_block li a:link,
+.block-menu_block li a:visited {
+	background: transparent url('../images/star.png') no-repeat left center;
+	color: #545454;
+	font-family: TrajanPro;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 3px 0 3px 32px;
+	text-transform: none;
+}
+
+.block-menu_block li a:hover,
+.block-menu_block li a:focus,
+.block-menu_block li a.active {
+	color: #d9362b;
+}
+
 /* General Menu Link Styles */
 ul.menu a:link,
 ul.menu a:visited {
