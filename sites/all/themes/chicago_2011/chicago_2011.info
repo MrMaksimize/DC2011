@@ -44,6 +44,7 @@ regions[content_bottom] = content bottom
 regions[node_top] = node top
 regions[node_bottom] = node bottom
 
+regions[postscript_top] = postscript top
 regions[postscript_one] = postscript 1
 regions[postscript_two] = postscript 2
 regions[postscript_three] = postscript 3

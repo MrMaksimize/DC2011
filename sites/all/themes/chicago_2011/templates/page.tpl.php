@@ -164,9 +164,14 @@
       </div><!-- /#main-content-container -->
     </div><!-- /#main-zone-wrapper -->
     
-    <?php if($postscript_one || $postscript_two || $postscript_three || $postscript_four): ?>    
+    <?php if($postscript_top || $postscript_one || $postscript_two || $postscript_three || $postscript_four): ?>    
     <div id="postscript-zone-wrapper" class="zone-wrapper postscript-zone-wrapper">
       <div id="postscript-wrapper" class="container-<?php print $postscript_container_width; ?> clearfix">
+        <?php if($postscript_top): ?>
+          <div id="postscript-top" class="postscript <?php print $postscript_top_classes; ?>">
+            <?php print $postscript_top; ?>
+          </div><!-- /#postscript-one -->
+        <?php endif; ?>
         <?php if($postscript_one): ?>
           <div id="postscript-one" class="postscript <?php print $postscript_one_classes; ?>">
             <?php print $postscript_one; ?>
