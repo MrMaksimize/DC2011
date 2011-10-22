@@ -142,10 +142,15 @@ settings[chicago_2011_content_container_width] = 12
 settings[chicago_2011_sidebar_first_width] = 3
 settings[chicago_2011_content_main_width] = 5
 settings[chicago_2011_sidebar_last_width] = 4
+settings[chicago_2011_node_top_width] = 5
+settings[chicago_2011_node_bottom_width] = 5
 
 ; ------- Region settings for postscript regions
 
 settings[chicago_2011_postscript_container_width] = 12
+settings[chicago_2011_postscript_top_width] = 12
+settings[chicago_2011_postscript_top_prefix] = 0
+settings[chicago_2011_postscript_top_suffix] = 0
 settings[chicago_2011_postscript_one_width] = 4
 settings[chicago_2011_postscript_one_prefix] = 0
 settings[chicago_2011_postscript_one_suffix] = 0

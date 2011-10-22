@@ -22,7 +22,7 @@ a:visited {
 	color: #0f638d;
 	text-align: left;
 	text-decoration: none;
-	/*line-height: 24px;*/
+	line-height: 24px;
 }
 
 /* Hover/Active Link Styles */
@@ -276,7 +276,9 @@ body.front #page-inner-wrapper {
 
 #sidebar-first {}
 
-#sidebar-last {}
+#sidebar-last {
+	padding-top: 72px;
+}
 
 /* Postscript */
 #postscript-wrapper {
@@ -642,9 +644,13 @@ ul.main-menu a.active-trail {
 
 /* Footer Elements ------------------------------------ */
 #footer-message {
+	color: #3C3C3C;
+	float: left;
 	line-height: 24px;
 	margin: 0;
 	padding: 1.5em 0;
+	text-align: center;
+	width: 100%;
 }
 
 /* Vertical tabs -------------------------------------- */
@@ -833,7 +839,7 @@ label {
 	margin-top: 0;
 	margin-bottom: 1.5em;
 	width: auto;
-	max-width: 400px;
+	max-width: 450px;
 }
 
 .form-item .description {
@@ -1246,6 +1252,10 @@ form#user-register .form-submit {
 	padding: 0 16px;
 }
 
+.view-id-Sponsors .sponsor-logo {
+	text-align: center;
+}
+
 .view-id-Sponsors .website-link {
 	text-align: center;
 	margin-bottom: 24px;
@@ -1422,8 +1432,10 @@ h5.fullname {
 .session-info {
 	float: left;
 	margin-right: 10px;
-	width: 400px;
 	padding-top: 6px;
+	width: 400px;
+	max-height: 54px;
+	overflow: hidden;
 }
 
 .session-meta {
@@ -1700,7 +1712,8 @@ a.callout.active {
 	text-shadow: none;
 }
 
-a.callout.login:link {
+a.callout.login:link,
+a.callout.register:link {
 	text-shadow: none;
 }
 
@@ -1887,7 +1900,7 @@ a.callout.login:link {
 	color: #f27c38;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin: 0 1em;
+	margin: 0 0.5em;
 }
 
 .dcc-user-welcome a:hover,
@@ -1931,7 +1944,12 @@ a.callout.login:link {
 }
 
 .register-cta .buy-now {
+	color: #f27c38;
 	display: inline-block;
+	font-size: 33px;
+	line-height: 48px;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #274150;
 }
 
 .register-cta .buy {
@@ -2133,7 +2151,7 @@ a.callout.login:link {
 }
 .block .twtr-timeline {
 	border-radius: 0;
-	height: auto !important;
+	/*height: auto !important;*/
 	overflow: hidden;
 	position: relative;
 	z-index: 2;

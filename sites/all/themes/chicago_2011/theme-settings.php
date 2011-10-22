@@ -481,6 +481,20 @@ function chicago_2011_settings($saved_settings) {
           '#options' => $grids,
           '#description' => t('This number, combined with the Sidebar First and Main Content determine the share of your grid for each element.'),
         );
+        $form['chicago_2011_container']['chicago_2011_regions']['main']['chicago_2011_node_top_width'] = array(
+          '#type' => 'select',
+          '#title' => t('Contextual Width for Node Top'),
+          '#default_value' => $saved_settings['chicago_2011_node_top_width'],
+          '#options' => $grids,
+          '#description' => t('This number, combined with the Sidebar First and Main Content determine the share of your grid for each element.'),
+        );
+        $form['chicago_2011_container']['chicago_2011_regions']['main']['chicago_2011_node_bottom_width'] = array(
+          '#type' => 'select',
+          '#title' => t('Contextual Width for Node Bottom'),
+          '#default_value' => $saved_settings['chicago_2011_node_bottom_width'],
+          '#options' => $grids,
+          '#description' => t('This number, combined with the Sidebar First and Main Content determine the share of your grid for each element.'),
+        );
         $options = array(t('Combine Sidebars on all except the listed pages.'), t('Combine Sidebars on only the listed pages.'));
         $description = t("Enter one page per line as Drupal paths. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array('%blog' => 'blog', '%blog-wildcard' => 'blog/*', '%front' => '<front>'));
         $form['chicago_2011_container']['chicago_2011_regions']['main']['sidebar_combine'] = array(
@@ -511,6 +525,31 @@ function chicago_2011_settings($saved_settings) {
           '#default_value' => $saved_settings['chicago_2011_postscript_container_width'],
           '#options' => $containers,
           '#description' => t('Container Grid width for the postscript regions.'),
+        );
+        $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_top_width'] = array(
+          '#type' => 'select',
+          '#title' => t('Contextual Width for Postscript Top'),
+          '#default_value' => $saved_settings['chicago_2011_postscript_top_width'],
+          '#options' => $grids,
+          '#description' => t('Grid width of the first postscript region. This number should be less than or equal to the container width defined above.'),
+        );
+        $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_top_prefix'] = array(
+          '#type' => 'select',
+          '#title' => t('Prefix Spacing for Postscript Top'),
+          '#default_value' => $saved_settings['chicago_2011_postscript_top_prefix'],
+          '#options' => $spacing,
+          '#prefix' => '<div class="prefix_config">',
+          '#suffix' => '</div>',
+          '#description' => t('Adding prefix grids to this element will add padding to the left side of the element, creating spacing between the previous element.'),
+        );
+         $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_top_suffix'] = array(
+          '#type' => 'select',
+          '#title' => t('Suffix Spacing for Postscript Top'),
+          '#default_value' => $saved_settings['chicago_2011_postscript_top_suffix'],
+          '#options' => $spacing,
+          '#prefix' => '<div class="suffix_config">',
+          '#suffix' => '</div>',
+          '#description' => t('Adding suffix grids to this element will add padding to the right side of the element, creating spacing between the next element.'),
         );
         $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_one_width'] = array(
           '#type' => 'select',
