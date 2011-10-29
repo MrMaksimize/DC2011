@@ -41,9 +41,6 @@ regions[content] = content
 regions[content_top] = content top
 regions[content_bottom] = content bottom
 
-regions[node_top] = node top
-regions[node_bottom] = node bottom
-
 regions[postscript_top] = postscript top
 regions[postscript_one] = postscript 1
 regions[postscript_two] = postscript 2
@@ -142,8 +139,6 @@ settings[chicago_2011_content_container_width] = 12
 settings[chicago_2011_sidebar_first_width] = 3
 settings[chicago_2011_content_main_width] = 5
 settings[chicago_2011_sidebar_last_width] = 4
-settings[chicago_2011_node_top_width] = 5
-settings[chicago_2011_node_bottom_width] = 5
 
 ; ------- Region settings for postscript regions
 

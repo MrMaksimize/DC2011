@@ -209,12 +209,14 @@
             <?php print $footer_last; ?>
           </div><!-- /#footer-last -->
         <?php endif; ?>
-				<?php if ($footer_message): ?>
+      </div><!-- /#footer-wrapper -->
+			<?php if ($footer_message): ?>
+      	<div id="footer-message-wrapper" class="footer-message-wrapper">
           <div id="footer-message">
             <?php print $footer_message; ?>
           </div><!-- /#footer-message -->
-        <?php endif; ?>
-      </div><!-- /#footer-wrapper -->
+        </div><!-- /#footer-message-wrapper -->
+      <?php endif; ?>
     </div><!-- /#footer-zone-wrapper -->
     <?php endif; ?>
   </div><!-- /#page-inner-wrapper -->
