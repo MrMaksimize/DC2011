@@ -13,6 +13,7 @@ base theme = omega
 stylesheets[all][] = css/chicago-2011-styles.css
 stylesheets[all][] = css/fonts.css
 stylesheets[all][] = css/formalize.css
+stylesheets[screen and (max-width: 480px)][] = css/chicago2011-480.css
 
 ; ------- DEFAULT SCRIPTS
 
@@ -20,7 +21,8 @@ scripts[] = js/formToWizard.js
 scripts[] = js/jquery.delay.plugin.js
 scripts[] = js/countdown.js
 scripts[] = js/theme-script.js
-
+;scripts[] = js/mobile.js
+;scripts[] = js/mobile_grid_response.js
 
 ; ------- Declare default theme regions
 

@@ -169,9 +169,45 @@ function chicago_2011_preprocess(&$vars, $hook) {
 	
 
 function chicago_2011_preprocess_page(&$vars, $hook) {
-	//dpm($vars);
-	//$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
-	//$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
+  //dpm($vars);
+  //$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
+  //$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
+  $vars['head'] = $vars['head'].'<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=NO"/>';
+  //drupal_add_js('sites/all/themes/chicago_2011/js/textSizer.js');
+  drupal_add_js('sites/all/themes/chicago_2011/js/mobile_grid_response.js');
+  $response_settings = array(
+    'prevState' => 'full',
+    //state will be set up on load,
+    'gridOps' => array(
+      'globals' => array(
+        array('oldSelector' => 'grid-1', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-2', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-3', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-4', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-5', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-6', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-7', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-8', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-9', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-10', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-11', 'newSelector' => 'container-12'),
+        array('oldSelector' => 'grid-12', 'newSelector' => 'container-12'),
+      ),
+      //after defining global replacements, time to define replacements that
+      //happen specifically within a specific selector (yup i know)
+      /*'specOps' => array(
+        '#site-header' => array(
+          //array('oldSelector' => 'grid-5', 'newSelector' => 'container-12'),
+          //array('oldSelector' => 'grid-7', 'newSelector' => 'container-12'),
+        ),
+        '#preface-zone-wrapper' => array(
+          //array('oldSelector' => 'grid-7', 'newSelector' => 'container-12'),
+          //array('oldSelector' => 'grid-5', 'newSelector' => 'container-12'),
+        ),
+      ),*/
+    ),
+  );
+  drupal_add_js(array('dc2011' => $response_settings), 'setting');
 }
 
 

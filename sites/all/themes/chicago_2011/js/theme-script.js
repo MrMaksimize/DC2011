@@ -44,6 +44,7 @@ $(document).ready(function() {
 	//wrap mini pager "of" in a span to use different font
 	//jQuery('li.pager-current').html($('li.pager-current').html().replace(/(of)/g,'<span class="curly">$1</span>'));
 	 
+	
 });
 //}(jQuery);
 
