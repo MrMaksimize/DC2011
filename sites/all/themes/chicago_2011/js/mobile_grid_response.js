@@ -2,43 +2,77 @@ Drupal.behaviors.dc2011Behavior = function (context) {
     //get state
   //Drupal.settings.dc2011.prevState = 'full';
   //resizeRespond();
-  window.addEventListener('resize', resizeRespond, false);
-  Drupal.settings.dc2011.location = window.location.protocol + "//" + window.location.host;
-  /*flag helper*/
-  $(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
-    if(Drupal.settings.dc2011.state == 'mobile' && $('body').hasClass('session-schedule-mobile')){
-      $('span.schedule-add .flag-wrapper a').text('');
+  if (context && Drupal.settings.dc2011.counter < 1){
+    Drupal.settings.dc2011.counter ++;
+    window.addEventListener('resize', resizeRespond, false);
+    Drupal.settings.dc2011.location = window.location.protocol + "//" + window.location.host;
+    //implement fit text operations
+    for (el in Drupal.settings.dc2011.fitTextEls){
+      var t = el;
+      console.log(Drupal.settings.dc2011.fitTextEls);
+      $(Drupal.settings.dc2011.fitTextEls[el].el).fitText(1, {
+        minFontSize: Drupal.settings.dc2011.fitTextEls[el].min,
+        maxFontSize: Drupal.settings.dc2011.fitTextEls[el].max
+      });
+      console.log(el);
     }
-  });
-  $('.session-schedule-mobile .view-cod-schedule h5 a').bind('click', function(event){
-    console.log($(this).attr('href'));
-    //find parent
-    var parent = $(this).parents('.views-accordion-item');
-    var nid = $('.load-space .load-container', parent).attr('id');
-    nid = nid.replace('nid-', '');
-    $.ajax({
-      url: Drupal.settings.dc2011.location + '/node_response/'+nid,
-      success: function(body){
-        console.log(body);
-        body = body.nodes[0].node;
-        console.log(body);
-        
-        $('.load-container', parent).html(
-        '<div class="ajax-speaker">'+body.field_speakers_uid+'</div>'+
-        '<div class="ajax-body">'+body.body+'</div>'+
-        '<div class="ajax-read-more">'+body.title+'</div>'
-        );
-      },
-      error: function(textStatus){
-        alert('fail');
-      },
-      dataType: 'json',
+    /*flag helper*/
+    $(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
+      if(Drupal.settings.dc2011.state == 'mobile' && $('body').hasClass('session-schedule-mobile')){
+        $('span.schedule-add .flag-wrapper a').text('');
+      }
     });
-    event.stopPropagation();
-    return false;
-  });
-  console.log('behavior active');
-  resizeRespond();
+    $('.session-schedule-mobile .view-cod-schedule-mobile h5.title a').bind('click', function(event){
+      console.log(event);
+      event.preventDefault();
+      event.stopPropagation();
+      //this ends up acting as a router based on the classes attached to the href.
+      //iterate over all the subtabs and close them up.
+      //store link in a variable for future use.
+      var link_clicked = $(this);
+      //find parent
+      var parent = $(this).parents('.views-accordion-item');
+      if($(link_clicked).hasClass('loaded')){
+        //now we know it's been loaded.  but is it open?
+        if ($(link_clicked).hasClass('active')){
+          //here we know it's been loaded and open. so if clicked again, this is a close
+          $('.load-container', parent).slideUp('fast');
+          $(link_clicked).removeClass('active');
+        }
+        else{
+          //now we know it's loaded, but not active. so a click means open up
+          $('.load-container', parent).slideDown('fast');
+          $(link_clicked).addClass('active');
+        }
+      }
+      else{
+        //here we know that it has not yet been loaded, so let's load it in.
+        var nid = $('.load-space .load-container', parent).attr('id');
+        nid = nid.replace('nid-', '');
+        $.ajax({
+          url: Drupal.settings.dc2011.location + '/node_response/'+nid,
+          success: function(body){
+            body = body.nodes[0].node;
+            
+            $('.load-container', parent).html(
+            '<div class="ajax-speaker">'+body.field_speakers_uid+'</div>'+
+            '<div class="ajax-body">'+body.body+'</div>'+
+            '<div class="ajax-read-more">'+body.title+'</div>'
+            );
+            //if everything loaded, give it a loaded class
+            $(link_clicked).addClass('loaded active');
+          },
+          error: function(textStatus){
+            alert('fail');
+          },
+          dataType: 'json',
+        });
+      }
+      return false;
+    });
+    console.log('behavior active');
+    resizeRespond();
+  }
 }
 
 

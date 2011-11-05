@@ -173,9 +173,17 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
   //$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
   $vars['head'] = $vars['head'].'<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=NO"/>';
   //drupal_add_js('sites/all/themes/chicago_2011/js/textSizer.js');
-  drupal_add_js('sites/all/themes/chicago_2011/js/mobile_grid_response.js');
   drupal_add_js('sites/all/themes/chicago_2011/js/jquery.fittext.js');
+  drupal_add_js('sites/all/themes/chicago_2011/js/mobile_grid_response.js');
   $response_settings = array(
+    'counter' => 0,
+    'fitTextEls' => array(
+      array(
+        'el' => 'h1',
+        'min' => '10px',
+        'max' => '30px',
+      ),
+    ),
     'prevState' => 'full',
     //state will be set up on load,
     'gridOps' => array(
