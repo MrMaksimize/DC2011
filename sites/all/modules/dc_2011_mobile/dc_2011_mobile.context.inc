@@ -81,12 +81,6 @@ function dc_2011_mobile_context_default_contexts() {
           'region' => 'content_bottom',
           'weight' => 0,
         ),
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => 2,
-          'region' => 'postscript_two',
-          'weight' => 0,
-        ),
       ),
     ),
     'theme' => array(
@@ -256,12 +250,6 @@ function dc_2011_mobile_context_default_contexts() {
           'module' => 'views',
           'delta' => 'attendees-block_1',
           'region' => 'postscript_two',
-          'weight' => 0,
-        ),
-        'block-2' => array(
-          'module' => 'block',
-          'delta' => 2,
-          'region' => 'postscript_three',
           'weight' => 0,
         ),
         'block-5' => array(
