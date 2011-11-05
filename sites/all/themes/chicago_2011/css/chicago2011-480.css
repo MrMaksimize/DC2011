@@ -1299,6 +1299,10 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
 /*links - no hover*/
 .more-link a:hover,
 .more-link a:focus,
@@ -1318,6 +1322,12 @@ a.more-link:visited {
   text-decoration: none;
   text-indent: 0;
   width: auto;
+}
+#block-views-sponsors_mobile-block_10 {
+  background: url('../images/bg/body_bg.png') repeat;
+}
+h1.title {
+  margin-left: 4%;
 }
 #view-id-sessions-block_3 .view-footer {
   position: relative;
@@ -1399,10 +1409,6 @@ div.error {
   display: block;
   overflow: hidden;
 }
-.view-cod-schedule-mobile .views-accordion-item .question {
-  padding-left: 24px;
-  float: left;
-}
 .view-cod-schedule-mobile .views-accordion-item .speaker-image {
   float: right;
   position: relative;
@@ -1481,57 +1487,86 @@ div.error {
   border: 1px solid;
   border-color: #3cc6b8 #378b80 #13685b;
 }
-div.session {
-  width: 92%;
-  /*height:80px; single nodes*/
-
+.page-program-sessions .view-sessions .view-content .session, .page-program-sessions-accepted .view-sessions .view-content .session {
+  width: 93%;
+  height: 80px;
 }
-div.session .presentation-inner {
-  width: 94% !important;
+.page-program-sessions .view-sessions .view-content .session .presentation-inner, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner {
+  width: 100% !important;
   max-height: 80px;
 }
-div.session .presentation-inner .session-info {
-  width: 100%;
+.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-info, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-info {
+  width: 85%;
+  float: left;
   max-height: 75px;
 }
-div.session .presentation-inner .session-info .title {
+.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-info h5.title, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-info h5.title {
   max-width: 85%;
   font-size: 15px;
+  width: 95%;
+  font-size: 15px;
+  float: left;
+  height: 20px;
+  padding-left: 8px;
+  background-position-x: 0px;
+  display: block;
+  height: 72px;
+  overflow: hidden;
 }
-div.session .presentation-inner .session-info .question {
+.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-info .question, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-info .question {
   padding-left: 24px;
+  display: none;
 }
-.page-program-sessions .view-sessions .views-widget select {
+.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta {
+  width: 9%;
+  float: right;
+}
+.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image {
+  width: 100%;
+  float: right;
+  position: relative;
+  top: 2px;
+}
+.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img {
+  height: 30px;
+  width: auto;
+}
+.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl, .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl {
+  display: block;
+  position: relative;
+  right: 45px;
+}
+.page-program-sessions .view-sessions .views-widget select, .page-program-sessions-accepted .view-sessions .views-widget select {
   max-width: 350px;
 }
-.page-program-sessions .view-sessions .views-exposed-widget {
+.page-program-sessions .view-sessions .views-exposed-widget, .page-program-sessions-accepted .view-sessions .views-exposed-widget {
   text-align: center;
   width: 100%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one {
+.page-program-sessions .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one, .page-program-sessions-accepted .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one {
   width: 50%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget #edit-submit-sessions {
+.page-program-sessions .view-sessions .views-exposed-widget #edit-submit-sessions, .page-program-sessions-accepted .view-sessions .views-exposed-widget #edit-submit-sessions {
   margin-top: 10px;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper {
+.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper, .page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper {
   margin-right: 5%;
   margin-left: 5%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper {
+.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper, .page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper {
   margin-left: 5%;
   margin-right: 5%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper {
+.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper, .page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper {
   margin-right: 5%;
   margin-left: 5%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper {
+.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper, .page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 10px;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper {
+.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper, .page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 10px;
