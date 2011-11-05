@@ -9,67 +9,82 @@ Drupal.behaviors.dc2011Behavior = function (context) {
     //implement fit text operations
     for (el in Drupal.settings.dc2011.fitTextEls){
       var t = el;
-      console.log(Drupal.settings.dc2011.fitTextEls);
-      $(Drupal.settings.dc2011.fitTextEls[el].el).fitText(1, {
+      console.log(Drupal.settings.dc2011.fitTextEls[el].el);
+     $(Drupal.settings.dc2011.fitTextEls[el].el).fitText(1, {
         minFontSize: Drupal.settings.dc2011.fitTextEls[el].min,
         maxFontSize: Drupal.settings.dc2011.fitTextEls[el].max
       });
-      console.log(el);
     }
-    /*flag helper*/
-    $(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
-      if(Drupal.settings.dc2011.state == 'mobile' && $('body').hasClass('session-schedule-mobile')){
-        $('span.schedule-add .flag-wrapper a').text('');
-      }
-    });
-    $('.session-schedule-mobile .view-cod-schedule-mobile h5.title a').bind('click', function(event){
-      console.log(event);
-      event.preventDefault();
-      event.stopPropagation();
-      //this ends up acting as a router based on the classes attached to the href.
-      //iterate over all the subtabs and close them up.
-      //store link in a variable for future use.
-      var link_clicked = $(this);
-      //find parent
-      var parent = $(this).parents('.views-accordion-item');
-      if($(link_clicked).hasClass('loaded')){
-        //now we know it's been loaded.  but is it open?
-        if ($(link_clicked).hasClass('active')){
-          //here we know it's been loaded and open. so if clicked again, this is a close
-          $('.load-container', parent).slideUp('fast');
-          $(link_clicked).removeClass('active');
+    
+    /*sessions*/
+    
+    if ($('body').hasClass('page-program-session-schedule')){
+      console.log('init sess sched');
+      $(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
+        if(Drupal.settings.dc2011.state == 'mobile' && $('body').hasClass('session-schedule-mobile')){
+          $('span.schedule-add .flag-wrapper a').text('');
+        }
+      });
+      $('.session-schedule-mobile .view-cod-schedule-mobile h5.title a').bind('click', function(event){
+        console.log(event);
+        event.preventDefault();
+        event.stopPropagation();
+        //this ends up acting as a router based on the classes attached to the href.
+        //iterate over all the subtabs and close them up.
+        //store link in a variable for future use.
+        var link_clicked = $(this);
+        //find parent
+        var parent = $(this).parents('.views-accordion-item');
+        var parentH5 = $(this).parents('h5');
+        if($(link_clicked).hasClass('loaded')){
+          //now we know it's been loaded.  but is it open?
+          if ($(link_clicked).hasClass('active')){
+            //here we know it's been loaded and open. so if clicked again, this is a close
+            $('.load-container', parent).slideUp('fast');
+            $(link_clicked).removeClass('active');
+            $(parent).removeClass('active');
+          }
+          else{
+            //now we know it's loaded, but not active. so a click means open up
+            $('.load-container', parent).slideDown('fast');
+            $(link_clicked).addClass('active');
+            $(parent).addClass('active');
+          }
         }
         else{
-          //now we know it's loaded, but not active. so a click means open up
-          $('.load-container', parent).slideDown('fast');
-          $(link_clicked).addClass('active');
+          //here we know that it has not yet been loaded, so let's load it in.
+          var nid = $('.load-space .load-container', parent).attr('id');
+          nid = nid.replace('nid-', '');
+          $.ajax({
+            url: Drupal.settings.dc2011.location + '/node_response/'+nid,
+            success: function(body){
+              body = body.nodes[0].node;
+              
+              $('.load-container', parent).html(
+              '<div class="ajax-speaker">'+body.field_speakers_uid+'</div>'+
+              '<div class="ajax-body">'+body.body+'</div>'+
+              '<div class="ajax-read-more">'+body.title+'</div>'
+              );
+              //if everything loaded, give it a loaded class
+              $(link_clicked).addClass('loaded active');
+              $(parent).addClass('loaded active');
+              },
+            error: function(textStatus){
+              alert('fail');
+            },
+            dataType: 'json'
+          });
         }
-      }
-      else{
-        //here we know that it has not yet been loaded, so let's load it in.
-        var nid = $('.load-space .load-container', parent).attr('id');
-        nid = nid.replace('nid-', '');
-        $.ajax({
-          url: Drupal.settings.dc2011.location + '/node_response/'+nid,
-          success: function(body){
-            body = body.nodes[0].node;
-            
-            $('.load-container', parent).html(
-            '<div class="ajax-speaker">'+body.field_speakers_uid+'</div>'+
-            '<div class="ajax-body">'+body.body+'</div>'+
-            '<div class="ajax-read-more">'+body.title+'</div>'
-            );
-            //if everything loaded, give it a loaded class
-            $(link_clicked).addClass('loaded active');
-          },
-          error: function(textStatus){
-            alert('fail');
-          },
-          dataType: 'json',
-        });
-      }
-      return false;
-    });
+        return false;
+      });
+    }
+    /*for swiping imags on community*/
+    /*if ($('body').hasClass('page-community')){
+      $('#view-id-attendees-page_1 .view-content attendee').bind('swipe', function(){
+        alert($(this));
+      });
+    }*/
+    
     console.log('behavior active');
     resizeRespond();
   }
@@ -214,10 +229,16 @@ function menuToDropdown(topContainer, ulClass, context){
     $("<select />").appendTo(topContainer).addClass('mobile mobile-dropdown ' + topContainer.replace('#','') + '-mobile');
     $('ul'+ulClass + ' li', topContainer).each( function(){
         var el = this;
-      $('select', topContainer).
-        append('<option value = "' +
+        //construct optionString
+        var optionString = '<option value = "' + $('a', this).attr('href') + '" ';
+        if($(this).hasClass('active')){
+          optionString = optionString + 'selected="selected" '
+        }
+        optionString = optionString + '>' + $('a', this).text() + '</a>';
+      $('select', topContainer).append(optionString);
+        /*append('<option value = "' +
                $('a', this).attr('href') + '">' +
-               $('a', this).text() + '</a>');
+               $('a', this).text() + '</a>');*/
     });
     //now hide the original lis for future use
     $('ul'+ulClass).hide();

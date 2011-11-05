@@ -174,6 +174,7 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
   $vars['head'] = $vars['head'].'<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=NO"/>';
   //drupal_add_js('sites/all/themes/chicago_2011/js/textSizer.js');
   drupal_add_js('sites/all/themes/chicago_2011/js/jquery.fittext.js');
+  drupal_add_js('sites/all/themes/chicago_2011/js/jqswipe.js');
   drupal_add_js('sites/all/themes/chicago_2011/js/mobile_grid_response.js');
   $response_settings = array(
     'counter' => 0,
@@ -182,6 +183,11 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
         'el' => 'h1',
         'min' => '10px',
         'max' => '30px',
+      ),
+      array(
+        'el' => '.view-cod-schedule-mobile h5.titsle',
+        'min' => '14px',
+        'max' => '100px',
       ),
     ),
     'prevState' => 'full',

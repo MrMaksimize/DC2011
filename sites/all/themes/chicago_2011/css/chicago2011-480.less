@@ -87,6 +87,32 @@
     padding-left:0px; padding-right:0px;
   }
 }
+/*links - no hover*/
+
+  .more-link a:hover,
+  .more-link a:focus,
+  a.more-link:hover,
+  a.more-link:focus,
+  .more-link a:link,
+  .more-link a:visited,
+  a.more-link:link,
+  a.more-link:visited{
+    background: url("../images/btn/pager.png") no-repeat scroll right -16px #29736B;
+    border-radius: 16px 16px 16px 16px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 12px;
+    height: 16px;
+    padding: 0 1em 4px 0.5em;
+    text-decoration: none;
+    text-indent: 0;
+    width: auto;
+  }
+
+#view-id-sessions-block_3 .view-footer {
+  position:relative;
+  right:10px;
+}
 
 /*hides, this is a clone of the context reactions for display resizing*/
 #block-views-front_page_slideshow-block_1,
@@ -135,6 +161,7 @@ div.error{display:none;}
   .accordion-item-last{
     margin-bottom:0px !important;
   }
+  .views-accordion-item.active{height:100%;}
   .views-accordion-item{
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eaeaea));
     background: -moz-linear-gradient(top center, #fff 0%, #eaeaea 100%);
@@ -146,20 +173,22 @@ div.error{display:none;}
     box-shadow: 0 1px 1px 0 #999;
     padding: 0 10px;
     width: 94%;
-    height: 100%;
+    height: 70px;
     overflow: hidden;
     margin-top:10px;
     margin-bottom:10px;
     .time{
       float:left;
       }
-    .title{
+    h5.title{
           width:95%;
           font-size:15px;
           float:left;
           height:20px;
           padding-left:8px;
           background-position-x:0px;
+          display:block;
+          overflow:hidden;
         }
       .question{
         padding-left:24px;
@@ -353,13 +382,60 @@ div.session{
       width:100%;
       font-size:85px;
       display:block;
-      line-height:85px;
-      margin-top:0px;
+      line-height:25px;
+      margin-top:25px;
       padding-right:0px;
     }
   }
 }
 
+#view-id-attendees-page_1{
+  #views-exposed-form-attendees-page-1{
+    .views-exposed-widget{
+      width:95%;
+      margin-left:5%;
+      padding-left:0px;
+      padding-right:0px;
+      margin-right:0px;
+      text-align:center;
+      label{
+        text-align:left;
+        width:45%;
+        float:left;
+      }
+      .views-widget {
+        width:45%;
+        float:right;
+        margin-right:5%
+      }
+    }
+  }
+  .view-content .attendee {
+    width:100%;
+    margin-right:0px;
+    min-height:inherit;
+    .attendee-overlay{
+      position:absolute;
+      left:50%;
+      display:block;
+      width:50%;
+      height:100%;
+      padding:0px;
+      .fullname{
+        min-height:10px;
+      }
+      
+    }
+    .picture img{
+      width:50%;
+      height:auto;
+    }
+  }
+}
+
+#view-id-attendees-block_1 .views-view-grid{
+  text-align:center;
+}
 #preface-wrapper{margin-top:0px;}
 
 /*quicktabs*/
@@ -380,6 +456,13 @@ div.session{
       padding-top:0px;
       padding-bottom:0px;
     }
+  }
+}
+
+/*dir page*/
+#node-page-68{
+  iframe{
+    width:100% !important;
   }
 }
 
