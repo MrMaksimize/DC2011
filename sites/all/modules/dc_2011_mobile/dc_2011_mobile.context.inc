@@ -52,6 +52,97 @@ function dc_2011_mobile_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'community_mobile';
+  $context->description = '';
+  $context->tag = 'layout mobile';
+  $context->conditions = array(
+    'mobile' => array(
+      'values' => array(
+        'mobile' => 'mobile',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'community' => 'community',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-8' => array(
+          'module' => 'block',
+          'delta' => 8,
+          'region' => 'sidebar_last',
+          'weight' => 0,
+        ),
+        'views-Sponsors-block_8' => array(
+          'module' => 'views',
+          'delta' => 'Sponsors-block_8',
+          'region' => 'sidebar_last',
+          'weight' => 1,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('layout mobile');
+  $export['community_mobile'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'my_schedule_mobile';
+  $context->description = 'Session Schedule Page - Block Layout Mobile';
+  $context->tag = 'session schedule layout mobile';
+  $context->conditions = array(
+    'mobile' => array(
+      'values' => array(
+        'mobile' => 'mobile',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'program/session-schedule/your-schedule' => 'program/session-schedule/your-schedule',
+      ),
+    ),
+    'views' => array(
+      'values' => array(
+        'cod_schedule' => 'cod_schedule',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-cod_schedule_mobile-block_5' => array(
+          'module' => 'views',
+          'delta' => 'cod_schedule_mobile-block_5',
+          'region' => 'content',
+          'weight' => 0,
+        ),
+      ),
+    ),
+    'theme' => array(
+      'title' => '',
+      'subtitle' => '',
+      'class' => 'session-schedule-mobile your-schedule-mobile',
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Session Schedule Page - Block Layout Mobile');
+  t('session schedule layout mobile');
+  $export['my_schedule_mobile'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'session_schedule_mobile';
   $context->description = 'Session Schedule Page - Block Layout Mobile';
   $context->tag = 'session schedule layout mobile';
