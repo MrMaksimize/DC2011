@@ -87,7 +87,7 @@
     padding-left:0px; padding-right:0px;
   }
 }
-body{width:100%; overflow-x:hidden;}
+/*body{width:100%; overflow-x:hidden;}*/
 /*links - no hover*/
 
   .more-link a:hover,
@@ -179,7 +179,7 @@ div.error{display:none;}
     border-width: 1px 5px 1px 1px;
     box-shadow: 0 1px 1px 0 #999;
     padding: 0 10px;
-    width: 94%;
+    width: 92%;
     height: 70px;
     overflow: hidden;
     margin-top:10px;
@@ -228,6 +228,9 @@ div.error{display:none;}
         a:hover{border:0px;}
         a:active{border:0px;}
         .flag-wrapper{
+          position:relative;
+          bottom:14px;
+          left:24px;
            a.flag-action::before, a.unflag-action::before{
            outline:none;
             postion:relative;
@@ -270,10 +273,30 @@ div.error{display:none;}
       }
   }
 }
-.page-program-sessions, .page-program-sessions-accepted{
-  .view-sessions{
+
+.page-program-session-schedule-your-schedule{
+  .view-id-cod_schedule_mobile .session .presentation-inner .session-info{
+    width:100% !important;
+  }
+  .presentation .presenter{
+    float:right !important;
+            position:relative;
+            top:2px;
+            display:block;
+            max-width:inherit;
+            padding:0px;
+            width:9%;
+            height:auto;
+            img{
+              height:30px;
+              width:auto;
+            }
+  }
+}
+.page-program-sessions, .page-program-sessions-accepted, .page-program-session-schedule-your-schedule{
+  .view-sessions, .view-id-cod_schedule_mobile{
     .view-content .session{
-      width:93%;
+      width:92%;
      height:80px; 
       .presentation-inner{
         width:100% !important;
@@ -301,13 +324,13 @@ div.error{display:none;}
           }
         }
         .session-meta{
-          width:9%;
+          width:5%;
           float:right;
           .speaker-image{
-            width:100%;
-            float:right;
+            float:right !important;
             position:relative;
             top:2px;
+            width:30px;
             img{
               height:30px;
               width:auto;
@@ -330,6 +353,7 @@ div.error{display:none;}
     .views-exposed-widget{
       text-align:center;
       width:100%;
+      padding-right:0px;
       #edit-field-experience-value-many-to-one {
         width:50%;
       }
@@ -507,5 +531,30 @@ div.error{display:none;}
   width:350px !important;
   .twtr-tweet{
     width:350px !important;
+  }
+}
+
+.normal-text (@fsize: 10px) {
+  font-size:@fsize;
+  line-height: @fsize;
+}
+/*page specific*/
+.page-about-directions, .page-about-eat-drink-sleep{
+  #main-wrapper p{
+    .normal-text;
+    a.callout:link, a.callout:visited{
+      font-size:10px;
+      line-height:15px;
+    }
+    }
+}
+
+
+.page-code-conduct{
+  #main-wrapper p {.normal-text;}
+}
+.page-about-eat-drink-sleep, .page-code-conduct{
+  #main-wrapper li{
+    .normal-text;
   }
 }

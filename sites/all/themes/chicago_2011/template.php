@@ -182,7 +182,7 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
       array(
         'el' => 'h1',
         'min' => '10px',
-        'max' => '30px',
+        'max' => '25px',
       ),
       array(
         'el' => '.view-cod-schedule-mobile h5.titsle',
