@@ -20,11 +20,11 @@ Drupal.behaviors.dc2011Behavior = function (context) {
     
     if ($('body').hasClass('page-program-session-schedule')){
       console.log('init sess sched');
-      $(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
+      /*$(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
         if(Drupal.settings.dc2011.state == 'mobile' && $('body').hasClass('session-schedule-mobile')){
           $('span.schedule-add .flag-wrapper a').text('');
         }
-      });
+      });*/
       $('.session-schedule-mobile .view-cod-schedule-mobile h5.title a').bind('click', function(event){
         console.log(event);
         event.preventDefault();
@@ -208,7 +208,7 @@ function contextMocker(context){
 function contextHelper(context){
   menuToDropdown('#site-menu', '.main-menu', context);
   //schedule
-  $('span.schedule-add .flag-wrapper a').text('');
+  //$('span.schedule-add .flag-wrapper a').text('');
   //$('h5.title a').fitText();
 }
 

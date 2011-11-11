@@ -168,7 +168,17 @@ div.error{display:none;}
   .accordion-item-last{
     margin-bottom:0px !important;
   }
-  .views-accordion-item.active{height:100%;}
+  .views-accordion-item.active{
+      height:100%;
+      .schedule-add{
+        position:relative;
+        top:-5px;
+      }
+      .exp-lvl{
+        position:relative;
+        top:5px;
+      }
+  }
   .views-accordion-item{
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eaeaea));
     background: -moz-linear-gradient(top center, #fff 0%, #eaeaea 100%);
@@ -180,7 +190,7 @@ div.error{display:none;}
     box-shadow: 0 1px 1px 0 #999;
     padding: 0 10px;
     width: 92%;
-    height: 70px;
+    height: 150px;
     overflow: hidden;
     margin-top:10px;
     margin-bottom:10px;
@@ -188,10 +198,10 @@ div.error{display:none;}
       float:left;
       }
     h5.title{
-          width:95%;
+          width:90%;
           font-size:15px;
           float:left;
-          height:20px;
+          height:70px;
           padding-left:8px;
           background-position-x:0px;
           display:block;
@@ -200,7 +210,7 @@ div.error{display:none;}
       .speaker-image{
         float:right;
         position:relative;
-        top:2px;
+        top:5px;
         img{
           height:30px;
           width:auto;
@@ -210,76 +220,47 @@ div.error{display:none;}
         float:left;
       }
       div.load-container{margin-bottom:10px;}
-      span.exp-lvl{display:none}
-      button:focus,
+      span.exp-lvl{
+        float:left;
+        position:relative;
+        left:8px;
+        top:15px;
+        width:100px;
+      }
+      /*button:focus,
       button:active,
       .button:focus,
       .button:active,{
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
       box-shadow: none;
-      }
-
-      span.schedule-add{
-        span.flag-message{display:none !important;}
-        float:right;
-        background:transparent;
-        border:0px;
-        a:hover{border:0px;}
-        a:active{border:0px;}
-        .flag-wrapper{
-          position:relative;
-          bottom:14px;
-          left:24px;
-           a.flag-action::before, a.unflag-action::before{
-           outline:none;
-            postion:relative;
-            top:10px !important;
-            right:10px !important;
-            left:auto !important;
-            -webkit-appearance: none;
-            -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;
-           border-radius: 4px;
-           -moz-background-clip: padding;
-           -webkit-background-clip: padding;
-           background-clip: padding-box;
-           background: #13685b url(../images/button.png) repeat-x;
-           background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7cc3ba), color-stop(1, #29736b));
-           background: -moz-linear-gradient(top center, #7cc3ba 0%, #29736b 100%);
-           border: 1px solid;
-           border-color: #3cc6b8 #378b80 #13685b;
-           }
-           a.flag-action::after, a.unflag-action::after{
-            outline:none;
-            postion:relative;
-            top:10px !important;
-            right:10px !important;
-            left:auto !important;
-            -webkit-appearance: none;
-            -moz-border-radius: 4px;
-           -webkit-border-radius: 4px;
-           border-radius: 4px;
-           -moz-background-clip: padding;
-           -webkit-background-clip: padding;
-           background-clip: padding-box;
-           background: #13685b url(../images/button.png) repeat-x;
-           background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7cc3ba), color-stop(1, #29736b));
-           background: -moz-linear-gradient(top center, #7cc3ba 0%, #29736b 100%);
-           border: 1px solid;
-           border-color: #3cc6b8 #378b80 #13685b;
-           }
-        }
+      }*/
+      .schedule-add{
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #b4b4b4));
+        background: -moz-linear-gradient(top center, #fff 0%, #b4b4b4 100%);
+        border-color: #ececec #ccc #a1a1a1;
+        box-shadow: 0 0 0 4px #ececec;
+        color: #333;
+        display: inline-block;
+        float: right;
+        padding-left: 30px;
+        position: relative;
+        top: 5px;
+        width: 60px;
       }
   }
 }
 
 .page-program-session-schedule-your-schedule{
-  .view-id-cod_schedule_mobile .session .presentation-inner .session-info{
-    width:100% !important;
-  }
-  .presentation .presenter{
-    float:right !important;
+  .view-id-cod_schedule_mobile .session .presentation-inner {
+    height:150px;
+    max-height:150px;
+    width:92%;
+    .session-info{
+      width:100% !important;
+    
+        .presenter{
+          float:right !important;
             position:relative;
             top:2px;
             display:block;
@@ -291,27 +272,35 @@ div.error{display:none;}
               height:30px;
               width:auto;
             }
+        }
+        .schedule-add{
+          height:40px;
+        }
+    }
   }
 }
 .page-program-sessions, .page-program-sessions-accepted, .page-program-session-schedule-your-schedule{
   .view-sessions, .view-id-cod_schedule_mobile{
     .view-content .session{
       width:92%;
-     height:80px; 
+     height:150px;
+     .presentation-inner-wrapper{
+      
+     }
       .presentation-inner{
         width:100% !important;
-          max-height:80px;
+          max-height:150px;
         .session-info{
-          width:85%;
+          width:100%;
           float:left;
-          max-height:75px;
+          max-height:150px;
             h5.title{
               max-width:85%;
               font-size:15px;
-              width:95%;
+              width:100%;
               font-size:15px;
               float:left;
-              height:20px;
+              height:70px;
               padding-left:8px;
               background-position-x:0px;
               display:block;
@@ -324,22 +313,28 @@ div.error{display:none;}
           }
         }
         .session-meta{
-          width:5%;
-          float:right;
+          width:100%;
+          float:left;
           .speaker-image{
             float:right !important;
             position:relative;
-            top:2px;
+            bottom:78px;
             width:30px;
             img{
               height:30px;
               width:auto;
             }
           }
+          .schedule-add{
+            position:relative;
+            left:25px;
+          }
           .exp-lvl{
             display:block;
             position:relative;
-            right:45px;
+            right:0px;
+            width:100px;
+            top:28px;
           }
         }
       }
