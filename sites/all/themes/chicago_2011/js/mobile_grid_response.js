@@ -29,67 +29,95 @@ Drupal.behaviors.dc2011Behavior = function (context) {
         console.log(event);
         event.preventDefault();
         event.stopPropagation();
-        //this ends up acting as a router based on the classes attached to the href.
-        //iterate over all the subtabs and close them up.
-        //store link in a variable for future use.
         var link_clicked = $(this);
         //find parent
         var parent = $(this).parents('.views-accordion-item');
         var parentH5 = $(this).parents('h5');
-        if($(link_clicked).hasClass('loaded')){
-          //now we know it's been loaded.  but is it open?
-          if ($(link_clicked).hasClass('active')){
-            //here we know it's been loaded and open. so if clicked again, this is a close
-            $('.load-container', parent).slideUp('fast');
-            $(link_clicked).removeClass('active');
-            $(parent).removeClass('active');
-          }
-          else{
-            //now we know it's loaded, but not active. so a click means open up
-            $('.load-container', parent).slideDown('fast');
-            $(link_clicked).addClass('active');
-            $(parent).addClass('active');
-          }
-        }
-        else{
-          //here we know that it has not yet been loaded, so let's load it in.
-          var nid = $('.load-space .load-container', parent).attr('id');
-          nid = nid.replace('nid-', '');
-          $.ajax({
-            url: Drupal.settings.dc2011.location + '/node_response/'+nid,
-            success: function(body){
-              body = body.nodes[0].node;
-              
-              $('.load-container', parent).html(
-              '<div class="ajax-speaker">'+body.field_speakers_uid+'</div>'+
-              '<div class="ajax-body">'+body.body+'</div>'+
-              '<div class="ajax-read-more">'+body.title+'</div>'
-              );
-              //if everything loaded, give it a loaded class
-              $(link_clicked).addClass('loaded active');
-              $(parent).addClass('loaded active');
-              },
-            error: function(textStatus){
-              alert('fail');
-            },
-            dataType: 'json'
-          });
-        }
+        sessionLoad(parent, parentH5, link_clicked);
         return false;
       });
     }
-    /*for swiping imags on community*/
-    /*if ($('body').hasClass('page-community')){
-      $('#view-id-attendees-page_1 .view-content attendee').bind('swipe', function(){
-        alert($(this));
+    if ($('body').hasClass('page-program-sessions-accepted')||
+        $('body').hasClass('page-program-sessions')){
+      console.log('init sess sched');
+      $('.view-sessions h5.title a').bind('click', function(event){
+        console.log(event);
+        event.preventDefault();
+        event.stopPropagation();
+        
+        var link_clicked = $(this);
+        //find parent
+        var parent = $(this).parents('.presentation');
+        var parentH5 = $(this).parents('h5');
+        sessionLoad(parent, parentH5, link_clicked);
+        return false;
       });
-    }*/
+    }
+    if ($('body').hasClass('page-program-session-schedule-your-schedule')){
+      console.log('init sess sched');
+      $('.your-schedule-mobile h5.title a').bind('click', function(event){
+        console.log(event);
+        event.preventDefault();
+        event.stopPropagation();
+        
+        var link_clicked = $(this);
+        //find parent
+        var parent = $(this).parents('.presentation');
+        var parentH5 = $(this).parents('h5');
+        sessionLoad(parent, parentH5, link_clicked);
+        return false;
+      });
+    }
     
     console.log('behavior active');
     resizeRespond();
   }
 }
 
+function sessionLoad(parent, parentH5, link_clicked){
+//this ends up acting as a router based on the classes attached to the href.
+//iterate over all the subtabs and close them up.
+//store link in a variable for future use.
+  if($(link_clicked).hasClass('loaded')){
+//now we know it's been loaded.  but is it open?
+    if ($(link_clicked).hasClass('active')){
+      //here we know it's been loaded and open. so if clicked again, this is a close
+      $('.load-container', parent).slideUp('fast');
+      $(link_clicked).removeClass('active');
+      $(parent).removeClass('active');
+    }
+    else{
+      //now we know it's loaded, but not active. so a click means open up
+      $('.load-container', parent).slideDown('fast');
+      $(link_clicked).addClass('active');
+      $(parent).addClass('active');
+    }
+  }
+  else{
+  //here we know that it has not yet been loaded, so let's load it in.
+    var nid = $('.load-space .load-container', parent).attr('id');
+    nid = nid.replace('nid-', '');
+    $('.load-space .load-container', parent).html('<img class="load-spinner" src="/sites/all/themes/chicago_2011/images/spinner.gif"/>');
+    $.ajax({
+      url: Drupal.settings.dc2011.location + '/node_response/'+nid,
+      success: function(body){
+      body = body.nodes[0].node; 
+        $('.load-container', parent).html(
+          '<div class="ajax-speaker">'+body.field_speakers_uid+'</div>'+
+          '<div class="ajax-body">'+body.body+'</div>'+
+          '<div class="ajax-read-more">'+body.title+'</div>'
+        );
+        //if everything loaded, give it a loaded class
+        $(link_clicked).addClass('loaded active');
+        $(parent).addClass('loaded active');
+      },
+      error: function(textStatus){
+        alert('fail');
+      },
+      dataType: 'json'
+    });
+  }
+}
 
 function resizeRespond(force){
   console.log('respond');

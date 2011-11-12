@@ -106,7 +106,6 @@
   <?php endif; ?><!-- /body -->
   
   <?php if($id == 'picture'): ?>
-  
     <?php if ($field->element_type): ?>
       <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
     <?php endif; ?>
@@ -130,7 +129,7 @@
     <?php if ($field->element_type): ?>
       </<?php print $field->element_type; ?>>
     <?php endif; ?>
-  
+  <?php print '<div class ="load-space"><div class="load-container" id="nid-'.$row->nid.'"></div></div>'; ?>
   <?php endif; ?><!-- /picture -->
   
   <?php if($id == 'ops'): ?>
@@ -162,7 +161,6 @@
   <?php endif; ?><!-- /ops -->
   
   <?php if($id == 'field_experience_value'): ?>
-  
     <?php if ($field->element_type): ?>
       <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
     <?php endif; ?>
@@ -186,7 +184,7 @@
     <?php if ($field->element_type): ?>
       </<?php print $field->element_type; ?>>
     <?php endif; ?>
-		
+    
     </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
 <?php endif; ?><!-- /field_experience_value -->
