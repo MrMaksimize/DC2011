@@ -232,6 +232,7 @@ body {
 
 body.front #page-inner-wrapper {
 	min-height: 800px;
+	position: relative;
 }
 
 #user-bar-zone-wrapper {
@@ -736,6 +737,15 @@ ul.main-menu a.active-trail {
 	background-color: #000000;
 	border-bottom: 4px solid #D7382A;
 	border-top: 2px solid #3C3B3A;
+	box-shadow: 0 50px 100px #000;
+	position: relative;
+}
+
+#footer-message-wrapper.hoverMid {
+	position: fixed;
+	top: 575px;
+	width: 100%;
+	z-index: 5000;
 }
 
 #footer-message {
@@ -1160,27 +1170,6 @@ form#user-register .form-submit {
 }
 
 .view-front-page-slideshow div.slide-title:before {
-	/* Rotations 
-  -webkit-transform: rotate(-45deg);  
-     -moz-transform: rotate(-45deg);  
-      -ms-transform: rotate(-45deg);  
-       -o-transform: rotate(-45deg);  
-          transform: rotate(-45deg);  
-             filter: progid:DXImageTransform.Microsoft.Matrix( 
-                     M11=0.7071067811865476, M12=0.7071067811865475, M21=-0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
-               zoom: 1;
-							  /rotations
-	content: "";
-	position: absolute;
-	left: 6px;
-	top: 46px;
-	border-color: transparent transparent transparent #005d8f;
-	border-style: solid;
-	border-width: 16px;
-	width: 0;
-	height: 0;
-} */
-
   border-color: #005d8f #005d8f transparent transparent;
   border-style: solid;
   border-width: 8px 11px;
@@ -1205,8 +1194,19 @@ form#user-register .form-submit {
 .view-front-page-slideshow h2.slide-title  {
 	background: #fff url('../images/star.png') no-repeat 12px center;
   padding: 0 30px 0 50px;
+	text-shadow: 1px 1px 1px #fff, 2px 2px 2px #545454;
 	position: relative;
 	top: 6px;
+}
+
+.view-front-page-slideshow h2.slide-title:after {
+  background: transparent url('../images/bg/highlight_title.png') repeat-x left top;
+	content: "";
+	width: 100%;
+	height: 24px;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .view-front-page-slideshow .title {
@@ -1227,7 +1227,7 @@ form#user-register .form-submit {
 	border-style: solid;
 	border-width: 8px 11px;
 	position: absolute;
-	left: 0;
+	left: -22px;
 	top: -16px;
 	width: 0;
 	height: 0;
@@ -1235,11 +1235,12 @@ form#user-register .form-submit {
 
 .view-front-page-slideshow .body {
 	background: transparent url("../images/bg/spacer_white.png") repeat left top;
+	border-left: 22px solid #fff;
 	box-shadow: 5px 5px 12px -5px rgba(0, 0, 0, 0.8);
 	top: 230px;
 	left: -22px;
 	position: absolute;
-	width: 520px;
+	width: 500px;
 	height: 150px;
 	z-index: 3;
 }
@@ -1247,7 +1248,7 @@ form#user-register .form-submit {
 .view-front-page-slideshow .body p {
 	position: relative;
 	top: 44px;
-	padding: 0 12px 0 48px;
+	padding: 0 12px 0 24px;
 	line-height: 24px;
 }
 
@@ -1260,6 +1261,7 @@ form#user-register .form-submit {
 
 .view-front-page-slideshow .credit {
 	background: transparent url("../images/bg/spacer_white.png") repeat left top;
+	border-right: 16px solid #fff;
 	box-shadow: -5px 5px 12px -5px rgba(0, 0, 0, 0.8);
 	height: auto;
 	padding: 4px 48px 4px 8px;
@@ -1275,7 +1277,7 @@ form#user-register .form-submit {
 	 border-width: 5px 8px;
 	 content: "";
 	 position: absolute;
-	 right: 0;
+	 right: -16px;
 	 top: 32px;
 	 width: 0;
 	 height: 0;
@@ -1431,6 +1433,14 @@ form#user-register .form-submit {
 /* Attendees Block */
 #block-views-attendees-block_1 {
 	min-height: 350px;
+}
+
+#block-views-attendees-block_1 table {
+	margin-bottom: 0;
+}
+
+#block-views-attendees-block_1 td {
+	padding: 0 7px 14px;
 }
 
 /* User Profile */
@@ -2051,8 +2061,22 @@ a.callout.register:link {
 	font-family:  Bodidly, "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size: 138px;
 	line-height: 144px;
-	text-shadow: 1px 1px 2px #fff;
+	text-shadow: 1px 1px 2px white, -1px -1px 1px #000;
 	padding-right: 16px;
+	position: relative;
+}
+
+.register-cta .stock .overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: transparent;
+	background-image: -webkit-repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(99,180,199,0.18) 3px, rgba(99,180,199,0.18) 6px),
+										-webkit-repeating-linear-gradient(45deg, transparent 2px, transparent 5px, rgba(99,180,199,0.25) 5px, rgba(99,180,199,0.1) 10px);
+	background-image: -moz-repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(99,180,199,0.18) 3px, rgba(99,180,199,0.18) 6px),
+										-moz-repeating-linear-gradient(45deg, transparent 2px, transparent 5px, rgba(99,180,199,0.25) 5px, rgba(99,180,199,0.1) 10px);
+	background-image: -o-repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(99,180,199,0.18) 3px, rgba(99,180,199,0.18) 6px),
+										-o-repeating-linear-gradient(45deg, transparent 2px, transparent 5px, rgba(99,180,199,0.25) 5px, rgba(99,180,199,0.1) 10px);
 }
 
 .register-cta .avail {

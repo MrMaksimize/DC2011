@@ -9,11 +9,16 @@ $(document).ready(function() {
 /**
  * Hide Front Page items then fadeIn();
  */
-	jQuery('body.front .container-12').hide();
+	//Hide the stuff we don't want right away
+	jQuery('body.front .container-12, #footer-message-wrapper').hide();
+	// position the footer message in the middle of the browser window before showing everything else
+	jQuery('#footer-message-wrapper').addClass('hoverMid').delay(250).slideDown('slow').delay(500);
 	// show the logo and nav before fading everything in
-	jQuery('body.front #page-outer-wrapper, body.front #page, body.front #page-inner-wrapper, body.front #site-header.container-12, body.front #preface-wrapper.container-12').show();
+	jQuery('body.front #site-header.container-12, body.front #preface-wrapper.container-12').delay(1500).slideDown('slow');
 	// fadeIn the rest of the stuff
-	jQuery('body.front .container-12').delay(3500).slideDown(1000);
+	jQuery('body.front .container-12').delay(4500).slideDown(1000);
+	// don't forget to remove the positioning on the footer message
+	jQuery('#footer-message-wrapper').removeClass('hoverMid');
 	
 /**
  * Move Mollom to Account Info Fieldset.
