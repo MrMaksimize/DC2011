@@ -3,6 +3,8 @@ cdn
 boost
 uc_ssl
 
+FOOBAR
+
 remove cache folder
 
 1. move stuff from themes - css
