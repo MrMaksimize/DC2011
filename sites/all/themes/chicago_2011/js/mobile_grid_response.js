@@ -184,7 +184,7 @@ function contextMock(){
       console.log('runrep');
       if (Drupal.settings.dc2011.posState == 'mobile'){
         //context mocker
-        if (!$('body').hasClass('context_mobile')){
+        if (!$('body').hasClass('context_mobile')){ //determine if server side mobile is active
           contextMocker('mobile');
         }
         //context helper
@@ -231,6 +231,7 @@ function contextMock(){
 
 function contextMocker(context){
   console.log('contextMocker ' + context);
+  menuToDropdown('#site-menu', '.main-menu', context);
 }
 
 function contextHelper(context){
