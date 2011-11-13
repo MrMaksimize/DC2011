@@ -1379,6 +1379,9 @@ div.error {
 .front #header-zone-wrapper {
   height: 160px;
 }
+.front #preface-first {
+  display: none !important;
+}
 .view-cod-schedule-mobile .view-content {
   border: 0px;
 }
@@ -1944,6 +1947,20 @@ div.error {
   display: block;
 }
 /*sponsors footer*/
+#block-views-sponsors_mobile-block_10 .view-content {
+  background: white;
+}
+#block-views-sponsors_mobile-block_10 .views-accordion-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#block-views-sponsors_mobile-block_10 .views-accordion-item-first {
+  margin-top: 0px;
+}
+#block-views-sponsors_mobile-block_10 .views-accordion-item-last {
+  margin-bottom: 0px;
+}
 #block-views-sponsors_mobile-block_10 h2.block-title {
   margin-left: 4%;
   color: white;
