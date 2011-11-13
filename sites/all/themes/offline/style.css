@@ -1,0 +1,295 @@
+/* Embedded Fonts via @font-face */
+/* Bebas Neue */
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('fonts/bebas_neue/bebasneue-webfont.eot');
+	src: url('fonts/bebas_neue/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/bebas_neue/bebasneue-webfont.woff') format('woff'),
+			 url('fonts/bebas_neue/bebasneue-webfont.ttf') format('truetype'),
+			 url('fonts/bebas_neue/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Bebas 3 */
+@font-face {
+	font-family: 'Bebas';
+	src: url('fonts/bebas/bebas-webfont.eot');
+	src: url('fonts/bebas/bebas-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/bebas/bebas-webfont.woff') format('woff'),
+			 url('fonts/bebas/bebas-webfont.ttf') format('truetype'),
+			 url('fonts/bebas/bebas-webfont.svg#BebasRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Bodidly Bold Medium */
+@font-face {
+	font-family: 'Bodidly';
+	src: url('fonts/bodidly/bodidly_bold-webfont.eot');
+	src: url('fonts/bodidly/bodidly_bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/bodidly/bodidly_bold-webfont.woff') format('woff'),
+			 url('fonts/bodidly/bodidly_bold-webfont.ttf') format('truetype'),
+			 url('fonts/bodidly/bodidly_bold-webfont.svg#BODIDLYboldMedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* League Gothic */
+@font-face {
+	font-family: 'LeagueGothic';
+	src: url('fonts/league_gothic/league_gothic-webfont.eot');
+	src: url('fonts/league_gothic/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/league_gothic/league_gothic-webfont.woff') format('woff'),
+			 url('fonts/league_gothic/league_gothic-webfont.ttf') format('truetype'),
+			 url('fonts/league_gothic/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Trajan Pro */
+@font-face {
+	font-family: 'TrajanPro';
+	src: url('fonts/trajan_pro/trajanpro_bold-webfont.eot');
+	src: url('fonts/trajan_pro/trajanpro_bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/trajan_pro/trajanpro_bold-webfont.woff') format('woff'),
+			 url('fonts/trajan_pro/trajanpro_bold-webfont.ttf') format('truetype'),
+			 url('fonts/trajan_pro/trajanpro_bold-webfont.svg#TrajanProBold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TrajanPro';
+	src: url('fonts/trajan_pro/trajanpro_regular-webfont.eot');
+	src: url('fonts/trajan_pro/trajanpro_regular-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/trajan_pro/trajanpro_regular-webfont.woff') format('woff'),
+			 url('fonts/trajan_pro/trajanpro_regular-webfont.ttf') format('truetype'),
+			 url('fonts/trajan_pro/trajanpro_regular-webfont.svg#TrajanProRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* GillSans */
+@font-face {
+	font-family: 'GillSans';
+	src: url('fonts/gillsans/GillSans_regular-webfont.eot');
+	src: url('fonts/gillsans/GillSans_regular-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/gillsans/GillSans_regular-webfont.woff') format('woff'),
+			 url('fonts/gillsans/GillSans_regular-webfont.ttf') format('truetype'),
+			 url('fonts/gillsans/GillSans_regular-webfont.svg#') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GillSans';
+	src: url('fonts/gillsans/GillSans_light-webfont.eot');
+	src: url('fonts/gillsans/GillSans_light-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/gillsans/GillSans_light-webfont.woff') format('woff'),
+			 url('fonts/gillsans/GillSans_light-webfont.ttf') format('truetype'),
+			 url('fonts/gillsans/GillSans_light-webfont.svg#') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GillSans';
+	src: url('fonts/gillsans/GillSans_bold-webfont.eot');
+	src: url('fonts/gillsans/GillSans_bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/gillsans/GillSans_bold-webfont.woff') format('woff'),
+			 url('fonts/gillsans/GillSans_bold-webfont.ttf') format('truetype'),
+			 url('fonts/gillsans/GillSans_bold-webfont.svg#') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GillSans';
+	src: url('fonts/gillsans/GillSans_italic-webfont.eot');
+	src: url('fonts/gillsans/GillSans_italic-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/gillsans/GillSans_italic-webfont.woff') format('woff'),
+			 url('fonts/gillsans/GillSans_italic-webfont.ttf') format('truetype'),
+			 url('fonts/gillsans/GillSans_italic-webfont.svg#') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'GillSans';
+	src: url('fonts/gillsans/GillSans_light-italic-webfont.eot');
+	src: url('fonts/gillsans/GillSans_light-italic-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/gillsans/GillSans_light-italic-webfont.woff') format('woff'),
+			 url('fonts/gillsans/GillSans_light-italic-webfont.ttf') format('truetype'),
+			 url('fonts/gillsans/GillSans_light-italic-webfont.svg#') format('svg');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'GillSans';
+	src: url('fonts/gillsans/GillSans_bold-italic-webfont.eot');
+	src: url('fonts/gillsans/GillSans_bold-italic-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fonts/gillsans/GillSans_bold-italic-webfont.woff') format('woff'),
+			 url('fonts/gillsans/GillSans_bold-italic-webfont.ttf') format('truetype'),
+			 url('fonts/gillsans/GillSans_bold-italic-webfont.svg#') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* Default Link Styles */
+a,
+a:link,
+a:visited {
+	color: #0f638d;
+	text-align: left;
+	text-decoration: none;
+	line-height: 24px;
+}
+
+/* Hover/Active Link Styles */
+a:hover,
+a:focus,
+a:active {
+	color: #d9362b;
+	text-decoration: underline;
+}
+
+/* Title Link Styles */
+.title a,
+.title a:link,
+.title a:visited {
+	color: #0f638d;
+	text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus {
+	text-decoration: underline;
+}
+
+a.callout:link,
+a.callout:visited {
+  color: #F27C38;
+  font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  line-height: 24px;
+  text-decoration: none;
+	text-shadow: 1px 1px 0px #005D8F;
+  text-transform: uppercase;
+	margin: 0 !important;
+  padding: 0pt 0.25em;
+}
+
+a.callout:hover,
+a.callout:focus {
+	color: #fff;
+	text-shadow: 1px 1px 0px #000;
+}
+
+a.callout.active {
+	color: #A63C24;
+	text-decoration: underline;
+	text-shadow: none;
+}
+
+a.callout.login:link,
+a.callout.register:link {
+	text-shadow: none;
+}
+
+/* =====================================
+	Offline styles
+* ------------------------------------- */
+body{
+	color: #333;
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	/*font-size: 16px;*/
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+/*content*/
+#content{width:400px; margin:150px auto 0; padding:10px; position: relative;}
+
+h1 {
+	color: #fff;
+	font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
+	/*font-size: 48px;*/
+	font-size: 3em;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1;
+	text-shadow: 1px 3px 2px #333;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+}
+
+h1.title,
+h1.page-title,
+h1.node-title {
+}
+
+#logo{
+	position: absolute;
+	top: -145px;
+}
+p{margin:10px 0 10px 30px;}
+#sitename{font-size:12px;color:#666;text-align:right; margin:0 10px; }
+#footermsg{color:#aaa; font-size:10px; text-align:center; border-top: 1px dashed #ccc;  padding:10px 0 0 0;  margin:10px 0;}
+
+
+hr{border: 0px; border-top: 1px solid #C3A226; height:0px;}
+small{color:#aaa; font-size:11px; line-height:15px;}
+code{color:#997447; background:#EEEAE0; padding:2px 5px;}
+
+/* Base theme styles that should be inherited, but I don't want to make an outside path dependency in this theme's .info */
+body {
+	background: #fffefa url('images/bg/body_bg.png') repeat left top;
+	margin: 0;
+}
+
+#page {
+	background: transparent url('images/bg/skyline.png') repeat-x center 56px;
+}
+
+#page-outer-wrapper {
+	background: transparent url('images/bg/page_bg.png') repeat-x left top;
+}
+
+#page-inner-wrapper {
+	background: transparent url('images/bg/noise_burst.png') no-repeat center 216px;
+	min-height: 800px;
+	position: relative;
+	padding-top: 70px;
+}
+
+/* Footer Elements ------------------------------------ */
+#footer-message-wrapper {
+	background-color: #000000;
+	border-bottom: 4px solid #D7382A;
+	border-top: 2px solid #3C3B3A;
+	box-shadow: 0 50px 100px #000;
+	position: relative;
+}
+
+#footer-message-wrapper.hoverMid {
+	position: absolute;
+	top: 575px;
+	width: 100%;
+	z-index: 5000;
+}
+
+#footer-message {
+	color: #fff;
+	line-height: 24px;
+	margin: 0;
+	padding: 1.5em 0;
+	text-align: center;
+	width: 100%;
+}
+
+#footer-message a.callout {
+	text-shadow: 1px 1px 1px #e23c38;
+}

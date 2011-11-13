@@ -1,0 +1,11 @@
+name = Ubercart SSL
+description = Secure Ubercart /cart links with an SSL Cert.  Do NOT enable this unless your site works with SSL as it WILL break your cart.  If it does, just disable this and get your site working with SSL first and then re-enable this module.  This module does not require Ubercart so it can be used for anything else as well, its just that its most common use is to be used with Ubercart so that is why I named it so.  Feel free to use it with anything you like.
+core = 6.x
+package = Ubercart - extra
+
+; Information added by drupal.org packaging script on 2011-03-02
+version = "6.x-1.26"
+core = "6.x"
+project = "uc_ssl"
+datestamp = "1299039969"
+
