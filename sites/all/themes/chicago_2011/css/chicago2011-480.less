@@ -115,7 +115,19 @@ body{width:100%; overflow-x:hidden;}
   background:url('../images/bg/body_bg.png') repeat;
 }
 h1.title{
-  margin-left:4%;
+  margin-left:0px;
+  text-align:center;
+  margin-bottom:0px;
+}
+#content-tabs{
+  text-align:center;
+  ul.primary, ul.secondary{
+    padding-bottom:0px;
+    padding-left:16px;
+    padding-right:0px;
+    padding-top:0px;
+  }
+  margin-bottom:0px;
 }
 #view-id-sessions-block_3 .view-footer {
   position:relative;
@@ -424,6 +436,7 @@ div.error{display:none;}
       text-align:center;
       width:100%;
       padding-right:0px;
+      padding-top:6px;
       #edit-field-experience-value-many-to-one {
         width:50%;
       }
@@ -467,8 +480,9 @@ div.error{display:none;}
     height:75px;
     max-height:75px; /* need bg to adjust brown area*/
     #branding{
+      text-align:center;
       img {
-        width:300px !important;
+        width:90% !important;
         height:auto !important;
       }
     }
@@ -577,12 +591,25 @@ div.error{display:none;}
   }
 }
 /*sponsors footer*/
+#block-views-sponsors_mobile-block_10{
+  h2.block-title{
+    margin-left:4%;
+    color:white;
+    font-family:TrajanPro, Georgia, "Times New Roman", Times, serif;
+    font-style:normal;
+    font-weight:bold;
+    text-shadow:1px 3px 2px #333;
+    margin-bottom:24px;
+    background:transparent;
+    border:0px;
+  }
+}
 
 #view-id-sponsors_mobile-block_10{
   .views-accordion{
     h3.accordion-header{
       padding-top:0px;
-      width:100%;
+      width:90%;
       padding-bottom:0px;
       background:#545454;
         font-family:GillSans, Helvetica, Arial, sans-serif;

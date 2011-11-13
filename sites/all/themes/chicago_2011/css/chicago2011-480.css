@@ -1330,7 +1330,19 @@ a.more-link:visited {
   background: url('../images/bg/body_bg.png') repeat;
 }
 h1.title {
-  margin-left: 4%;
+  margin-left: 0px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+#content-tabs {
+  text-align: center;
+  margin-bottom: 0px;
+}
+#content-tabs ul.primary, #content-tabs ul.secondary {
+  padding-bottom: 0px;
+  padding-left: 16px;
+  padding-right: 0px;
+  padding-top: 0px;
 }
 #view-id-sessions-block_3 .view-footer {
   position: relative;
@@ -1753,6 +1765,7 @@ div.error {
   text-align: center;
   width: 100%;
   padding-right: 0px;
+  padding-top: 6px;
 }
 .page-program-sessions .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one,
 .page-program-sessions-accepted .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one,
@@ -1830,8 +1843,11 @@ div.error {
   /* need bg to adjust brown area*/
 
 }
+#header-zone-wrapper #site-header #branding {
+  text-align: center;
+}
 #header-zone-wrapper #site-header #branding img {
-  width: 300px !important;
+  width: 90% !important;
   height: auto !important;
 }
 #header-zone-wrapper #site-header #site-menu {
@@ -1928,9 +1944,20 @@ div.error {
   display: block;
 }
 /*sponsors footer*/
+#block-views-sponsors_mobile-block_10 h2.block-title {
+  margin-left: 4%;
+  color: white;
+  font-family: TrajanPro, Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: bold;
+  text-shadow: 1px 3px 2px #333;
+  margin-bottom: 24px;
+  background: transparent;
+  border: 0px;
+}
 #view-id-sponsors_mobile-block_10 .views-accordion h3.accordion-header {
   padding-top: 0px;
-  width: 100%;
+  width: 90%;
   padding-bottom: 0px;
   background: #545454;
   font-family: GillSans, Helvetica, Arial, sans-serif;
