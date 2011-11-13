@@ -164,9 +164,14 @@
       </div><!-- /#main-content-container -->
     </div><!-- /#main-zone-wrapper -->
     
-    <?php if($postscript_one || $postscript_two || $postscript_three || $postscript_four): ?>    
+    <?php if($postscript_top || $postscript_one || $postscript_two || $postscript_three || $postscript_four): ?>    
     <div id="postscript-zone-wrapper" class="zone-wrapper postscript-zone-wrapper">
       <div id="postscript-wrapper" class="container-<?php print $postscript_container_width; ?> clearfix">
+        <?php if($postscript_top): ?>
+          <div id="postscript-top" class="postscript <?php print $postscript_top_classes; ?>">
+            <?php print $postscript_top; ?>
+          </div><!-- /#postscript-one -->
+        <?php endif; ?>
         <?php if($postscript_one): ?>
           <div id="postscript-one" class="postscript <?php print $postscript_one_classes; ?>">
             <?php print $postscript_one; ?>
@@ -204,12 +209,14 @@
             <?php print $footer_last; ?>
           </div><!-- /#footer-last -->
         <?php endif; ?>
-				<?php if ($footer_message): ?>
+      </div><!-- /#footer-wrapper -->
+			<?php if ($footer_message): ?>
+      	<div id="footer-message-wrapper" class="footer-message-wrapper">
           <div id="footer-message">
             <?php print $footer_message; ?>
           </div><!-- /#footer-message -->
-        <?php endif; ?>
-      </div><!-- /#footer-wrapper -->
+        </div><!-- /#footer-message-wrapper -->
+      <?php endif; ?>
     </div><!-- /#footer-zone-wrapper -->
     <?php endif; ?>
   </div><!-- /#page-inner-wrapper -->

@@ -512,6 +512,31 @@ function chicago_2011_settings($saved_settings) {
           '#options' => $containers,
           '#description' => t('Container Grid width for the postscript regions.'),
         );
+        $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_top_width'] = array(
+          '#type' => 'select',
+          '#title' => t('Contextual Width for Postscript Top'),
+          '#default_value' => $saved_settings['chicago_2011_postscript_top_width'],
+          '#options' => $grids,
+          '#description' => t('Grid width of the first postscript region. This number should be less than or equal to the container width defined above.'),
+        );
+        $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_top_prefix'] = array(
+          '#type' => 'select',
+          '#title' => t('Prefix Spacing for Postscript Top'),
+          '#default_value' => $saved_settings['chicago_2011_postscript_top_prefix'],
+          '#options' => $spacing,
+          '#prefix' => '<div class="prefix_config">',
+          '#suffix' => '</div>',
+          '#description' => t('Adding prefix grids to this element will add padding to the left side of the element, creating spacing between the previous element.'),
+        );
+         $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_top_suffix'] = array(
+          '#type' => 'select',
+          '#title' => t('Suffix Spacing for Postscript Top'),
+          '#default_value' => $saved_settings['chicago_2011_postscript_top_suffix'],
+          '#options' => $spacing,
+          '#prefix' => '<div class="suffix_config">',
+          '#suffix' => '</div>',
+          '#description' => t('Adding suffix grids to this element will add padding to the right side of the element, creating spacing between the next element.'),
+        );
         $form['chicago_2011_container']['chicago_2011_regions']['postscript']['chicago_2011_postscript_one_width'] = array(
           '#type' => 'select',
           '#title' => t('Contextual Width for Postscript 1'),

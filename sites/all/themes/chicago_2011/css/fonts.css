@@ -95,11 +95,11 @@
 
 @font-face {
 	font-family: 'GillSans';
-	src: url('../fonts/gillsans/gillsans_bold-webfont.eot');
-	src: url('../fonts/gillsans/gillsans_bold-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/gillsans/gillsans_bold-webfont.woff') format('woff'),
-			 url('../fonts/gillsans/gillsans_bold-webfont.ttf') format('truetype'),
-			 url('../fonts/gillsans/gillsans_bold-webfont.svg#') format('svg');
+	src: url('../fonts/gillsans/GillSans_bold-webfont.eot');
+	src: url('../fonts/gillsans/GillSans_bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/gillsans/GillSans_bold-webfont.woff') format('woff'),
+			 url('../fonts/gillsans/GillSans_bold-webfont.ttf') format('truetype'),
+			 url('../fonts/gillsans/GillSans_bold-webfont.svg#') format('svg');
 	font-weight: bold;
 	font-style: normal;
 }

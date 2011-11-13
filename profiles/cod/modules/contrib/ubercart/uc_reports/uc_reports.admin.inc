@@ -549,6 +549,7 @@ function uc_reports_products_custom_form_submit($form, &$form_state) {
  *
  * Straight duplication of theme_table, but our row handling is different.
  *
+ * @see theme_table()
  * @ingroup themeable
  */
 function theme_uc_reports_product_table($header, $rows, $attributes = array(), $caption = NULL) {
@@ -611,6 +612,7 @@ function theme_uc_reports_product_table($header, $rows, $attributes = array(), $
       }
       if (count($cells)) {
         // Add odd/even class
+        // We don't flip here like theme_table(), because we did that above.
         if (isset($attributes['class'])) {
           $attributes['class'] .= ' '. $class;
         }
@@ -792,7 +794,7 @@ function uc_reports_sales_year() {
 
   // Site time minus GMT time, in seconds
   $timezone_offset = _uc_reports_timezone_offset();
-  
+
   $order_statuses = _uc_reports_order_statuses();
 
   // Get the year for the report from the URL.

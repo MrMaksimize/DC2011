@@ -529,12 +529,8 @@ function uc_object_attributes_form($form_state, $object, $type, $view = 'overvie
   }
 
   $used_aids = array();
-  $used_labels = array();
   foreach ($attributes as $attribute) {
     $used_aids[] = $attribute->aid;
-    if (!empty($attribute->label)) {
-      $used_labels[] = $attribute->label;
-    }
   }
 
   if ($view == 'overview') {
@@ -600,7 +596,7 @@ function uc_object_attributes_form($form_state, $object, $type, $view = 'overvie
     $unused_attributes = array();
     $result = db_query("SELECT a.aid, a.name, a.label FROM {uc_attributes} AS a LEFT JOIN {uc_attribute_options} AS ao ON a.aid = ao.aid GROUP BY a.aid, a.name, a.label ORDER BY a.name");
     while ($attribute = db_fetch_object($result)) {
-      if (!in_array($attribute->aid, $used_aids) && !in_array($attribute->label, $used_labels)) {
+      if (!in_array($attribute->aid, $used_aids)) {
         $unused_attributes[$attribute->aid] = $attribute->name;
       }
     }
@@ -1000,7 +996,7 @@ function uc_object_options_form_validate($form, &$form_state) {
   if (isset($form_state['values']['attributes'])) {
     foreach ($form_state['values']['attributes'] as $aid => $attribute) {
       $selected_opts = array();
-      if (is_array($attribute['options'])) {
+      if (isset($attribute['options'])) {
         foreach ($attribute['options'] as $oid => $option) {
           if ($option['select'] == 1) {
             $selected_opts[] = $oid;
@@ -1037,9 +1033,11 @@ function uc_object_options_form_submit($form, &$form_state) {
   }
 
   foreach ($form_state['values']['attributes'] as $attribute) {
-    db_query("UPDATE $attr_table SET default_option = %d WHERE $id = $sql_type AND aid = %d", $attribute['default'], $form_state['values']['id'], $attribute['aid']);
+    if (isset($attribute['default'])) {
+      db_query("UPDATE $attr_table SET default_option = %d WHERE $id = $sql_type AND aid = %d", $attribute['default'], $form_state['values']['id'], $attribute['aid']);
+    }
 
-    if (is_array($attribute['options'])) {
+    if (isset($attribute['options'])) {
       foreach ($attribute['options'] as $oid => $option) {
         db_query("DELETE FROM $opt_table WHERE $id = $sql_type AND oid = %d", $form_state['values']['id'], $oid);
 
@@ -1057,6 +1055,11 @@ function uc_object_options_form_submit($form, &$form_state) {
   }
 
   drupal_set_message(t('The !type options have been saved.', array('!type' => $form_state['values']['type'] == 'product' ? t('product') : t('product class'))));
+
+  if ($form_state['values']['type'] == 'product') {
+    // Clear the page and block caches.
+    cache_clear_all();
+  }
 }
 
 /**
@@ -1214,7 +1217,7 @@ function uc_product_adjustments_form_submit($form, &$form_state) {
   }
   drupal_set_message(t('Product adjustments have been saved.'));
   $goto = array($_GET['q']);
-  if ($_GET['page']) {
+  if (isset($_GET['page'])) {
     $goto[] = 'page='. $_GET['page'];
   }
   $form_state['redirect'] = $goto;

@@ -30,7 +30,11 @@
     global $user; 
     profile_load_profile($user);
 		$skinr_welcome_message = "dcc-user-welcome";
-    $logged_in_copy="Welcome, $user->profile_first $user->profile_last:&nbsp;" . l("Buy a ticket", "content/drupalcamp-chicago-2011") . " " . l("My Account", "user/".$user->uid."/edit") . " " .  l("Logout", "logout");   
+    if (is_array($user->roles) && in_array('attendee', array_values($user->roles))) {
+      $logged_in_copy="Welcome, $user->profile_first $user->profile_last:&nbsp;" . l("Submit a Session", "node/add/session") . " " . l("Buy a ticket", "content/drupalcamp-chicago-2011") . " " . l("My Account", "user/".$user->uid."/edit") . " " .  l("Logout", "logout");
+    } else {
+      $logged_in_copy="Welcome, $user->profile_first $user->profile_last:&nbsp;" . l("Buy a ticket", "content/drupalcamp-chicago-2011") . " " . l("My Account", "user/".$user->uid."/edit") . " " .  l("Logout", "logout");   
+    }
     $block->content=$logged_in?$logged_in_copy:$block->content;
   }
 ?>
