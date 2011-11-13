@@ -11,7 +11,7 @@
  ******************************************************************************/
 
 /**
- * Implementation of hook_ca_entity().
+ * Implements hook_ca_entity().
  */
 function uc_order_ca_entity() {
   $entities['uc_order'] = array(
@@ -29,7 +29,7 @@ function uc_order_ca_entity() {
 }
 
 /**
- * Implementation of hook_ca_trigger().
+ * Implements hook_ca_trigger().
  */
 function uc_order_ca_trigger() {
   $triggers['uc_order_status_update'] = array(
@@ -62,7 +62,7 @@ function uc_order_ca_trigger() {
 }
 
 /**
- * Implementation of hook_ca_predicate().
+ * Implements hook_ca_predicate().
  */
 function uc_order_ca_predicate() {
   $predicates = array();
@@ -111,7 +111,7 @@ function uc_order_ca_predicate() {
 }
 
 /**
- * Implementation of hook_ca_condition().
+ * Implements hook_ca_condition().
  */
 function uc_order_ca_condition() {
   $order_arg = array(
@@ -123,6 +123,16 @@ function uc_order_ca_condition() {
     '#description' => t('Returns TRUE if the current order status matches the status specified below.'),
     '#category' => t('Order'),
     '#callback' => 'uc_order_condition_check_order_status',
+    '#arguments' => array(
+      'order' => $order_arg,
+    ),
+  );
+
+  $conditions['uc_order_state_condition'] = array(
+    '#title' => t('Check the order state'),
+    '#description' => t('Returns TRUE if the current order status belong to the order state specified below.'),
+    '#category' => t('Order'),
+    '#callback' => 'uc_order_condition_check_order_state',
     '#arguments' => array(
       'order' => $order_arg,
     ),
@@ -288,7 +298,7 @@ function uc_order_ca_condition() {
 }
 
 /**
- * Implementation of hook_ca_action().
+ * Implements hook_ca_action().
  */
 function uc_order_ca_action() {
   $order_arg = array(
@@ -362,6 +372,36 @@ function uc_order_condition_check_order_status_form($form_state, $settings = arr
     '#title' => t('Order status'),
     '#options' => $options,
     '#default_value' => $settings['order_status'],
+  );
+
+  return $form;
+}
+
+/**
+ * Check the current order state.
+ *
+ * @see uc_order_condition_check_order_state_form()
+ */
+function uc_order_condition_check_order_state($order, $settings) {
+  // Return TRUE if the order status matches.
+  return uc_order_status_data($order->order_status, 'state') == $settings['order_state'];
+}
+
+/**
+ * @see uc_order_condition_check_order_state()
+ */
+function uc_order_condition_check_order_state_form($form_state, $settings = array()) {
+  foreach (uc_order_state_list('general') as $state) {
+    $options[$state['id']] = $state['title'];
+  }
+  foreach (uc_order_state_list('specific') as $state) {
+    $options[$state['id']] = $state['title'];
+  }
+  $form['order_state'] = array(
+    '#type' => 'select',
+    '#title' => t('Order state'),
+    '#options' => $options,
+    '#default_value' => $settings['order_state'],
   );
 
   return $form;

@@ -154,9 +154,9 @@ class UbercartTestHelper extends DrupalWebTestCase {
 /**
  * Test the country import and update functions.
  */
-class UbercartStoreCountriesTest extends UbercartTestHelper {
+class UbercartCountryTestCase extends UbercartTestHelper {
 
-  function getInfo() {
+  public static function getInfo() {
     return array(
       'name' => 'Country functionality',
       'description' => 'Import, edit, and remove countries and their settings.',

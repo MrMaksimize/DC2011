@@ -172,6 +172,7 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
 	//dpm($vars);
 	//$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
 	//$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
+//  $vars['styles'] = drupal_get_css();
 }
 
 

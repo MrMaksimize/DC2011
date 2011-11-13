@@ -156,6 +156,16 @@ function uc_product_menu() {
 }
 
 /**
+ * Implements hook_help().
+ */
+function uc_product_help($path, $arg) {
+  switch ($path) {
+    case 'admin/store/settings/products/edit/fields':
+      return t("These settings control which fields are displayed and the position they are displayed in when viewing product nodes.");
+  }
+}
+
+/**
  * Implements hook_perm().
  */
 function uc_product_perm() {
@@ -1385,7 +1395,7 @@ function uc_product_table($args = array()) {
       if (module_exists('imagecache')) {
         if (($field = variable_get('uc_image_'. $node->type, '')) && isset($node->$field) && file_exists($node->{$field}[0]['filepath'])) {
           $image = $node->{$field}[0];
-          $data['image'] = array('#value' => l(theme('imagecache', 'product_list', $image['filepath'], $image['alt'], $image['title']), 'node/'. $node->nid, array('html' => TRUE)));
+          $data['image'] = array('#value' => l(theme('imagecache', 'product_list', $image['filepath'], $image['data']['alt'], $image['data']['title']), 'node/'. $node->nid, array('html' => TRUE)));
         }
         else {
           $data['image'] = array('#value' => t('n/a'));
@@ -1837,7 +1847,7 @@ function uc_product_get_picture($node_id, $format = 'product') {
     $image = $product->{$field}[0];
     $path = $image['filepath'];
     if (file_exists($path)) {
-      $img = theme('imagecache', $format, $path, $image['alt'], $image['title']);
+      $img = theme('imagecache', $format, $path, $image['data']['alt'], $image['data']['title']);
       if ($format == 'product') {
         if ($image_widget) {
           $image_widget_func = $image_widget['callback'];

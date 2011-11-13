@@ -11,7 +11,7 @@
  */
 
 /**
- * Handle the "Ship to" order pane.
+ * Handles the "Ship to" order pane.
  */
 function uc_order_pane_ship_to($op, $arg1) {
   switch ($op) {
@@ -106,7 +106,7 @@ function uc_order_pane_ship_to($op, $arg1) {
 }
 
 /**
- * Handle the "Bill to" order pane.
+ * Handles the "Bill to" order pane.
  */
 function uc_order_pane_bill_to($op, $arg1) {
   switch ($op) {
@@ -196,7 +196,7 @@ function uc_order_pane_bill_to($op, $arg1) {
 }
 
 /**
- * Handle the "Customer Info" order pane.
+ * Handles the "Customer Info" order pane.
  */
 function uc_order_pane_customer($op, $arg1) {
   switch ($op) {
@@ -271,7 +271,7 @@ function uc_order_pane_customer($op, $arg1) {
 }
 
 /**
- * Handle the "Products" order pane.
+ * Handles the "Products" order pane.
  */
 function uc_order_pane_products($op, $arg1) {
   switch ($op) {
@@ -315,7 +315,7 @@ function uc_order_pane_products($op, $arg1) {
 }
 
 /**
- * Handle the "Line Items" order pane.
+ * Handles the "Line Items" order pane.
  */
 function uc_order_pane_line_items($op, $arg1) {
   switch ($op) {
@@ -506,7 +506,7 @@ function uc_order_pane_line_items($op, $arg1) {
 }
 
 /**
- * Handle the "Order Comments" order pane.
+ * Handles the "Order Comments" order pane.
  */
 function uc_order_pane_order_comments($op, $arg1) {
   switch ($op) {
@@ -541,7 +541,7 @@ function uc_order_pane_order_comments($op, $arg1) {
 }
 
 /**
- * Handle the "Admin Comments" order pane.
+ * Handles the "Admin Comments" order pane.
  */
 function uc_order_pane_admin_comments($op, $arg1) {
   switch ($op) {
@@ -585,7 +585,7 @@ function uc_order_pane_admin_comments($op, $arg1) {
 }
 
 /**
- * Handle the "Update" order pane.
+ * Handles the "Update" order pane.
  */
 function uc_order_pane_update($op, $arg1) {
   switch ($op) {
@@ -597,10 +597,9 @@ function uc_order_pane_update($op, $arg1) {
 /**
  * Form to save order comments and update the order status.
  *
+ * @see theme_uc_order_view_update_controls()
+ * @see uc_order_view_update_form_submit()
  * @ingroup forms
- * @see
- *   theme_uc_order_view_update_controls()
- *   uc_order_view_update_form_submit()
  */
 function uc_order_view_update_form($form_state, $order) {
   $form['order_comment_field'] = array(
@@ -672,26 +671,20 @@ function uc_order_view_update_form($form_state, $order) {
 }
 
 /**
- * @ingroup themeable
  * @see uc_order_view_update_form()
+ * @ingroup themeable
  */
 function theme_uc_order_view_update_controls($form) {
   return '<div class="update-controls">'. drupal_render($form) .'</div>';
 }
 
 /**
+ * Form submit handler for uc_order_view_update_form().
+ *
  * @see uc_order_view_update_form()
  */
 function uc_order_view_update_form_submit($form, &$form_state) {
   global $user;
-
-  if ($form_state['values']['status'] != $form_state['values']['current_status']) {
-    if (uc_order_update_status($form_state['values']['order_id'], $form_state['values']['status'])) {
-      if (is_null($form_state['values']['order_comment']) || strlen($form_state['values']['order_comment']) == 0) {
-        uc_order_comment_save($form_state['values']['order_id'], $user->uid, '-', 'order', $form_state['values']['status'], $form_state['values']['notify']);
-      }
-    }
-  }
 
   if (!is_null($form_state['values']['order_comment']) && strlen(trim($form_state['values']['order_comment'])) > 0) {
     uc_order_comment_save($form_state['values']['order_id'], $user->uid, $form_state['values']['order_comment'], 'order', $form_state['values']['status'], $form_state['values']['notify']);
@@ -699,6 +692,14 @@ function uc_order_view_update_form_submit($form, &$form_state) {
 
   if (!is_null($form_state['values']['admin_comment']) && strlen(trim($form_state['values']['admin_comment'])) > 0) {
     uc_order_comment_save($form_state['values']['order_id'], $user->uid, $form_state['values']['admin_comment']);
+  }
+
+  if ($form_state['values']['status'] != $form_state['values']['current_status']) {
+    if (uc_order_update_status($form_state['values']['order_id'], $form_state['values']['status'])) {
+      if (is_null($form_state['values']['order_comment']) || strlen($form_state['values']['order_comment']) == 0) {
+        uc_order_comment_save($form_state['values']['order_id'], $user->uid, '-', 'order', $form_state['values']['status'], $form_state['values']['notify']);
+      }
+    }
   }
 
   // Let conditional actions send email if requested.
@@ -711,7 +712,7 @@ function uc_order_view_update_form_submit($form, &$form_state) {
 }
 
 /**
- * Build the order view products table.
+ * Builds the order view products table.
  */
 function op_products_view_table($order) {
   $table = array(
@@ -780,8 +781,10 @@ function op_products_view_table($order) {
         '#value' => $product->qty .'&times;',
         '#cell_attributes' => array('align' => 'right'),
       );
+      $node = node_load($product->nid);
+      $title = node_access('view', $node) ? l($product->title, 'node/'. $node->nid) : check_plain($product->title);
       $data['product'] = array(
-        '#value' => check_plain($product->title) . uc_product_get_description($product),
+        '#value' => $title . uc_product_get_description($product),
       );
       $data['model'] = array(
         '#value' => check_plain($product->model),
@@ -827,7 +830,7 @@ function op_products_view_table($order) {
 }
 
 /**
- * Build the order customer's view products table.
+ * Builds the order customer's view products table.
  */
 function op_products_customer_table($order) {
   $table = array(
@@ -896,8 +899,10 @@ function op_products_customer_table($order) {
         '#value' => $product->qty .'&times;',
         '#cell_attributes' => array('align' => 'right'),
       );
+      $node = node_load($product->nid);
+      $title = node_access('view', $node) ? l($product->title, 'node/'. $node->nid) : check_plain($product->title);
       $data['product'] = array(
-        '#value' => check_plain($product->title) . uc_product_get_description($product),
+        '#value' => $title . uc_product_get_description($product),
       );
       $data['model'] = array(
         '#value' => check_plain($product->model),
@@ -942,7 +947,7 @@ function op_products_customer_table($order) {
 }
 
 /**
- * Build the order comments table.
+ * Builds the order comments table.
  */
 function op_order_comments_view_table($comments) {
   $table = array(
@@ -1010,7 +1015,7 @@ function op_order_comments_view_table($comments) {
 }
 
 /**
- * Build the order admin comments table.
+ * Builds the order admin comments table.
  */
 function op_admin_comments_view_table($comments) {
   $table = array(
@@ -1061,7 +1066,7 @@ function op_admin_comments_view_table($comments) {
 }
 
 /**
- * Build a list of order panes defined in the enabled modules.
+ * Builds a list of order panes defined in the enabled modules.
  */
 function _order_pane_list($view = 'view') {
   static $panes;
@@ -1090,7 +1095,7 @@ function _order_pane_list($view = 'view') {
 }
 
 /**
- * Return data from an order pane by pane ID and the array key.
+ * Returns data from an order pane by pane ID and the array key.
  */
 function _order_pane_data($pane_id, $key) {
   $panes = _order_pane_list();
@@ -1102,7 +1107,7 @@ function _order_pane_data($pane_id, $key) {
 }
 
 /**
- * Call an order pane function with the argument passed by reference.
+ * Calls an order pane function with the argument passed by reference.
  */
 function _call_order_pane_byref($func, $op, &$form) {
   return $func($op, $form);

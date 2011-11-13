@@ -264,7 +264,10 @@ function profile_view_field($user, $field) {
       case 'checkbox':
         return $browse ? l($field->title, 'profile/'. $field->name) : check_plain($field->title);
       case 'url':
-        return '<a href="'. check_url($value) .'">'. check_plain($value) .'</a>';
+        $url = check_url($value);
+        $parsed_url = parse_url($url);
+        $url = (!isset($parsed_url['scheme'])) ? 'http://'.$url : $url;
+        return '<a href="'. $url .'">'. check_plain($value) .'</a>';
       case 'date':
         $format = substr(variable_get('date_format_short', 'm/d/Y - H:i'), 0, 5);
         // Note: Avoid PHP's date() because it does not handle dates before
@@ -432,14 +435,7 @@ function _profile_update_user_fields($fields, $account) {
 function profile_validate_profile($edit, $category) {
   $result = _profile_get_fields($category);
   while ($field = db_fetch_object($result)) {
-    if ($edit[$field->name]) {
-      if ($field->type == 'url') {
-        if (!valid_url($edit[$field->name], TRUE)) {
-          form_set_error($field->name, t('The value provided for %field is not a valid URL.', array('%field' => $field->title)));
-        }
-      }
-    }
-    else if ($field->required && !user_access('administer users')) {
+    if ($field->required && !user_access('administer users')) {
       form_set_error($field->name, t('The field %field is required.', array('%field' => $field->title)));
     }
   }

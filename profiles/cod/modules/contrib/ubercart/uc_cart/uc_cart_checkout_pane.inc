@@ -25,29 +25,7 @@ function uc_checkout_pane_cart($op) {
 
     case 'review':
       $items = uc_cart_get_contents();
-      $output = '<table>';
-      $context = array(
-        'revision' => 'themed',
-        'type' => 'cart_item',
-        'subject' => array(),
-      );
-      foreach ($items as $item) {
-        $desc = check_plain($item->title) . uc_product_get_description($item);
-
-        $price_info = array(
-          'price' => $item->price,
-          'qty' => $item->qty,
-        );
-        $context['subject'] = array(
-          'cart' => $items,
-          'cart_item' => $item,
-          'node' => node_load($item->nid),
-        );
-        $output .= '<tr valign="top"><td>'. $item->qty .'&times;</td><td width="100%">'. $desc
-                  .'</td><td nowrap="nowrap">'. uc_price($price_info, $context) .'</td></tr>';
-      }
-      $output .= '</table>';
-      $review[] = $output;
+      $review[] = theme('uc_checkout_pane_cart_review', $items);
       return $review;
   }
 }
@@ -97,7 +75,7 @@ function uc_checkout_pane_customer($op, &$arg1, $arg2) {
           $contents['new_account']['name'] = array(
             '#type' => 'textfield',
             '#title' => t('Username'),
-            '#default_value' => $arg1->data['new_user']['name'],
+            '#default_value' => isset($arg1->data['new_user']['name']) ? $arg1->data['new_user']['name'] : '',
             '#maxlength' => 60,
             '#size' => 32,
           );
@@ -167,7 +145,7 @@ function uc_checkout_pane_customer($op, &$arg1, $arg2) {
         variable_get('uc_cart_new_account_password', FALSE)) &&
         $user->uid == 0) {
         // Skip if an account already exists for this e-mail address.
-        if (variable_get('uc_cart_mail_existing', TRUE) && db_fetch_object(db_query("SELECT uid FROM {users} WHERE LOWER(mail) = LOWER('%s')", $arg2['primary_email'])) > 0) {
+        if (variable_get('uc_cart_mail_existing', TRUE) && db_result(db_query("SELECT uid FROM {users} WHERE LOWER(mail) = LOWER('%s')", $arg2['primary_email'])) > 0) {
           drupal_set_message(t('An account already exists for your e-mail address. The new account details you entered will be disregarded.'));
         }
         else {
@@ -187,7 +165,9 @@ function uc_checkout_pane_customer($op, &$arg1, $arg2) {
             if (strcmp($arg2['new_account']['pass'], $arg2['new_account']['pass_confirm'])) {
               form_set_error('panes][customer][new_account][pass_confirm', t('The passwords you entered did not match. Please try again.'));
             }
-            $arg1->data['new_user']['pass'] = $arg2['new_account']['pass'];
+            if (!empty($arg2['new_account']['pass'])) {
+              $arg1->data['new_user']['pass'] = $arg2['new_account']['pass'];
+            }
           }
         }
       }
@@ -674,4 +654,43 @@ function theme_cart_review_table($show_subtotal = TRUE) {
   }
 
   return theme('table', $header, $rows, array('class' => 'cart-review'));
+}
+
+/**
+ * Theme cart items on the checkout review order page.
+ *
+ * @param $items
+ *   Cart items.
+ * @return
+ *   A string of HTML for the page contents.
+ * @ingroup themeable
+ */
+function theme_uc_checkout_pane_cart_review($items) {
+  $context = array(
+    'revision' => 'themed',
+    'type' => 'cart_item',
+    'subject' => array(),
+  );
+
+  $output = '<table>';
+  foreach ($items as $item) {
+    $desc = check_plain($item->title) . uc_product_get_description($item);
+
+    $price_info = array(
+      'price' => $item->price,
+      'qty' => $item->qty,
+    );
+
+    $context['subject'] = array(
+      'cart' => $items,
+      'cart_item' => $item,
+      'node' => node_load($item->nid),
+    );
+
+    $output .= '<tr valign="top"><td>'. $item->qty .'&times;</td><td width="100%">'. $desc
+              .'</td><td nowrap="nowrap">'. uc_price($price_info, $context) .'</td></tr>';
+  }
+  $output .= '</table>';
+
+  return $output;
 }

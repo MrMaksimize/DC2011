@@ -605,19 +605,16 @@ function uc_store_store_settings_form() {
     '#size' => 32,
     '#maxlength' => 128,
     '#required' => TRUE,
-    '#default_value' => variable_get('uc_store_email', NULL),
-    '#summary' => variable_get('uc_store_email', NULL) ? t('Store e-mail address is %email.', array('%email' => variable_get('uc_store_email', ''))) : t('Store e-mail address is not set.'),
+    '#default_value' => uc_store_email(),
+    '#summary' => uc_store_email() ? t('Store e-mail address is %email.', array('%email' => uc_store_email())) : t('Store e-mail address is not set.'),
   );
 
   $form['uc_store_email_include_name'] = array(
     '#type' => 'checkbox',
     '#title' => t('Include the store name in the "From" line of store e-mails.'),
     '#description' => t('May not be available on all server configurations. Turn off if this causes problems.'),
-
-    // don't show this element if there isn't an e-mail address set
-    '#summary callback' => variable_get('uc_store_email', NULL) ? NULL : 'summarize_null',
     '#default_value' => variable_get('uc_store_email_include_name', TRUE),
-    '#summary callback' => variable_get('uc_store_email', NULL) ? NULL : 'summarize_null',
+    '#summary callback' => uc_store_email() ? NULL : 'summarize_null',
   );
 
   $form['uc_store_phone'] = uc_textfield(t('Phone number'), variable_get('uc_store_phone', NULL), FALSE);
@@ -944,13 +941,6 @@ function uc_store_customer_orders($uid) {
   $header = array(t('View'), t('Order ID'), t('Date'), t('Billing name'),
                   t('Shipping name'), t('Items'), t('Total'));
 
-  $context = array(
-    'revision' => 'themed-original',
-    'type' => 'order_total',
-    'subject' => array(
-      'order' => $order,
-    ),
-  );
   $totals = array('orders' => 0, 'items' => 0, 'total' => 0);
   while ($order = db_fetch_object($result)) {
     $icons = l(uc_store_get_icon('file:order_view'),
@@ -979,6 +969,14 @@ function uc_store_customer_orders($uid) {
     $totals['items'] += $item_count['COUNT(*)'];
     $totals['total'] += $order->order_total;
 
+    $context = array(
+      'revision' => 'themed-original',
+      'type' => 'order_total',
+      'subject' => array(
+        'order' => $order,
+      ),
+    );
+
     $rows[] = array(
       'data' => array(
         array('data' => $icons),
@@ -991,6 +989,7 @@ function uc_store_customer_orders($uid) {
       'id' => 'order-'. $order->order_id,
     );
   }
+
   if (empty($rows)) {
     $rows[] = array(
       array('data' => t('No orders found.'), 'colspan' => 7)
