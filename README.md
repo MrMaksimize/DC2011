@@ -1,9 +1,9 @@
-disable
-cdn
-boost
-uc_ssl
+disable the following:
+	cdn
+	boost
+	uc_ssl
 
-FOOBAR
+else{FOOBAR};
 
 remove cache folder
 
@@ -13,6 +13,9 @@ remove cache folder
 4. download mobile tools
 5. move feature
 6. enable
+	drush en dc_2011_mobile
+
+	drush fr -y dc_2011_mobile
 7. go through each context that has a mobile, make sure to check require all conditions, and set it desktop only
 
 
