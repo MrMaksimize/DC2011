@@ -2015,6 +2015,19 @@ div.error {
   font-size: 10px;
   line-height: 15px;
 }
+.node-type-sponsor #main-wrapper {
+  font-size: 10px;
+  line-height: 10px;
+}
+.node-type-sponsor #main-wrapper .field-field-logo {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.node-type-sponsor #main-wrapper p, .node-type-sponsor #main-wrapper li {
+  font-size: 10px;
+  line-height: 10px;
+}
 .page-code-conduct #main-wrapper p {
   font-size: 10px;
   line-height: 10px;
