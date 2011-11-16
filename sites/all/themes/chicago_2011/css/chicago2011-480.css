@@ -2028,6 +2028,12 @@ div.error {
   font-size: 10px;
   line-height: 10px;
 }
+.page-sponsors #main-content {
+  padding: 0px;
+}
+.page-sponsors #main-content h2.block-title {
+  display: none;
+}
 .page-code-conduct #main-wrapper p {
   font-size: 10px;
   line-height: 10px;
