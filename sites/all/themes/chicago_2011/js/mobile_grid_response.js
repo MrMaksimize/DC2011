@@ -17,8 +17,12 @@ Drupal.behaviors.dc2011Behavior = function (context) {
     }
     
     /*sessions*/
-    
-    if ($('body').hasClass('page-program-session-schedule')){
+    console.log('behavior active');
+    resizeRespond();
+  }
+}
+function clickBinder{
+       if ($('body').hasClass('page-program-session-schedule')){
       console.log('init sess sched');
       /*$(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
         if(Drupal.settings.dc2011.state == 'mobile' && $('body').hasClass('session-schedule-mobile')){
@@ -68,12 +72,7 @@ Drupal.behaviors.dc2011Behavior = function (context) {
         return false;
       });
     }
-    
-    console.log('behavior active');
-    resizeRespond();
-  }
-}
-
+    }
 function sessionLoad(parent, parentH5, link_clicked){
 //this ends up acting as a router based on the classes attached to the href.
 //iterate over all the subtabs and close them up.
@@ -145,6 +144,7 @@ function resizeRespond(force){
         .addClass(currentOpReps[i].newSelector +' mobile');
       }
     }
+    clickBinder();
     Drupal.settings.dc2011.prevState = 'mobile';
   }
   else if (($(window).width()) > 480 && Drupal.settings.dc2011.state == 'full' && Drupal.settings.dc2011.prevState == 'mobile'){
