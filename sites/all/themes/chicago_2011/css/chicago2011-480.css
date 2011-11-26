@@ -44,8 +44,8 @@
   max-width: 80px;
 }
 /**
- * This will display them grid elements as block rather than inline for mobile browsers 
- * (essentially anything smaller than the narrow grid size, and media query declares. 
+ * This will display them grid elements as block rather than inline for mobile browsers
+ * (essentially anything smaller than the narrow grid size, and media query declares.
  */
 .grid-1,
 .grid-2,
@@ -1358,8 +1358,8 @@ h1.title {
 
 }
 #user-bar-zone-wrapper {
-  height: 65px;
-  max-height: 65px;
+  height: 72px;
+  max-height: 72px;
   background: #2a2b2c;
 }
 #user-bar-zone-wrapper #user-bar-regions .dcc-user-welcome {

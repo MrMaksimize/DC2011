@@ -15,7 +15,7 @@ Drupal.behaviors.dc2011Behavior = function (context) {
         maxFontSize: Drupal.settings.dc2011.fitTextEls[el].max
       });
     }
-    
+
     /*sessions*/
     console.log('behavior active');
     resizeRespond();
@@ -48,7 +48,7 @@ function clickBinder(){
         console.log(event);
         event.preventDefault();
         event.stopPropagation();
-        
+
         var link_clicked = $(this);
         //find parent
         var parent = $(this).parents('.presentation');
@@ -63,7 +63,7 @@ function clickBinder(){
         console.log(event);
         event.preventDefault();
         event.stopPropagation();
-        
+
         var link_clicked = $(this);
         //find parent
         var parent = $(this).parents('.presentation');
@@ -100,7 +100,7 @@ function sessionLoad(parent, parentH5, link_clicked){
     $.ajax({
       url: Drupal.settings.dc2011.location + '/node_response/'+nid,
       success: function(body){
-      body = body.nodes[0].node; 
+      body = body.nodes[0].node;
         $('.load-container', parent).html(
           '<div class="ajax-speaker">'+body.field_speakers_uid+'</div>'+
           '<div class="ajax-body">'+body.body+'</div>'+
@@ -145,6 +145,7 @@ function resizeRespond(force){
       }
     }
     clickBinder();
+    $('#user-bar-first a.register').prepend('<br/>');
     Drupal.settings.dc2011.prevState = 'mobile';
   }
   else if (($(window).width()) > 480 && Drupal.settings.dc2011.state == 'full' && Drupal.settings.dc2011.prevState == 'mobile'){
@@ -171,6 +172,7 @@ function resizeRespond(force){
         .addClass(currentOpReps[i].oldSelector);
       }
     }
+    $('#user-bar-first #block-block-1 .content-inner p br').remove();
     console.log('full_state');
     Drupal.settings.dc2011.prevState = 'full';
   }
@@ -191,7 +193,7 @@ function contextMock(){
         else{
           contextHelper('mobile');
         }
-        
+
         Drupal.settings.dc2011.prevPosState = 'mobile';
       }
       else if (Drupal.settings.dc2011.posState == 'full'){
@@ -269,8 +271,20 @@ function menuToDropdown(topContainer, ulClass, context){
                $('a', this).attr('href') + '">' +
                $('a', this).text() + '</a>');*/
     });
+    //dc2011 hack
+    //find the secondary menu from the top
+    $('#block-menu-secondary-links ul li').each( function(){
+      var el = this;
+      var optionString = '<option value = "' + $('a', this).attr('href') + '" ';
+      if($('a', el).hasClass('active')){
+          optionString = optionString + 'selected="selected" '
+      }
+      optionString = optionString + '>' + $('a', this).text() + '</a>';
+      $('select', topContainer).append(optionString);
+    });
     //now hide the original lis for future use
     $('ul'+ulClass).hide();
+    //bind the change function
     $('select', topContainer).change(function(){
       window.location = $(this).find("option:selected").val();
     });
@@ -280,4 +294,3 @@ function menuToDropdown(topContainer, ulClass, context){
     $('select', topContainer).remove();
   }
 }
-
