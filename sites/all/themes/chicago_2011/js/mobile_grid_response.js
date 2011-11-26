@@ -21,7 +21,7 @@ Drupal.behaviors.dc2011Behavior = function (context) {
     resizeRespond();
   }
 }
-function clickBinder{
+function clickBinder(){
        if ($('body').hasClass('page-program-session-schedule')){
       console.log('init sess sched');
       /*$(document).bind('flagGlobalAfterLinkUpdate', function(event, data) {
