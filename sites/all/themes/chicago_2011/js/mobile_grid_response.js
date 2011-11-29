@@ -42,7 +42,8 @@ function clickBinder(){
       });
     }
     if ($('body').hasClass('page-program-sessions-accepted')||
-        $('body').hasClass('page-program-sessions')){
+        $('body').hasClass('page-program-sessions')||
+        $('body').hasClass('page-sessions')){
       console.log('init sess sched');
       $('.view-sessions h5.title a').bind('click', function(event){
         console.log(event);
