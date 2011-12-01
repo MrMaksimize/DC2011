@@ -155,6 +155,12 @@
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
+      
+      <?php global $user; ?>
+    <?php if (!$user->uid): ?>
+  </div><!-- /session-meta -->
+  </div><!-- /presentation-inner -->
+  	<?php endif; ?>
     
     <?php endif; ?><!-- /picture -->
   
@@ -183,14 +189,10 @@
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
-    
-    <?php endif; ?><!-- /ops -->
-    
-    <?php global $user; ?>
-    <?php if ($id == 'ops' || !$user->uid): ?>
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
-  	<?php endif; ?>
+    
+    <?php endif; ?><!-- /ops -->
 
 <?php endforeach; ?>
 
