@@ -277,6 +277,43 @@ function dc_2011_mobile_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'sponsors_mobile';
+  $context->description = '';
+  $context->tag = 'layout';
+  $context->conditions = array(
+    'mobile' => array(
+      'values' => array(
+        'mobile' => 'mobile',
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        'sponsors' => 'sponsors',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-sponsors_mobile-block_10' => array(
+          'module' => 'views',
+          'delta' => 'sponsors_mobile-block_10',
+          'region' => 'content',
+          'weight' => 0,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('layout');
+  $export['sponsors_mobile'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'ui_section_front';
   $context->description = 'Front Page - Mobile';
   $context->tag = 'Front Page';
