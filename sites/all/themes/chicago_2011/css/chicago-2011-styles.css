@@ -1563,6 +1563,8 @@ h5.fullname {
 	text-align: center;
 	margin: 0 auto;
 	padding: 18px 0;
+	width: 95%;
+	height: 24px;
 }
 
 .presentation.schedule_item .session-info h5.title {
@@ -1585,7 +1587,7 @@ h5.fullname {
 .presentation.schedule_item .session-info h5.title a:hover,
 .presentation.schedule_item .session-info h5.title a:focus {
 	color: #0F638D;
-	text-shadow: 0 -1px 1px #1a1a1a;
+	text-decoration: none;
 }
 
 .presentation.schedule_item .session-meta {
