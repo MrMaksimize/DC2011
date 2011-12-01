@@ -73,8 +73,8 @@
   
 <?php endif; ?>
 		<?php if($id == 'title'): ?>
-<div class="presentation-inner <?php if($id == 'field_track_value'): print $field_track_value->content; endif; ?>">
-<div class="session-info">
+<?php /*<div class="presentation-inner <?php if($id == 'field_track_value'): print $field_track_value->content; endif; ?>">
+<div class="session-info"> */ ?>
     
 			<?php if ($field->element_type): ?>
         <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
@@ -128,8 +128,9 @@
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
     
-</div><!-- /session-info -->
-  <div class="session-meta">
+<?php /* </div><!-- /session-info -->
+  <div class="session-meta"> */ ?>
+  
     <?php endif; ?><!-- /body -->
     <?php if($id == 'picture'): ?>
     
@@ -214,8 +215,8 @@
       <?php endif; ?>
     <?php endif; ?><!-- /field_experience_value -->
     
-  </div><!-- /session-meta -->
-  </div><!-- /presentation-inner -->
+  <?php /* </div><!-- /session-meta -->
+  </div><!-- /presentation-inner --> */ ?>
 
 <?php endforeach; ?>
 
