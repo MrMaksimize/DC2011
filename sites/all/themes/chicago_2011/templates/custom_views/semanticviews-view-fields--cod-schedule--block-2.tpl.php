@@ -43,7 +43,7 @@
 
 <div class="presentation-inner-wrapper">
 
-<?php foreach ($fields as $id => $field): ?>
+<?php /* foreach ($fields as $id => $field): */ ?>
 
 <?php if($id == 'field_slot_datetime_value'): ?>
 
@@ -217,6 +217,6 @@
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
 
-<?php endforeach; ?>
+<?php /* endforeach; */ ?>
 
 </div>
