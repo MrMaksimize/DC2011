@@ -35,3 +35,11 @@ general ui
 ####Responsive
 The site is not meant to be fully responsive, but depends heavily on server side context.  However, if you're up for it, run through the site in smaller browser size without ?device=mobile  
 Resize back and forth to make sure that proper changes happen in each direction (full and mobile) size change.  
+
+
+###Enabling multiple users pictures on sessions
+* enable views_customfield
+* edit the sessions view
+* exclude user:picture from display
+* right below user picture add Global -> phpcode
+* insert code into the field from here: http://pastebin.com/YhJHAfJ4
