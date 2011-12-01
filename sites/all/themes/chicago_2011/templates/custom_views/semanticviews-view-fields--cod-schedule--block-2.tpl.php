@@ -185,6 +185,9 @@
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
     
+  </div><!-- /session-meta -->
+  </div><!-- /presentation-inner -->
+    
     <?php endif; ?><!-- /ops -->
   
 		<?php if($id == 'field_experience_value'): ?>
@@ -212,9 +215,6 @@
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
-    
-  </div><!-- /session-meta -->
-  </div><!-- /presentation-inner -->
     <?php endif; ?><!-- /field_experience_value -->
 
 <?php endforeach; ?>
