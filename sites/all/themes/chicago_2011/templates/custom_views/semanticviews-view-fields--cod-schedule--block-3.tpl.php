@@ -184,10 +184,10 @@
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
     
+    <?php endif; ?><!-- /ops -->
+    
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
-    
-    <?php endif; ?><!-- /ops -->
 
 <?php endforeach; ?>
 

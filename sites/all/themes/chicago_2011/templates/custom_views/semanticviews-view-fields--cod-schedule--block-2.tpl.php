@@ -212,10 +212,10 @@
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
+    <?php endif; ?><!-- /field_experience_value -->
     
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
-    <?php endif; ?><!-- /field_experience_value -->
 
 <?php endforeach; ?>
 
