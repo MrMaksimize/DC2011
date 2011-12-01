@@ -43,3 +43,4 @@ Resize back and forth to make sure that proper changes happen in each direction 
 * exclude user:picture from display
 * right below user picture add Global -> phpcode
 * insert code into the field from here: http://pastebin.com/YhJHAfJ4
+* also under semantic views, give phpcode the class pictures
