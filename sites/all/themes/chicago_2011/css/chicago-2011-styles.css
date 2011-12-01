@@ -1551,6 +1551,47 @@ h5.fullname {
 	overflow: hidden;
 }
 
+.presentation.schedule_item .presentation-inner {
+  background-color: #bdddeb;
+	background-image: none;
+	border-color: transparent !important;
+}
+
+.presentation.schedule_item .session-info {
+	display: block;
+	float: none;
+	text-align: center;
+	margin: 0 auto;
+	padding: 18px 0;
+}
+
+.presentation.schedule_item .session-info h5.title {
+	background-image: none;
+	padding-left: 0px !important;
+}
+
+.presentation.schedule_item .session-info h5.title a:link,
+.presentation.schedule_item .session-info h5.title a:visited {
+	color: #3f3f3f;
+	font-family: GillSans, Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	line-height: 24px;
+	text-shadow: 0 1px 1px #ececec;
+	text-transform: uppercase;
+}
+
+.presentation.schedule_item .session-info h5.title a:hover,
+.presentation.schedule_item .session-info h5.title a:focus {
+	color: #0F638D;
+	text-shadow: 0 -1px 1px #1a1a1a;
+}
+
+.presentation.schedule_item .session-meta {
+	display: none;
+}
+
 .presentation.proposed .presentation-inner {
 	width: 915px;
 }
