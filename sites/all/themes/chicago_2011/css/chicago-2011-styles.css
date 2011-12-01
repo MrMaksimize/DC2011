@@ -1590,6 +1590,10 @@ h5.fullname {
 	text-decoration: none;
 }
 
+.presentation.schedule_item .session-info .question {
+	display: none;
+}
+
 .presentation.schedule_item .session-meta {
 	display: none;
 }
