@@ -187,7 +187,7 @@
     
     <?php endif; ?><!-- /ops -->
     
-    <?php if ($ops || !$user_is_anon): ?>
+    <?php if ($ops || $user_is_anon): ?>
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
   	<?php endif; ?>
