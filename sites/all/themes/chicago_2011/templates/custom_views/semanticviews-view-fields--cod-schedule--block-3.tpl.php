@@ -42,7 +42,7 @@
 
 <div class="presentation-inner-wrapper">
 
-<?php /* foreach ($fields as $id => $field): */ ?>
+<?php foreach ($fields as $id => $field): ?>
 
 <?php if($id == 'field_slot_datetime_value'): ?>
 
@@ -71,9 +71,9 @@
   <?php endif; ?>
   
 <?php endif; ?>
+		<?php if($id == 'title'): ?>
 <div class="presentation-inner <?php if($id == 'field_track_value'): print $field_track_value->content; endif; ?>">
 <div class="session-info">
-		<?php if($id == 'title'): ?>
     
 			<?php if ($field->element_type): ?>
         <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
@@ -126,10 +126,10 @@
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
-    <?php endif; ?><!-- /body -->
     
 </div><!-- /session-info -->
   <div class="session-meta">
+    <?php endif; ?><!-- /body -->
     <?php if($id == 'picture'): ?>
     
       <?php if ($field->element_type): ?>
@@ -184,11 +184,11 @@
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
     
-    <?php endif; ?><!-- /ops -->
-    
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
+    
+    <?php endif; ?><!-- /ops -->
 
-<?php /* endforeach; */ ?>
+<?php endforeach; ?>
 
 </div>
