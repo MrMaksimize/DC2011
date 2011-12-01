@@ -1715,6 +1715,8 @@ h5.fullname {
 .view.sessions-list .views-exposed-widget {
 	display: inline-block;
 	float: none;
+	margin-right: 24px;
+	margin-bottom: 16px;
 	padding: 0 10px 0 0;
 	vertical-align: bottom;
 }
