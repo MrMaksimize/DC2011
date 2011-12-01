@@ -186,7 +186,8 @@
     
     <?php endif; ?><!-- /ops -->
     
-    <?php if ($id == 'ops' || $user_is_anon): ?>
+    <?php global $user; ?>
+    <?php if ($id == 'ops' || !$user->uid): ?>
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
   	<?php endif; ?>
