@@ -184,10 +184,12 @@
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
     
+    <?php endif; ?><!-- /ops -->
+    
+    <?php if ($ops || !$user_is_anon): ?>
   </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
-    
-    <?php endif; ?><!-- /ops -->
+  	<?php endif; ?>
 
 <?php endforeach; ?>
 
