@@ -50,174 +50,170 @@
   <?php if ($field->element_type): ?>
     <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
   <?php endif; ?>
-  
+
 		<?php if ($field->label): ?>
-    
+
       <?php if ($field->label_element_type): ?>
         <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
       <?php endif; ?>
-      
+
         <?php print $field->label; ?>:
-          
+
       <?php if ($field->label_element_type): ?>
         </<?php print $field->label_element_type; ?>>
       <?php endif; ?>
-      
+
     <?php endif; ?><!-- /label -->
-      
+
     <?php print $field->content; ?>
-      
+
   <?php if ($field->element_type): ?>
     </<?php print $field->element_type; ?>>
   <?php endif; ?>
-  
+
 <?php endif; ?>
 		<?php if($id == 'title'): ?>
 <div class="presentation-inner <?php if($id == 'field_track_value'): print $field_track_value->content; endif; ?>">
 <div class="session-info">
-    
+
 			<?php if ($field->element_type): ?>
         <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
       <?php endif; ?>
-      
+
 				<?php if ($field->label): ?>
-        
+
           <?php if ($field->label_element_type): ?>
             <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
           <?php endif; ?>
-          
+
             <?php print $field->label; ?>:
-          
+
           <?php if ($field->label_element_type): ?>
             </<?php print $field->label_element_type; ?>>
           <?php endif; ?>
-        
+
         <?php endif; ?><!-- /label -->
-        
+
         <?php print $field->content; ?>
-      
+
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?><!-- /title -->
-    
+
   	<?php endif; ?>
-    
+
     <?php if($id == 'field_questions_answered_value'): ?>
-    
+
       <?php if ($field->element_type): ?>
       <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
       <?php endif; ?>
-      
+
 				<?php if ($field->label): ?>
-        
+
           <?php if ($field->label_element_type): ?>
             <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
           <?php endif; ?>
-          
+
             <?php print $field->label; ?>:
-          
+
           <?php if ($field->label_element_type): ?>
             </<?php print $field->label_element_type; ?>>
           <?php endif; ?>
-        
+
         <?php endif; ?><!-- /label -->
-        
+
         <?php print $field->content; ?>
-      
+
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
-    
+
 </div><!-- /session-info -->
   <div class="session-meta">
     <?php endif; ?><!-- /body -->
-    <?php if($id == 'picture'): ?>
-    
+    <?php if($id == 'phpcode'): ?>
+
       <?php if ($field->element_type): ?>
         <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
       <?php endif; ?>
-      
+
         <?php if ($field->label): ?>
-        
+
           <?php if ($field->label_element_type): ?>
             <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
           <?php endif; ?>
-          
+
             <?php print $field->label; ?>:
-          
+
           <?php if ($field->label_element_type): ?>
             </<?php print $field->label_element_type; ?>>
           <?php endif; ?>
-        
+
         <?php endif; ?><!-- /label -->
-        
+
         <?php print $field->content; ?>
-      
+
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
-      
+
       <?php global $user; ?>
-    <?php if (!$user->uid): ?>
-  </div><!-- /session-meta -->
+ </div><!-- /session-meta -->
   </div><!-- /presentation-inner -->
-  	<?php endif; ?>
-    
+
     <?php endif; ?><!-- /picture -->
-  
+
 		<?php if($id == 'ops'): ?>
-    
+
       <?php if ($field->element_type): ?>
         <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
       <?php endif; ?>
-      
+
 				<?php if ($field->label): ?>
-        
+
           <?php if ($field->label_element_type): ?>
             <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
           <?php endif; ?>
-          
+
             <?php print $field->label; ?>:
-          
+
           <?php if ($field->label_element_type): ?>
             </<?php print $field->label_element_type; ?>>
           <?php endif; ?>
-        
+
         <?php endif; ?><!-- /label -->
-        
+
         <?php print $field->content; ?>
-      
+
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
-      
-  </div><!-- /session-meta -->
-  </div><!-- /presentation-inner -->
-    
+
+
     <?php endif; ?><!-- /ops -->
-  
+
 		<?php if($id == 'field_experience_value'): ?>
-    
+
       <?php if ($field->element_type): ?>
         <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
       <?php endif; ?>
-      
+
         <?php if ($field->label): ?>
-        
+
           <?php if ($field->label_element_type): ?>
             <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
           <?php endif; ?>
-          
+
             <?php print $field->label; ?>:
-          
+
           <?php if ($field->label_element_type): ?>
             </<?php print $field->label_element_type; ?>>
           <?php endif; ?>
-        
+
         <?php endif; ?><!-- /label -->
-      
+
         <?php print $field->content; ?>
-      
+
       <?php if ($field->element_type): ?>
         </<?php print $field->element_type; ?>>
       <?php endif; ?>
