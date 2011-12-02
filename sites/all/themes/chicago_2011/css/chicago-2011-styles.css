@@ -1034,7 +1034,7 @@ ul#steps li#stepDesc0 {
 	padding-left: 0;
 }
 
-ul#steps li.current { 
+ul#steps li.current {
 	background-position: left -40px;
 	color:#000;
 	text-shadow: 1px 1px 0 #fff;
@@ -1340,8 +1340,8 @@ form#user-register .form-submit {
 }
 
 .view-news .views-field-name label,
-.view-news .views-field-name .field-content { 
-  display: inline-block; 
+.view-news .views-field-name .field-content {
+  display: inline-block;
 }
 
 /* Sponsor Page */
@@ -1510,6 +1510,11 @@ h5.fullname {
 
 .presentation div {
 	display: inline-block;
+}
+.presentation .pictures{
+	float:right;
+	margin-right:19px;
+	margin-top:10px;
 }
 
 .presentation-inner-wrapper {
@@ -2279,7 +2284,7 @@ a.callout.register:link {
 .block .twtr-widget h4,
 .block .twtr-widget p {
 	line-height: 1.2 !important;
-	margin: 0 !important; 
+	margin: 0 !important;
 	padding: 0 !important;
 	width: auto !important;
 }
@@ -2486,7 +2491,7 @@ a.callout.register:link {
 	margin-right: 0;
 	margin-top: 0;
 	padding: 4px !important;
-	
+
 }
 
 #fancy_login_close_button:hover {
@@ -2589,7 +2594,7 @@ form#user-login #edit-submit {
 .block.grid-24 {
 	margin-left: 0;
 	margin-right: 0;
-} 
+}
 
 #webform-client-form-67 {
 	coumn-count: 2;
