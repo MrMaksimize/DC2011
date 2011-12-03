@@ -60,6 +60,12 @@ function template_preprocess_semanticviews_view_fields(&$vars) {
 function template_preprocess_semanticviews_view_unformatted(&$vars) {
   $view = $vars['view'];
 
+  // Initialize the row index.
+  static $row_index = array();
+  if (!isset($row_index[$view->name])) {
+    $row_index[$view->name] = 0;
+  }
+
   $vars['group_element'] = check_plain($vars['options']['group']['element_type']);
   $vars['group_attributes'] = array();
   if ($vars['options']['group']['class']) {
@@ -89,10 +95,12 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
   $tokens = semanticviews_get_alias_tokens($view);
 
   foreach ($vars['rows'] as $id => $row) {
+    // Get the right view result row id, needed for grouped fields.
+    $row_id = $row_index[$view->name] + $id;
     // Get token replacements.
-    $replacements = semanticviews_get_token_replacements($view->result[$id], $tokens);
+    $replacements = semanticviews_get_token_replacements($view->result[$row_id], $tokens);
     // Add replacement for the row number.
-    $replacements['#'] = $id;
+    $replacements['#'] = $row_id;
 
     $vars['row_attributes'][$id] = array();
     $classes = array();
@@ -132,4 +140,6 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
       $vars['row_attributes'][$id]['class'] = implode(' ', $classes);
     }
   }
+  // Increment the row index for next call.
+  $row_index[$view->name] = $view->row_index + 1;
 }
