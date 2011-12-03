@@ -303,6 +303,11 @@ function dc_2011_mobile_context_default_contexts() {
         ),
       ),
     ),
+    'theme' => array(
+      'title' => '',
+      'subtitle' => '',
+      'class' => 'context_mobile',
+    ),
   );
   $context->condition_mode = 1;
 

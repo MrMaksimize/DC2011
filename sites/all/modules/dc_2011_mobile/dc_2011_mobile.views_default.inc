@@ -1397,7 +1397,10 @@ function dc_2011_mobile_views_default_views() {
       'operator' => 'or',
       'value' => array(
         '29' => '29',
+        '30' => '30',
         '74' => '74',
+        '73' => '73',
+        '83' => '83',
       ),
       'group' => '0',
       'exposed' => FALSE,
