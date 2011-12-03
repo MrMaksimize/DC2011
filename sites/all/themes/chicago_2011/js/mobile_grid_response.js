@@ -6,15 +6,6 @@ Drupal.behaviors.dc2011Behavior = function (context) {
     Drupal.settings.dc2011.counter ++;
     window.addEventListener('resize', resizeRespond, false);
     Drupal.settings.dc2011.location = window.location.protocol + "//" + window.location.host;
-    //implement fit text operations
-    for (el in Drupal.settings.dc2011.fitTextEls){
-      var t = el;
-      console.log(Drupal.settings.dc2011.fitTextEls[el].el);
-     $(Drupal.settings.dc2011.fitTextEls[el].el).fitText(1, {
-        minFontSize: Drupal.settings.dc2011.fitTextEls[el].min,
-        maxFontSize: Drupal.settings.dc2011.fitTextEls[el].max
-      });
-    }
 
     /*sessions*/
     console.log('behavior active');
@@ -209,32 +200,22 @@ function contextMock(){
         Drupal.settings.dc2011.prevPosState = 'full';
       }
     }
-  //}
-  /*else if($('body').hasClass('node-type-page')||
-          $('body').hasClass('page-community')||
-          $('body').hasClass('page-program-sessions')||
-          $('body').hasClass('section-users')){ //gotta be a better way, just need to remember
-    Drupal.settings.dc2011.posState = getState();
-    if (Drupal.settings.dc2011.posState != Drupal.settings.dc2011.prevPosState){
-      if (Drupal.settings.dc2011.posState == 'mobile'){
-        //move page title above menu
-        $('#header-zone-wrapper #branding').after($('#main-wrapper h1.page-title'));
-        $('#main-wrapper h1.page-title').remove();
-        Drupal.settings.dc2011.prevPosState = 'mobile';
-      }
-      else if (Drupal.settings.dc2011.posState == 'full'){
-        //move page title back where it belongs
-        $('#main-wrapper').prepend($('#header-zone-wrapper h1.page-title'));
-        $('#header-zone-wrapper h1.page-title').remove();
-        Drupal.settings.dc2011.prevPosState = 'full';
-      }
-    }
-  }*/
 }
 
 function contextMocker(context){
   console.log('contextMocker ' + context);
   menuToDropdown('#site-menu', '.main-menu', context);
+  //implement fit text operations
+  if (context != 'full'){
+    for (el in Drupal.settings.dc2011.fitTextEls){
+      var t = el;
+      console.log(Drupal.settings.dc2011.fitTextEls[el].el);
+     $(Drupal.settings.dc2011.fitTextEls[el].el).fitText(1, {
+        minFontSize: Drupal.settings.dc2011.fitTextEls[el].min,
+        maxFontSize: Drupal.settings.dc2011.fitTextEls[el].max
+      });
+    }
+  }
 }
 
 function contextHelper(context){
