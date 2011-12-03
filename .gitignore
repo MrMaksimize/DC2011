@@ -14,3 +14,5 @@ UPGRADE.txt
 .DS_Store
 cache/*
 .idea/*
+*.komodoproject
+phpinfo.php

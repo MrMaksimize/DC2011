@@ -1475,6 +1475,12 @@ div.error {
   height: 30px;
   width: auto;
 }
+.view-cod-schedule-mobile .views-accordion-item .pictures {
+  float: right;
+}
+.view-cod-schedule-mobile .views-accordion-item .picture {
+  float: right;
+}
 .view-cod-schedule-mobile .views-accordion-item div.load-space {
   float: left;
 }

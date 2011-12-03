@@ -19,7 +19,8 @@ if (theme_get_setting('chicago_2011_fixed')) {
 /**
  * Implementation of HOOK_theme().
  */
-function chicago_2011_theme(&$existing, $type, $theme, $path) {
+function chicago_2011_theme(&$existing, $type, $theme, $path)
+{
   if (!db_is_active()) {
     return array();
   }
@@ -35,10 +36,10 @@ function chicago_2011_theme(&$existing, $type, $theme, $path) {
       'arguments' => array('attributes'),
     ),
   );
-	
-	// Custom hook for user account links block creation
-	$hooks['user_account_links'] = omega_theme($existing, $type, $theme, $path);
-	
+
+  // Custom hook for user account links block creation
+  $hooks['user_account_links'] = omega_theme($existing, $type, $theme, $path);
+
   $hooks = omega_theme($existing, $type, $theme, $path);
   // Add your theme hooks like this:
   /*
@@ -51,7 +52,7 @@ function chicago_2011_theme(&$existing, $type, $theme, $path) {
 /*function chicago_2011_user_account_links(&$vars, $user) {
 	if (user_is_annonymous) {
 	};
-	
+
 	if (user_is_logged_in) {
 	};
 }*/
@@ -60,23 +61,24 @@ function chicago_2011_theme(&$existing, $type, $theme, $path) {
  * The region_builder function will create the variables needed to create
  * a dynamic group of regions. This function is simply a quick pass-thru
  * that will create either inline or stacked regions. This function will
- * not do any advanced functionality, but simply assing the appropriate 
+ * not do any advanced functionality, but simply assing the appropriate
  * classes based on the settings for the theme.
- * 
+ *
  * For a more advanced set of regions, dynamic_region_builder() will be used.
  */
-function chicago_2011_static_region_builder($region_data, $container_width, $vars) {
+function chicago_2011_static_region_builder($region_data, $container_width, $vars)
+{
   // let's cycle the region data, and determine what we have
   foreach ($region_data AS $region => $info) {
     // if we do have content for this region, let's create it.
     if ($info['data']) {
-      $vars[$region .'_classes'] = ns('grid-'. $info['width']);
+      $vars[$region . '_classes'] = ns('grid-' . $info['width']);
     }
     if (!empty($info['spacing']) && is_array($info['spacing'])) {
       foreach ($info['spacing'] AS $attribute => $value) {
         if ($value) {
-          $vars[$region .'_classes'] .= ' '. $attribute .'-'. $value;
-        } 
+          $vars[$region . '_classes'] .= ' ' . $attribute . '-' . $value;
+        }
       }
     }
   }
@@ -84,50 +86,55 @@ function chicago_2011_static_region_builder($region_data, $container_width, $var
 }
 
 
-function _chicago_2011_dynamic_zones($width, $conditions, $vars) {
-  foreach($conditions AS $variable => $reaction) {
-    if(($reaction['type'] && $vars[$variable]) || (!$reaction['type'] && !$vars[$variable])) {
+function _chicago_2011_dynamic_zones($width, $conditions, $vars)
+{
+  foreach ($conditions AS $variable => $reaction) {
+    if (($reaction['type'] && $vars[$variable]) || (!$reaction['type'] && !$vars[$variable])) {
       $width = $width - $reaction['value'];
     }
   }
   return $width;
 }
-function _chicago_2011_dynamic_widths($width, $conditions, $vars) {
-  foreach($conditions AS $variable => $zone) {
-    if(($vars[$variable])) {
+
+function _chicago_2011_dynamic_widths($width, $conditions, $vars)
+{
+  foreach ($conditions AS $variable => $zone) {
+    if (($vars[$variable])) {
       $width = $width - $zone['width'];
     }
   }
   return $width;
 }
+
 /**
  * The dynamic_region_builder function will be used to pass important zones
  * like the content regions where the regions sent to the function MUST appear
  * inline, and advanced calculations need to be done in order to display the as such
- * 
+ *
  * Stacked regions are not possible using this function, and should be passed through
  * static_region_builder() instead.
  */
-function chicago_2011_dynamic_region_builder($region_data, $container_width, $vars) {
+function chicago_2011_dynamic_region_builder($region_data, $container_width, $vars)
+{
   // let's cycle the region data, and determine what we have
   foreach ($region_data AS $region => $info) {
     // if we do have content for this region, let's create it.
     if ($info['data']) {
-      
+
       $width = !empty($info['primary']) ? $container_width : $info['width'];
-      $vars[$region .'_classes'] = !empty($info['primary']) ?  ns('grid-'. _chicago_2011_dynamic_widths($width, $info['related'], $vars)) : ns('grid-'. $info['width']);
+      $vars[$region . '_classes'] = !empty($info['primary']) ? ns('grid-' . _chicago_2011_dynamic_widths($width, $info['related'], $vars)) : ns('grid-' . $info['width']);
       // we know we have stuff to put here, so we can check for push & pull options
-      if($info['pull']) {
-      	// looks like we do wanna pull, or this value would have been false, so let's boogie
-      	$vars[$region .'_classes'] .= ' '. ns('pull-'. _chicago_2011_dynamic_zones($info['pull']['width'], $info['pull']['conditions'], $vars));
-      	//krumo('Pulling '. $region .' '. $vars[$region .'_classes']);
+      if ($info['pull']) {
+        // looks like we do wanna pull, or this value would have been false, so let's boogie
+        $vars[$region . '_classes'] .= ' ' . ns('pull-' . _chicago_2011_dynamic_zones($info['pull']['width'], $info['pull']['conditions'], $vars));
+        //krumo('Pulling '. $region .' '. $vars[$region .'_classes']);
       }
-      if($info['push']) {
-      	// looks like a push
-      	$vars[$region .'_classes'] .= ' '. ns('push-'. _chicago_2011_dynamic_zones($info['push']['width'], $info['push']['conditions'], $vars));
-      	//krumo('Pushing '. $region .' '. $vars[$region .'_classes']);
-      	//krumo('Should be pushing '. $info['push']['width'] .' grids.');
-      	//krumo($info['push']['conditions']);
+      if ($info['push']) {
+        // looks like a push
+        $vars[$region . '_classes'] .= ' ' . ns('push-' . _chicago_2011_dynamic_zones($info['push']['width'], $info['push']['conditions'], $vars));
+        //krumo('Pushing '. $region .' '. $vars[$region .'_classes']);
+        //krumo('Should be pushing '. $info['push']['width'] .' grids.');
+        //krumo($info['push']['conditions']);
       }
     }
     // currently ignored becuase we have not given prefix/suffix class options
@@ -135,8 +142,8 @@ function chicago_2011_dynamic_region_builder($region_data, $container_width, $va
     if (!empty($info['spacing']) && is_array($info['spacing'])) {
       foreach ($info['spacing'] AS $attribute => $value) {
         if ($value) {
-          $vars[$region .'_classes'] .= ' '. $attribute .'-'. $value;
-        } 
+          $vars[$region . '_classes'] .= ' ' . $attribute . '-' . $value;
+        }
       }
     }
     // \unused prefix/suffix stuffs
@@ -166,17 +173,18 @@ function chicago_2011_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-	
 
-function chicago_2011_preprocess_page(&$vars, $hook) {
 
-	//dpm($vars);
-	//$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
-	//$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
-//  $vars['styles'] = drupal_get_css();
+function chicago_2011_preprocess_page(&$vars, $hook)
+{
+
+  //dpm($vars);
   //$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
   //$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
-  $vars['head'] = $vars['head'].'<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=NO"/>';
+  //  $vars['styles'] = drupal_get_css();
+  //$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
+  //$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
+  $vars['head'] = $vars['head'] . '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=NO"/>';
   //drupal_add_js('sites/all/themes/chicago_2011/js/textSizer.js');
   drupal_add_js('sites/all/themes/chicago_2011/js/jquery.fittext.js');
   drupal_add_js('sites/all/themes/chicago_2011/js/mobile_grid_response.js');
@@ -238,13 +246,16 @@ function chicago_2011_preprocess_page(&$vars, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 
-function chicago_2011_preprocess_node(&$vars, $hook) {
+function chicago_2011_preprocess_node(&$vars, $hook)
+{
   //dpm($vars);
 }
 
-function chicago_2011_preprocess_user_profile(&$vars) {
-	//dpm($vars);
+function chicago_2011_preprocess_user_profile(&$vars)
+{
+  //dpm($vars);
 }
+
 
 
 /**
@@ -278,15 +289,16 @@ function chicago_2011_preprocess_block(&$vars, $hook) {
 
 /**
  * Create a string of attributes form a provided array.
- * 
+ *
  * @param $attributes
  * @return string
  */
-function chicago_2011_render_attributes($attributes) {
+function chicago_2011_render_attributes($attributes)
+{
   if ($attributes) {
     $items = array();
-    foreach($attributes as $attribute => $data) {
-      if(is_array($data)) {
+    foreach ($attributes as $attribute => $data) {
+      if (is_array($data)) {
         $data = implode(' ', $data);
       }
       $items[] = $attribute . '="' . $data . '"';
@@ -294,7 +306,7 @@ function chicago_2011_render_attributes($attributes) {
     $output = ' ' . implode(' ', $items);
   }
   return $output;
-	//return omega_render_attributes($attributes);  
+  //return omega_render_attributes($attributes);
 }
 
 /* function chicago_2011_links(&$links, $node) {

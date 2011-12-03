@@ -1,3 +1,35 @@
 <?php
 
 include_once('dc_2011_mobile.features.inc');
+
+function dc_2011_mobile_views_post_render (&$view){
+  if ($view->name == 'cod_schedule_mobile'){
+    $rooms = array();
+    $result = $view->result;
+    //determine available rooms by pulling in a schedule item
+    foreach ($result as $res_key => $item){
+      if ($item->node_type == 'schedule_item'){
+        if (empty($rooms)){
+          $node = node_load($item->nid);
+          $dirty_rooms = $node->field_session_room;
+          //clean up this array, just once but later code can be lighter
+          foreach ($dirty_rooms as $key => $room){
+            $rooms[$room['nid']] = $room['nid'];
+          }
+          $rooms = array_filter($rooms);
+        }
+        $temp_rooms = $rooms;
+        unset($temp_rooms[$item->node_data_field_session_room_field_session_room_nid]);
+        foreach ($temp_rooms as $room_key => $room){
+        //duplicate the item in the result array
+          $new_item = $item;
+          $new_item->node_data_field_session_room_field_session_room_nid = $room;
+          $result[] = $new_item;
+        }
+      }
+    }
+    //$view->result = $result;
+    //$view->style_plugin->render();
+    dsm($view);
+  }
+}
