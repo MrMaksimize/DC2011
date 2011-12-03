@@ -13,3 +13,4 @@ README.txt
 UPGRADE.txt
 .DS_Store
 cache/*
+.idea/*
