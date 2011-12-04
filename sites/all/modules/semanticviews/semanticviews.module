@@ -33,6 +33,7 @@ function semanticviews_get_alias_tokens($view) {
  */
 //function semanticviews_get_token_replacements($row, $tokens) {
 function semanticviews_get_token_replacements($row_id, $tokens) {
+	$row_id = $row_index[$view->name] + $id;
   $replacements = array();
   foreach ($row_id as $alias => $value) {
     if (!empty($tokens[$alias])) {
