@@ -2608,6 +2608,6 @@ form#user-login #edit-submit {
 
 /* Session Schedule messages that are errors, to be removed eventually */
 
-body.page-program-session-schedule .messages.error {
+/*body.page-program-session-schedule .messages.error {
 	display: none;
-}
+}*/

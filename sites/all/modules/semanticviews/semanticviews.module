@@ -34,6 +34,12 @@ function semanticviews_get_alias_tokens($view) {
 function semanticviews_get_token_replacements($row, $tokens) {
 //function semanticviews_get_token_replacements($row_id, $tokens) { ---- IF YOU UNCOMMENT THIS, DON'T FORGET TO CHANGE THE $ARG ON L37 ->->->-> $row SHOULD BE $row_id
   $replacements = array();
+  if (empty($row)){
+    return;
+  }
+  if (is_object($row)){
+    $row = get_object_vars($row);
+  }
   foreach ($row as $alias => $value) {
     if (!empty($tokens[$alias])) {
       $replacements[$tokens[$alias]] = $value;
