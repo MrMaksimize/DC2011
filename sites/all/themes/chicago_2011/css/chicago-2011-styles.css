@@ -2291,6 +2291,10 @@ a.callout.register:link {
 	bottom: -10px;
 }
 
+.view-attendees-attending .views-summary a {
+	display: none;
+}
+
 /* Countdown Timer */
 #countdown-container {
 	background: transparent url("../images/bg/spacer_black.png") repeat left top;
