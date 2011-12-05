@@ -234,7 +234,7 @@ function getState(){
   }
 }
 $(window).load(function() {
-  Drupal.attachBehaviors();
+  //Drupal.attachBehaviors();
 });
 
 function menuToDropdown(topContainer, ulClass, context){

@@ -32,7 +32,6 @@ function semanticviews_get_alias_tokens($view) {
  * Helper function that returns row replacements given a row and all tokens.
  */
 function semanticviews_get_token_replacements($row, $tokens) {
-//function semanticviews_get_token_replacements($row_id, $tokens) { ---- IF YOU UNCOMMENT THIS, DON'T FORGET TO CHANGE THE $ARG ON L37 ->->->-> $row SHOULD BE $row_id
   $replacements = array();
   if (empty($row)){
     return;
