@@ -2625,3 +2625,40 @@ form#user-login #edit-submit {
 
 } */
 
+/* Comment Forms */
+#comments .box {
+	margin-top: 24px;
+}
+
+#comments h2 {
+	margin-bottom: 24px;
+}
+
+form#comment-form .form-item {
+	max-width: 100%;
+}
+
+form#comment-form .form-item label {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+form#comment-form .form-item #edit-subject-wrapper input {
+	width: 350px;
+}
+
+form#comment-form .form-item .resizable-textarea {
+	width: 100%;
+}
+
+form#comment-form fieldset {
+	display: none;
+}
+
+form#comment-form #edit-notify-wrapper {
+	margin-bottom: 0;
+}
+
+form#comment-form .form-radios {
+	margin-top: 0;
+}
