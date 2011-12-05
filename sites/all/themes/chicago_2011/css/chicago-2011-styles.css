@@ -955,6 +955,10 @@ label {
 	line-height: 24px;
 }
 
+label.inline {
+	display: inline-block;
+}
+
 .form-item {
 	margin-top: 0;
 	margin-bottom: 1.5em;
@@ -1769,6 +1773,63 @@ h5.fullname {
 .view-sessions.presenter-list .presenter .username span {
 	color: #1A1A1A;
 	text-transform: capitalize;
+}
+
+/* Session: Node Page -- Essential Info Block*/
+.view-sessions.block-session-info .time {
+	display: inline-block;
+	margin: 0 20px 24px;
+	text-align: center;
+	width: 100px;
+}
+
+.view-sessions.block-session-info .exp-lvl {
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 24px;
+	width: 150px;
+}
+
+.view-sessions.block-session-info .track {
+	border: medium none;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	text-shadow: -1px -1px 0px #545454;
+	text-transform: uppercase;
+	margin: 0 15px;
+	padding: 4px 0;
+	width: 110px;
+}
+
+.view-sessions.block-session-info .Code .track {
+	background-color: #fe6e05;
+}
+
+.view-sessions.block-session-info .Build .track {
+	background-color: #114ba7;
+}
+
+.view-sessions.block-session-info .Design .track {
+	background-color: #d9362b;
+}
+
+.view-sessions.block-session-info .Business .track {
+	background-color: #29abe1;
+}
+
+.view-sessions.block-session-info .Community .track {
+	background-color: #11a72d;
+}
+
+.view-sessions.block-session-info .fivestar-widget {
+	clear: none;
+	display: inline-block;
+	float: right;
+	text-align: center;
+	padding: 3px 0;
+	width: 150px;
 }
 
 /* Session List
