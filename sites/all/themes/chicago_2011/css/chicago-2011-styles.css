@@ -1726,6 +1726,51 @@ h5.fullname {
 	right: 0;
 }
 
+/* Session: Node Page
+ *
+ * Presenter(s) Block
+ */
+.view-sessions.presenter-list .presenter {
+	height: 300px;
+	margin-bottom: 24px;
+	position: relative;
+}
+
+.view-sessions.presenter-list .presenter .speaker-image {
+	position: relative;
+	z-index: 1;
+}
+
+.view-sessions.presenter-list .presenter .realname {
+	background: url("../images/bg/spacer_white.png") repeat scroll 0 0 transparent;
+	bottom: 48px;
+	margin: 0 10px;
+	padding: 0 10px;
+	position: absolute;
+	width: 260px;
+	z-index: 2;
+}
+
+.view-sessions.presenter-list .presenter .username {
+	background: url("/sites/all/themes/chicago_2011/images/bg/spacer_white.png") repeat scroll 0 0 transparent;
+	bottom: 10px;
+	color: #545454;
+	font-size: 22px;
+	font-weight: 100;
+	line-height: 24px;
+	margin: 0 10px;
+	padding: 0 10px 14px;
+	position: absolute;
+	text-transform: lowercase;
+	width: 260px;
+	z-index: 2;
+}
+
+.view-sessions.presenter-list .presenter .username span {
+	color: #1A1A1A;
+	text-transform: capitalize;
+}
+
 /* Session List
  *
  * Exposed Filters ------------------------------------------------ */
