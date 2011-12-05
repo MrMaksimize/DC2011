@@ -57,6 +57,8 @@ $(document).ready(function() {
 		jQuery('.view-attendees-attending .views-summary a').remove(); //Remove the anchor with the role name
 		jQuery('.view-attendees-attending .views-summary').text( jQuery('.view-attendees-attending .views-summary').text().replace('(', '').replace(')', '') ); //Remove parents that views provides by default
 		jQuery('.view-attendees-attending .views-summary').addClass('stock');
+		jQuery('.views-summary.stock').prepend('<span></span>');
+		jQuery('.views-summary.stock span').addClass('overlay');
 	};
 
 /**
