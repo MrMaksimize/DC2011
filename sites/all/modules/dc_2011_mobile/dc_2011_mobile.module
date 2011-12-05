@@ -2,7 +2,7 @@
 
 include_once('dc_2011_mobile.features.inc');
 
-/*function dc_2011_mobile_views_post_render (&$view){
+/*function dc_2011_mobile_views_post_render (&$view, &$output){
   if ($view->name == 'cod_schedule_mobile'){
     $rendered_fields = $view->style_plugin->rendered_fields;
     $titles = array();
@@ -17,6 +17,14 @@ include_once('dc_2011_mobile.features.inc');
       }
     }
     $view->style_plugin->rendered_fields = $rendered_fields;
+    $output = 'ppoop';
     dsm($view);
+  }
+}*/
+
+/*function dc_2011_mobile_views_query_alter(&$view, &$query){
+  if ($view->name == 'cod_schedule_mobile'){
+    dsm($view);
+    dsm($query);
   }
 }*/

@@ -870,18 +870,6 @@ function dc_2011_mobile_views_default_views() {
       ),
       'relationship' => 'none',
     ),
-    'field_speakers_uid' => array(
-      'label' => 'speakers',
-      'required' => 0,
-      'delta' => '-1',
-      'id' => 'field_speakers_uid',
-      'table' => 'node_data_field_speakers',
-      'field' => 'field_speakers_uid',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
     'flag_content_rel' => array(
       'label' => 'flag: session_schedule',
       'required' => 0,
@@ -1153,7 +1141,7 @@ function dc_2011_mobile_views_default_views() {
       'label_type' => 'none',
       'format' => 'default',
       'multiple' => array(
-        'group' => 1,
+        'group' => 0,
         'multiple_number' => '',
         'multiple_from' => '',
         'multiple_reversed' => 0,
@@ -1423,7 +1411,7 @@ function dc_2011_mobile_views_default_views() {
   ));
   $handler->override_option('title', '<none>');
   $handler->override_option('empty', '');
-  $handler->override_option('distinct', 1);
+  $handler->override_option('distinct', 0);
   $handler->override_option('style_plugin', 'views_accordion');
   $handler->override_option('style_options', array(
     'grouping' => 'field_session_room_nid',
@@ -1431,7 +1419,7 @@ function dc_2011_mobile_views_default_views() {
     'start-open' => 1,
     'row-start-open' => '0',
     'keep-one-open' => 0,
-    'disable-close-others' => 0,
+    'disable-close-others' => 1,
     'speed' => '0.5',
     'toggle-links' => 0,
     'include-style' => 1,

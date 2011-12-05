@@ -1612,7 +1612,7 @@ div.error {
 .page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl,
 .page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl {
   position: relative;
-  top: 360px !important;
+  top: 340px !important;
 }
 .page-program-sessions .view-sessions .view-content .presentation.active .schedule-add,
 .page-program-sessions-accepted .view-sessions .view-content .presentation.active .schedule-add,
@@ -1666,6 +1666,16 @@ div.error {
 .page-sessions .view-id-cod_schedule_mobile .view-content .session {
   width: 92%;
   height: 150px;
+}
+.page-program-sessions .view-sessions .view-content .session .presenter,
+.page-program-sessions-accepted .view-sessions .view-content .session .presenter,
+.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presenter,
+.page-sessions .view-sessions .view-content .session .presenter,
+.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presenter,
+.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presenter,
+.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presenter,
+.page-sessions .view-id-cod_schedule_mobile .view-content .session .presenter {
+  float: right !important;
 }
 .page-program-sessions .view-sessions .view-content .session .presentation-inner,
 .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner,
