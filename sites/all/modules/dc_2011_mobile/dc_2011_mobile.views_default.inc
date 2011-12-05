@@ -344,8 +344,12 @@ function dc_2011_mobile_views_default_views() {
       'reduce_duplicates' => 0,
     ),
     'field_session_room_nid' => array(
-      'operator' => 'not empty',
-      'value' => array(),
+      'operator' => 'or',
+      'value' => array(
+        '29' => '29',
+        '74' => '74',
+        '83' => '83',
+      ),
       'group' => '0',
       'exposed' => FALSE,
       'expose' => array(
@@ -956,14 +960,59 @@ function dc_2011_mobile_views_default_views() {
       'hide_empty' => 0,
       'empty_zero' => 0,
       'imagecache_preset' => 'presenter_session-thumb',
-      'exclude' => 0,
+      'exclude' => 1,
       'id' => 'picture',
       'table' => 'users',
       'field' => 'picture',
       'override' => array(
         'button' => 'Use default',
       ),
-      'relationship' => 'field_speakers_uid',
+      'relationship' => 'none',
+    ),
+    'phpcode' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'value' => '<?php 
+foreach ($data->node_data_field_speakers_field_speakers_uid as $speaker){
+  $the_speaker = user_load($speaker[\'uid\']);
+  if ($the_speaker->picture){
+    $pic_url = \'/\'.imagecache_create_path(\'presenter_session-thumb\', $the_speaker->picture);
+  }
+  else{
+  $pic_url =  \'/sites/default/files/imagecache/presenter_session-thumb/%252Fsites/all/themes/chicago_2011/images/content/attendee_default.jpg\';
+  }
+$user_path = \'/\'.drupal_get_path_alias(\'user/\'.$the_speaker->uid);
+ print \'<div class="picture"><a href="\'.$user_path.\'" title="View \'.$the_speaker->name.\' profile"><img src="\'.$pic_url.\'" alt="\'.$the_speaker->name.\' picture" title="View \'.$the_speaker->name.\' profile" height="40" width="40" class="imagecache imagecache-presenter_session-thumb"></a></div>\';
+}
+?>',
+      'exclude' => 0,
+      'id' => 'phpcode',
+      'table' => 'customfield',
+      'field' => 'phpcode',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
     ),
     'title' => array(
       'label' => '',
@@ -1060,7 +1109,7 @@ function dc_2011_mobile_views_default_views() {
         'strip_tags' => 0,
       ),
       'empty' => '',
-      'hide_empty' => 0,
+      'hide_empty' => 1,
       'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
@@ -1071,7 +1120,7 @@ function dc_2011_mobile_views_default_views() {
         'multiple_from' => '',
         'multiple_reversed' => FALSE,
       ),
-      'exclude' => 1,
+      'exclude' => 0,
       'id' => 'field_track_value',
       'table' => 'node_data_field_track',
       'field' => 'field_track_value',
@@ -1385,9 +1434,7 @@ function dc_2011_mobile_views_default_views() {
       'operator' => 'or',
       'value' => array(
         '29' => '29',
-        '30' => '30',
         '74' => '74',
-        '73' => '73',
         '83' => '83',
       ),
       'group' => '0',
@@ -1434,25 +1481,29 @@ function dc_2011_mobile_views_default_views() {
         'element_type' => 'div',
         'class' => 'time',
       ),
-      'picture' => array(
+      'phpcode' => array(
         'element_type' => 'div',
-        'class' => 'presenter speaker-image',
+        'class' => 'presenter',
       ),
       'title' => array(
         'element_type' => 'h5',
         'class' => 'title',
       ),
-      'ops' => array(
-        'element_type' => 'span',
-        'class' => 'schedule-add button',
+      'field_track_value' => array(
+        'element_type' => 'div',
+        'class' => 'field_track',
+      ),
+      'nothing' => array(
+        'element_type' => 'div',
+        'class' => 'load-space',
       ),
       'field_experience_value' => array(
         'element_type' => 'span',
         'class' => 'exp-lvl',
       ),
-      'nothing' => array(
-        'element_type' => 'div',
-        'class' => 'load-space',
+      'ops' => array(
+        'element_type' => 'span',
+        'class' => 'schedule-add button',
       ),
     ),
     'skip_blank' => 0,

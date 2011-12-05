@@ -256,6 +256,9 @@ function chicago_2011_preprocess_user_profile(&$vars)
   //dpm($vars);
 }
 
+/*function chicago_2011_preprocess_views_view_accordion__cod_schedule_mobile(&$vars){
+	dsm($vars);
+}*/
 
 
 /**

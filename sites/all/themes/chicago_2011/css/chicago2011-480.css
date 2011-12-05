@@ -1428,11 +1428,26 @@ div.error {
   position: relative;
   top: 33px;
 }
+.view-cod-schedule-mobile .Build {
+  border-right-color: #114ba7 !important;
+}
+.view-cod-schedule-mobile .Code {
+  border-right-color: #fe6e05 !important;
+}
+.view-cod-schedule-mobile .Design {
+  border-right-color: #d9362b !important;
+}
+.view-cod-schedule-mobile .Business {
+  border-right-color: #29abe1 !important;
+}
+.view-cod-schedule-mobile .Community {
+  border-right-color: #11a72d !important;
+}
 .view-cod-schedule-mobile .views-accordion-item {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
   background: -moz-linear-gradient(top center, #ffffff 0%, #eaeaea 100%);
   border-color: #dfdfdf transparent #9d9d9d #cacaca;
-  border-right-color: blue;
+  border-right-color: #dbdbdb;
   border-radius: 3px;
   border-style: solid;
   border-width: 1px 5px 1px 1px;
