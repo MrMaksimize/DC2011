@@ -1428,11 +1428,26 @@ div.error {
   position: relative;
   top: 33px;
 }
+.view-cod-schedule-mobile .Build {
+  border-right-color: #114ba7 !important;
+}
+.view-cod-schedule-mobile .Code {
+  border-right-color: #fe6e05 !important;
+}
+.view-cod-schedule-mobile .Design {
+  border-right-color: #d9362b !important;
+}
+.view-cod-schedule-mobile .Business {
+  border-right-color: #29abe1 !important;
+}
+.view-cod-schedule-mobile .Community {
+  border-right-color: #11a72d !important;
+}
 .view-cod-schedule-mobile .views-accordion-item {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
   background: -moz-linear-gradient(top center, #ffffff 0%, #eaeaea 100%);
   border-color: #dfdfdf transparent #9d9d9d #cacaca;
-  border-right-color: blue;
+  border-right-color: #dbdbdb;
   border-radius: 3px;
   border-style: solid;
   border-width: 1px 5px 1px 1px;
@@ -1612,7 +1627,7 @@ div.error {
 .page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl,
 .page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl {
   position: relative;
-  top: 360px !important;
+  top: 340px !important;
 }
 .page-program-sessions .view-sessions .view-content .presentation.active .schedule-add,
 .page-program-sessions-accepted .view-sessions .view-content .presentation.active .schedule-add,
@@ -1666,6 +1681,16 @@ div.error {
 .page-sessions .view-id-cod_schedule_mobile .view-content .session {
   width: 92%;
   height: 150px;
+}
+.page-program-sessions .view-sessions .view-content .session .presenter,
+.page-program-sessions-accepted .view-sessions .view-content .session .presenter,
+.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presenter,
+.page-sessions .view-sessions .view-content .session .presenter,
+.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presenter,
+.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presenter,
+.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presenter,
+.page-sessions .view-id-cod_schedule_mobile .view-content .session .presenter {
+  float: right !important;
 }
 .page-program-sessions .view-sessions .view-content .session .presentation-inner,
 .page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner,

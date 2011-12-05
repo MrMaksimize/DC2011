@@ -20,8 +20,15 @@ function clickBinder(){
           $('span.schedule-add .flag-wrapper a').text('');
         }
       });*/
+      $('.session-schedule-mobile .view-cod-schedule-mobile .item-list').each(function(){
+        $('.accordion-content .views-accordion-item', this).each(function(){
+          var track_class = $('.field_track', this).text();
+          track_class = $.trim(track_class);
+          $(this).addClass(track_class);
+          console.log($(this));
+        });
+      });
       $('.session-schedule-mobile .view-cod-schedule-mobile h5.title a').bind('click', function(event){
-        console.log(event);
         event.preventDefault();
         event.stopPropagation();
         var link_clicked = $(this);
@@ -234,7 +241,7 @@ function getState(){
   }
 }
 $(window).load(function() {
-  Drupal.attachBehaviors();
+  //Drupal.attachBehaviors();
 });
 
 function menuToDropdown(topContainer, ulClass, context){
