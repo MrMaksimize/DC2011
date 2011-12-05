@@ -2226,7 +2226,8 @@ a.callout.register:link {
 	text-transform: uppercase;
 }
 
-.register-cta .stock {
+.register-cta .stock,
+.view-attendees-attending .views-summary {
 	color: #29736b;
 	display: inline-block;
 	float: left;
