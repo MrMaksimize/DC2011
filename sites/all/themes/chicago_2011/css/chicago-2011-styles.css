@@ -1752,7 +1752,7 @@ h5.fullname {
 }
 
 .view-sessions.presenter-list .presenter .username {
-	background: url("/sites/all/themes/chicago_2011/images/bg/spacer_white.png") repeat scroll 0 0 transparent;
+	background: url("../images/bg/spacer_white.png") repeat scroll 0 0 transparent;
 	bottom: 10px;
 	color: #545454;
 	font-size: 22px;
@@ -2679,8 +2679,14 @@ form#user-login #edit-submit {
 	margin-bottom: 24px;
 }
 
+form#comment-form {
+	background: url("../images/bg/spacer_white.png") repeat scroll 0 0 transparent;
+	padding: 12px 0;
+}
+
 form#comment-form .form-item {
 	max-width: 100%;
+	padding: 0 12px;
 }
 
 form#comment-form .form-item label {
