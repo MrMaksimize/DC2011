@@ -402,6 +402,18 @@ li ol {
   margin-bottom: 0;
 }
 
+#main-content ul,
+#main-content ol {
+	margin-right: 2em;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+
+#main-content ul li,
+#main-content ol li {
+	padding-left: 0.5em;
+}
+
 .item-list ul li {
   margin: 0;
 }
@@ -2606,8 +2618,8 @@ form#user-login #edit-submit {
 	max-width: 100%;
 }*/
 
-/* Session Schedule messages that are errors, to be removed eventually */
+/* Session Schedule messages that are errors, to be removed eventually
 
 body.page-program-session-schedule .messages.error {
 	display: none;
-}
+} */
