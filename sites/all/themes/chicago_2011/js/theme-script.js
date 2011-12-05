@@ -18,6 +18,8 @@ $(document).ready(function() {
   jQuery('#footer-message-wrapper').addClass('hoverMid').delay(250).slideDown('slow').delay(500);
   // show the logo and nav before fading everything in
   jQuery('body.front #site-header.container-12, body.front #preface-wrapper.container-12').delay(1500).slideDown('slow');
+	// show the preface-middle and preface-last regions if js is enabled
+	jQuery('.front #preface-middle, .front #preface-last').fadeIn('slow');
   // fadeIn the rest of the stuff
   jQuery('body.front .container-12').delay(4500).slideDown(1000);
   // don't forget to remove the positioning on the footer message

@@ -288,6 +288,15 @@ body.front #page-inner-wrapper {
 
 #preface-last {}
 
+/* Hide these two regions incase js is disabled */
+.front #preface-middle {
+	display: none;
+}
+
+.front #preface-last {
+	display: none;
+}
+
 /* Main */
 #main-content-container {
 	margin-top: 1.5em;
