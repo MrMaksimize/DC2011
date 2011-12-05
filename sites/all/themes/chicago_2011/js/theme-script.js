@@ -42,6 +42,15 @@ $(document).ready(function() {
   };
 
 /**
+ * Move FiveStar form widget to sidebar block when on session node pages
+ */
+	if (jQuery('.node-type-session form.fivestar-widget').length > 0) {
+		var fiveStarWidget = jQuery('form.fivestar-widget').clone();
+		jQuery('.node-type-session form.fivestar-widget').remove();
+		jQuery('.block-session-info .view-content .first').append(fiveStarWidget);
+	};
+
+/**
  * Add steps to forms with fieldsets
  *
  * Options available to be passed to "formToWizard({ options.FOO })" and their default values:
