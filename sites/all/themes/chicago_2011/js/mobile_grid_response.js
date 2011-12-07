@@ -32,6 +32,9 @@ function clickBinder(){
         event.preventDefault();
         event.stopPropagation();
         var link_clicked = $(this);
+        if (!$(link_clicked).hasClass('Session')){
+          return false;
+        }
         //find parent
         var parent = $(this).parents('.views-accordion-item');
         var parentH5 = $(this).parents('h5');

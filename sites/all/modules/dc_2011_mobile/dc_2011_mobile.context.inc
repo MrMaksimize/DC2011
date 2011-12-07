@@ -109,11 +109,6 @@ function dc_2011_mobile_context_default_contexts() {
         'program/session-schedule/your-schedule' => 'program/session-schedule/your-schedule',
       ),
     ),
-    'views' => array(
-      'values' => array(
-        'cod_schedule' => 'cod_schedule',
-      ),
-    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -129,7 +124,7 @@ function dc_2011_mobile_context_default_contexts() {
     'theme' => array(
       'title' => '',
       'subtitle' => '',
-      'class' => 'session-schedule-mobile your-schedule-mobile',
+      'class' => 'session-schedule-mobile your-schedule-mobile context_mobile',
     ),
   );
   $context->condition_mode = 1;
@@ -337,11 +332,17 @@ function dc_2011_mobile_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-uc_products-block_1' => array(
+        'views-attendees_attending-block_1' => array(
           'module' => 'views',
-          'delta' => 'uc_products-block_1',
+          'delta' => 'attendees_attending-block_1',
           'region' => 'preface_middle',
           'weight' => 0,
+        ),
+        'block-10' => array(
+          'module' => 'block',
+          'delta' => 10,
+          'region' => 'preface_middle',
+          'weight' => 1,
         ),
         'block-9' => array(
           'module' => 'block',

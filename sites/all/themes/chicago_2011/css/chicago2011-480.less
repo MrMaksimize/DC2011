@@ -173,54 +173,17 @@ div.error{display:none;}
   display:none !important;
 }
 
-.view-cod-schedule-mobile{
-  .view-content{
-    border:0px;
-  }
-  h3.accordion-header{
-    width:99%;
-    padding:0px;
-    background: #545454;
-    a{
-      font-family:GillSans, Helvetica, Arial, sans-serif;
-      font-size:18px;
-      text-transform:capitalize;
-      line-height:24px;
-      padding:12px 16px;
-      text-decoration:none;
-      white-space:nowrap;
-      color:white;
-      font-style:normal;
-      font-weight:normal;
+#view-id-cod_schedule-page_4{display:none !important;}
+/*.page-program-sessions, .page-program-sessions-proposed, .page-program-session-schedule-your-schedule, .page-sessions{*/
+  /*.view-sessions,*/ .view-cod-schedule-mobile{
+    /*for when data is loaded*/
+    /*globals*/
+    img.load-spinner{
+      position:relative;
+      left:40%;
+      bottom:25px;
     }
-  }
-  h3.accordion-header:hover{
-    background:#666666
-  }
-  h3.accordion-header-active{
-    a{color:white;}
-  }
-  .accordion-content{
-    background:#FFFEFA url('../images/bg/body_bg.png') repeat left top;
-  }
-  .accordion-item-first{
-    margin-top:0px !important;
-  }
-  .accordion-item-last{
-    margin-bottom:0px !important;
-  }
-  .views-accordion-item.active{
-      height:490px;
-      .schedule-add{
-        position:relative;
-        top:22px;
-      }
-      .exp-lvl{
-        position:relative;
-        top:33px;
-      }
-  }
-  .Build {
+    .Build {
       border-right-color: #114ba7 !important;
     }
 
@@ -239,67 +202,7 @@ div.error{display:none;}
     .Community {
       border-right-color: #11a72d !important;
     }
-  .views-accordion-item{
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eaeaea));
-    background: -moz-linear-gradient(top center, #fff 0%, #eaeaea 100%);
-    border-color: #dfdfdf transparent #9d9d9d #cacaca;
-    border-right-color:#dbdbdb;
-    border-radius: 3px;
-    border-style: solid;
-    border-width: 1px 5px 1px 1px;
-    box-shadow: 0 1px 1px 0 #999;
-    padding: 0 10px;
-    width: 92%;
-    height: 150px;
-    overflow: hidden;
-    margin-top:10px;
-    margin-bottom:10px;
-    .time{
-      float:left;
-      }
-    h5.title{
-          width:90%;
-          font-size:15px;
-          float:left;
-          height:70px;
-          padding-left:8px;
-          background-position-x:0px;
-          display:block;
-          overflow:hidden;
-        }
-
-      .speaker-image{
-        float:right;
-        position:relative;
-        top:5px;
-        img{
-          height:30px;
-          width:auto;
-        }
-      }
-      .pictures{
-        float:right;
-      }
-      .picture{
-        float:right;
-      }
-      div.load-space{
-        float:left;
-      }
-      div.load-container{margin-bottom:10px;}
-      img.load-spinner{
-        position:relative;
-        left:160px;
-        bottom:25px;
-      }
-      span.exp-lvl{
-        float:left;
-        position:relative;
-        left:8px;
-        top:15px;
-        width:100px;
-      }
-      .schedule-add{
+    .schedule-add.button{
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #b4b4b4));
         background: -moz-linear-gradient(top center, #fff 0%, #b4b4b4 100%);
         border-color: #ececec #ccc #a1a1a1;
@@ -311,90 +214,156 @@ div.error{display:none;}
         position: relative;
         top: 5px;
         width: 60px;
-      }
-  }
-}
+        height:31px;
+        margin-right:3px;
+    }
 
-.page-program-session-schedule-your-schedule{
-  #view-id-cod_schedule-page_4{display:none !important;}
-  .view-id-cod_schedule_mobile .presentation.active{
-    .presentation-inner{
-      max-height:490px;
-      height:490px;
-      .session-info{
-        max-height:490px !important;
+    .presenter{
+      float:right !important;
+      position:relative;
+      top:2px;
+      display:block;
+      max-width:inherit;
+      padding:0px;
+      width:38%;
+      height:auto;
+      .picture{
+        padding-right:1px;
+        float:right;
+      }
+      img{
+        height:30px;
+        width:30px;
+      }
+    }
+    h5.title{
+      width:90%;
+      font-size:15px;
+      float:left;
+      height:70px;
+      padding-left:8px;
+      background-position-x:0px;
+      display:block;
+      overflow:hidden;
+    }
+    .field_track{display:none !important;}
+    .exp-lvl{
+          float:left;
+          margin-top:18px;
+          display:block;
+    }
+    div.load-space{
+        float:left;
+    }
+    img.load-spinner{
+      position:relative;
+      left:100px;
+      bottom:5px;
+    }
+    .ajax-body p{padding-right:10px;}
+    .ajax-body li{margin-right:30px;}
+    .ajax-body{
+      height:275px; overflow:hidden;
+    }
+    div.load-container{margin-bottom:10px;}
+    /*accordion on session schedule*/
+    .views-accordion{
+      /*actives*/
+      .views-accordion-item.active{
         height:490px;
         .schedule-add{
           position:relative;
-          top:0px;
-          height:30px;
+          top:22px;
         }
-    }
-    }
-  }
-  .view-id-cod_schedule_mobile .session .presentation-inner {
-    height:150px;
-    max-height:150px;
-    width:92%;
-    .session-info{
-      width:100% !important;
-
-        .presenter{
-          float:right !important;
-            position:relative;
-            top:2px;
-            display:block;
-            max-width:inherit;
-            padding:0px;
-            width:38%;
-            height:auto;
-            .picture{
-              padding-right:1px;
-            }
-            img{
-              height:30px;
-              width:auto;
-            }
+        .exp-lvl{
+          float:left;
+          margin-top:18px;
         }
         .schedule-add{
-          height:40px;
+          top:-40px;
+          position:relative;
         }
-    }
-  }
-}
-/*.page-program-sessions, .page-program-sessions-proposed, .page-program-session-schedule-your-schedule, .page-sessions{*/
-  .view-sessions, .view-id-cod_schedule_mobile{
-    /*for when data is loaded*/
-    img.load-spinner{
-      position:relative;
-      left:40%;
-      bottom:25px;
-    }
-    .view-content .presentation.active{
+      }
+      /*end actives*/
+      .time{
+        float:left;
+      }
+
+      h3.accordion-header{
+        width:99%;
+        padding:0px;
+        background: #545454;
+        /*a{*/
+          font-family:GillSans, Helvetica, Arial, sans-serif;
+          font-size:18px;
+          text-transform:capitalize;
+          line-height:24px;
+          padding:12px 16px;
+          text-decoration:none;
+          white-space:nowrap;
+          color:white;
+          font-style:normal;
+          font-weight:normal;
+       /* }*/
+      }
+      h3.accordion-header:hover{
+        background:#666666
+      }
+      h3.accordion-header-active{
+        a{color:white;}
+      }
+      .accordion-content{
+        background:#FFFEFA url('../images/bg/body_bg.png') repeat left top;
+      }
+      .accordion-item-first{
+        margin-top:0px !important;
+      }
+      .accordion-item-last{
+        margin-bottom:15px !important;
+      }
+      .views-accordion-item{
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eaeaea));
+        background: -moz-linear-gradient(top center, #fff 0%, #eaeaea 100%);
+        border-color: #dfdfdf transparent #9d9d9d #cacaca;
+        border-right-color:#dbdbdb;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px 5px 1px 1px;
+        box-shadow: 0 1px 1px 0 #999;
+        padding: 0 10px;
+        width: 92%;
+        height: 150px;
+        overflow: hidden;
+        margin-top:15px;
+        margin-bottom:15px;
+      }
+    }/*end views-accordion*/
+    /*active*/
+    .presentation.active{
       height:490px;
       .presentation-inner {
         max-height:490px;
+        height:490px;
+          .session-info{
+          max-height:490px !important;
+          height:490px;
+        }
       }
-      .exp-lvl{
+      .schedule-add.button{
         position:relative;
-        top:340px !important;
+        top:-37px;
       }
-      .schedule-add{
-        position:relative;
-        top:352px;
-      }
-      .ajax-body p{padding-right:10px;}
-      .ajax-body li{margin-right:30px;}
-      .ajax-body{
-        height:275px; overflow:hidden;
-      }
-
     }
-    .view-content .session{
+
+    /*end active*/
+    .presentation{
       width:92%;
-     height:150px;
-     .presenter{float:right !important;}
-      .presentation-inner{
+      height:150px;
+    }
+    .presentation.schedule_item{
+      .field_room{display:none;}
+    }
+    .presentation-inner{
         width:100% !important;
           max-height:150px;
         .session-info{
@@ -403,97 +372,13 @@ div.error{display:none;}
           max-height:150px;
           height:142px;
         }
-        h5.title{
-          max-width:58%;
-          font-size:15px;
-          width:58%;
-          font-size:15px;
-          float:left;
-          height:70px;
-          padding-left:8px;
-          background-position-x:0px;
-          display:block;
-          height:72px;
-          overflow:hidden;
-        }
-        .field_track{display:none;}
-        /*.session-meta{
-          width:100%;
-          float:left;
-          .speaker-image{
-            float:right !important;
-            position:relative;
-            bottom:78px;
-            width:30px;
-            img{
-              height:30px;
-              width:auto;
-            }
-          }
-          .load-space{
-            display:block;
-            .load-container{
-              display:block;
-            }
-          }
-          .schedule-add{
-            position:relative;
-            left:25px;
-          }
-          .exp-lvl{
-            display:block;
-            position:relative;
-            right:0px;
-            width:100px;
-            top:28px;
-          }
-          .field_track{
-            display:none;
-          }
-        }*/
-      }
     }
-
-    .views-widget{
-      select{
-        max-width:350px;
-      }
+    .schedule-add.button{
+        position:relative;
+        top:-5px;
     }
-    .views-exposed-widget{
-      text-align:center;
-      width:100%;
-      padding-right:0px;
-      padding-top:6px;
-      #edit-field-experience-value-many-to-one {
-        width:50%;
-      }
-      #edit-submit-sessions{
-        margin-top:10px;
-      }
-      div.bef-select-as-checkboxes{
-        #edit-field-track-value-many-to-one-Code-wrapper{
-          margin-right:5%;
-          margin-left:5%;
-        }
-        #edit-field-track-value-many-to-one-Build-wrapper{
-          margin-left:5%;
-          margin-right:5%;
-        }
-        #edit-field-track-value-many-to-one-Design-wrapper{
-          margin-right:5%;
-          margin-left:5%;
-        }
-        #edit-field-track-value-many-to-one-Business-wrapper{
-          margin-left:5%;
-          margin-right:5%;
-          margin-top:10px;
-        }
-        #edit-field-track-value-many-to-one-Community-wrapper{
-          margin-left:5%;
-          margin-right:5%;
-          margin-top:10px;
-        }
-      }
+    .exp-lvl{
+      margin-top:10px;
     }
   }
 /*}*/
