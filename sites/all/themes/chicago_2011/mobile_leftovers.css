@@ -54,11 +54,7 @@
 
   .view-id-cod_schedule_mobile .presentation.active{
     .presentation-inner{
-      max-height:490px;
-      height:490px;
-      .session-info{
-        max-height:490px !important;
-        height:490px;
+
         .schedule-add{
           position:relative;
           top:0px;
@@ -69,84 +65,10 @@
   }
 }
 
-/*.session-meta{
-          width:100%;
-          float:left;
-          .speaker-image{
-            float:right !important;
-            position:relative;
-            bottom:78px;
-            width:30px;
-            img{
-              height:30px;
-              width:auto;
-            }
-          }
-          .load-space{
-            display:block;
-            .load-container{
-              display:block;
-            }
-          }
-          .schedule-add{
-            position:relative;
-            left:25px;
-          }
-          .exp-lvl{
-            display:block;
-            position:relative;
-            right:0px;
-            width:100px;
-            top:28px;
-          }
-          .field_track{
-            display:none;
-          }
-        }*/
+/*
 
 
-        .views-widget{
-      select{
-        max-width:350px;
-      }
-    }
 
-.views-exposed-widget{
-      text-align:center;
-      width:100%;
-      padding-right:0px;
-      padding-top:6px;
-      #edit-field-experience-value-many-to-one {
-        width:50%;
-      }
-      #edit-submit-sessions{
-        margin-top:10px;
-      }
-      div.bef-select-as-checkboxes{
-        #edit-field-track-value-many-to-one-Code-wrapper{
-          margin-right:5%;
-          margin-left:5%;
-        }
-        #edit-field-track-value-many-to-one-Build-wrapper{
-          margin-left:5%;
-          margin-right:5%;
-        }
-        #edit-field-track-value-many-to-one-Design-wrapper{
-          margin-right:5%;
-          margin-left:5%;
-        }
-        #edit-field-track-value-many-to-one-Business-wrapper{
-          margin-left:5%;
-          margin-right:5%;
-          margin-top:10px;
-        }
-        #edit-field-track-value-many-to-one-Community-wrapper{
-          margin-left:5%;
-          margin-right:5%;
-          margin-top:10px;
-        }
-      }
-    }
 
 
 
@@ -154,19 +76,7 @@
 
      .presenter{float:right !important;}
 
-        h5.title{
-          max-width:58%;
-          font-size:15px;
-          width:58%;
-          font-size:15px;
-          float:left;
-          height:70px;
-          padding-left:8px;
-          background-position-x:0px;
-          display:block;
-          height:72px;
-          overflow:hidden;
-        }
+
       }
     }
 

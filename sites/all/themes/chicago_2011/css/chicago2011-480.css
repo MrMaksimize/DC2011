@@ -1382,6 +1382,155 @@ div.error {
 .front #preface-first {
   display: none !important;
 }
+.views-widget select {
+  max-width: 350px;
+}
+.views-exposed-widget {
+  text-align: center;
+  width: 100%;
+  padding-right: 0px;
+  padding-top: 6px;
+}
+.views-exposed-widget #edit-field-experience-value-many-to-one {
+  width: 50%;
+}
+.views-exposed-widget #edit-submit-sessions {
+  margin-top: 10px;
+}
+.views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+}
+.views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+}
+.view-sessions {
+  /*active*/
+
+  /*end active*/
+
+}
+.view-sessions .presentation.active {
+  height: 490px;
+}
+.view-sessions .presentation.active .presentation-inner {
+  max-height: 490px;
+  height: 490px;
+}
+.view-sessions .presentation.active .presentation-inner .session-info {
+  max-height: 490px !important;
+  height: 490px;
+}
+.view-sessions .presentation.active .schedule-add.button {
+  position: relative;
+  top: -37px;
+}
+.view-sessions .question {
+  display: none;
+}
+.view-sessions h5.title {
+  max-width: 100%;
+  font-size: 15px;
+  width: 100%;
+  font-size: 15px;
+  float: left;
+  height: 70px;
+  padding-left: 8px;
+  background-position-x: 0px;
+  display: block;
+  height: 72px;
+  overflow: hidden;
+}
+.view-sessions .presentation {
+  width: 92%;
+  height: 150px;
+}
+.view-sessions .presentation.schedule_item .field_room {
+  display: none;
+}
+.view-sessions .presenter {
+  width: 100% !important;
+}
+.view-sessions .presenter .picture {
+  padding-right: 1px;
+}
+.view-sessions .presenter .picture img {
+  width: 30px !important;
+  height: 30px !important;
+}
+.view-sessions .presentation-inner {
+  width: 100% !important;
+  max-height: 150px;
+}
+.view-sessions .presentation-inner .session-info {
+  width: 58%;
+  float: left;
+  max-height: 150px;
+  height: 150px;
+  /*height:87px;*/
+
+}
+.view-sessions .schedule-add.button {
+  position: relative;
+  top: -5px;
+}
+.view-sessions .exp-lvl {
+  margin-top: 10px;
+}
+.view-sessions .session-meta {
+  width: 35%;
+  float: left;
+}
+.view-sessions .session-meta .speaker-image {
+  float: right !important;
+  position: relative;
+  bottom: 78px;
+  width: 30px;
+}
+.view-sessions .session-meta .speaker-image img {
+  height: 30px;
+  width: auto;
+}
+.view-sessions .session-meta .load-space {
+  display: block;
+}
+.view-sessions .session-meta .load-space .load-container {
+  display: block;
+}
+.view-sessions .session-meta .schedule-add {
+  position: relative;
+  left: 6px;
+  top: 100px;
+}
+.view-sessions .session-meta .exp-lvl {
+  display: block;
+  position: relative;
+  right: 177%;
+  width: 100px;
+  top: 57px;
+}
+.view-sessions .session-meta .field_track {
+  display: none;
+}
+.logged-in .view-sessions .presenter {
+  top: -40px;
+  position: relative;
+}
 #view-id-cod_schedule-page_4 {
   display: none !important;
 }

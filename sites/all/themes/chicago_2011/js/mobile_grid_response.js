@@ -51,7 +51,7 @@ function clickBinder(){
         console.log(event);
         event.preventDefault();
         event.stopPropagation();
-
+        return false; //@todo fix
         var link_clicked = $(this);
         //find parent
         var parent = $(this).parents('.presentation');
