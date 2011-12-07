@@ -1578,9 +1578,6 @@ div.error {
 .view-sessions .view-content .presentation.active .presentation-inner, .view-id-cod_schedule_mobile .view-content .presentation.active .presentation-inner {
   max-height: 490px;
 }
-.view-sessions .view-content .presentation.active .session-meta, .view-id-cod_schedule_mobile .view-content .presentation.active .session-meta {
-  height: 490px;
-}
 .view-sessions .view-content .presentation.active .exp-lvl, .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl {
   position: relative;
   top: 340px !important;
@@ -1609,6 +1606,41 @@ div.error {
 .view-sessions .view-content .session .presentation-inner, .view-id-cod_schedule_mobile .view-content .session .presentation-inner {
   width: 100% !important;
   max-height: 150px;
+  /*.session-meta{
+          width:100%;
+          float:left;
+          .speaker-image{
+            float:right !important;
+            position:relative;
+            bottom:78px;
+            width:30px;
+            img{
+              height:30px;
+              width:auto;
+            }
+          }
+          .load-space{
+            display:block;
+            .load-container{
+              display:block;
+            }
+          }
+          .schedule-add{
+            position:relative;
+            left:25px;
+          }
+          .exp-lvl{
+            display:block;
+            position:relative;
+            right:0px;
+            width:100px;
+            top:28px;
+          }
+          .field_track{
+            display:none;
+          }
+        }*/
+
 }
 .view-sessions .view-content .session .presentation-inner .session-info, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info {
   width: 100%;
@@ -1616,7 +1648,7 @@ div.error {
   max-height: 150px;
   height: 142px;
 }
-.view-sessions .view-content .session .presentation-inner .session-info h5.title, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info h5.title {
+.view-sessions .view-content .session .presentation-inner h5.title, .view-id-cod_schedule_mobile .view-content .session .presentation-inner h5.title {
   max-width: 58%;
   font-size: 15px;
   width: 58%;
@@ -1629,42 +1661,7 @@ div.error {
   height: 72px;
   overflow: hidden;
 }
-.view-sessions .view-content .session .presentation-inner .session-info .question, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info .question {
-  padding-left: 24px;
-  display: none;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta {
-  width: 100%;
-  float: left;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta .speaker-image, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image {
-  float: right !important;
-  position: relative;
-  bottom: 78px;
-  width: 30px;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image img {
-  height: 30px;
-  width: auto;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta .load-space, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space {
-  display: block;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta .load-space .load-container, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space .load-container {
-  display: block;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta .schedule-add, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .schedule-add {
-  position: relative;
-  left: 25px;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .exp-lvl {
-  display: block;
-  position: relative;
-  right: 0px;
-  width: 100px;
-  top: 28px;
-}
-.view-sessions .view-content .session .presentation-inner .session-meta .field_track, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .field_track {
+.view-sessions .view-content .session .presentation-inner .field_track, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .field_track {
   display: none;
 }
 .view-sessions .views-widget select, .view-id-cod_schedule_mobile .views-widget select {
