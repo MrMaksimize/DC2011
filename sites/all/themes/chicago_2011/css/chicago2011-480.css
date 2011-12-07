@@ -1406,7 +1406,7 @@ div.error {
   background: #666666;
 }
 .view-cod-schedule-mobile h3.accordion-header-active a {
-  color: #75bacd;
+  color: white;
 }
 .view-cod-schedule-mobile .accordion-content {
   background: #fffefa url('../images/bg/body_bg.png') repeat left top;
@@ -1458,15 +1458,6 @@ div.error {
   overflow: hidden;
   margin-top: 10px;
   margin-bottom: 10px;
-  /*button:focus,
-      button:active,
-      .button:focus,
-      .button:active,{
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      }*/
-
 }
 .view-cod-schedule-mobile .views-accordion-item .time {
   float: left;
@@ -1527,6 +1518,9 @@ div.error {
   top: 5px;
   width: 60px;
 }
+.page-program-session-schedule-your-schedule #view-id-cod_schedule-page_4 {
+  display: none !important;
+}
 .page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .presentation.active .presentation-inner {
   max-height: 490px;
   height: 490px;
@@ -1555,8 +1549,11 @@ div.error {
   display: block;
   max-width: inherit;
   padding: 0px;
-  width: 9%;
+  width: 38%;
   height: auto;
+}
+.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .session .presentation-inner .session-info .presenter .picture {
+  padding-right: 1px;
 }
 .page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .session .presentation-inner .session-info .presenter img {
   height: 30px;
@@ -1565,167 +1562,64 @@ div.error {
 .page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .session .presentation-inner .session-info .schedule-add {
   height: 40px;
 }
-.page-program-sessions .view-sessions,
-.page-program-sessions-accepted .view-sessions,
-.page-program-session-schedule-your-schedule .view-sessions,
-.page-sessions .view-sessions,
-.page-program-sessions .view-id-cod_schedule_mobile,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile,
-.page-sessions .view-id-cod_schedule_mobile {
+/*.page-program-sessions, .page-program-sessions-proposed, .page-program-session-schedule-your-schedule, .page-sessions{*/
+.view-sessions, .view-id-cod_schedule_mobile {
   /*for when data is loaded*/
 
 }
-.page-program-sessions .view-sessions img.load-spinner,
-.page-program-sessions-accepted .view-sessions img.load-spinner,
-.page-program-session-schedule-your-schedule .view-sessions img.load-spinner,
-.page-sessions .view-sessions img.load-spinner,
-.page-program-sessions .view-id-cod_schedule_mobile img.load-spinner,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile img.load-spinner,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile img.load-spinner,
-.page-sessions .view-id-cod_schedule_mobile img.load-spinner {
+.view-sessions img.load-spinner, .view-id-cod_schedule_mobile img.load-spinner {
   position: relative;
   left: 40%;
   bottom: 25px;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active,
-.page-sessions .view-sessions .view-content .presentation.active,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active {
+.view-sessions .view-content .presentation.active, .view-id-cod_schedule_mobile .view-content .presentation.active {
   height: 490px;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active .presentation-inner,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active .presentation-inner,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active .presentation-inner,
-.page-sessions .view-sessions .view-content .presentation.active .presentation-inner,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .presentation-inner,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active .presentation-inner,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .presentation-inner,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .presentation-inner {
+.view-sessions .view-content .presentation.active .presentation-inner, .view-id-cod_schedule_mobile .view-content .presentation.active .presentation-inner {
   max-height: 490px;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active .session-meta,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active .session-meta,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active .session-meta,
-.page-sessions .view-sessions .view-content .presentation.active .session-meta,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .session-meta,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active .session-meta,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .session-meta,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .session-meta {
+.view-sessions .view-content .presentation.active .session-meta, .view-id-cod_schedule_mobile .view-content .presentation.active .session-meta {
   height: 490px;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active .exp-lvl,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active .exp-lvl,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active .exp-lvl,
-.page-sessions .view-sessions .view-content .presentation.active .exp-lvl,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl {
+.view-sessions .view-content .presentation.active .exp-lvl, .view-id-cod_schedule_mobile .view-content .presentation.active .exp-lvl {
   position: relative;
   top: 340px !important;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active .schedule-add,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active .schedule-add,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active .schedule-add,
-.page-sessions .view-sessions .view-content .presentation.active .schedule-add,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .schedule-add,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active .schedule-add,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .schedule-add,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .schedule-add {
+.view-sessions .view-content .presentation.active .schedule-add, .view-id-cod_schedule_mobile .view-content .presentation.active .schedule-add {
   position: relative;
   top: 352px;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active .ajax-body p,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active .ajax-body p,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active .ajax-body p,
-.page-sessions .view-sessions .view-content .presentation.active .ajax-body p,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body p,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body p,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body p,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body p {
+.view-sessions .view-content .presentation.active .ajax-body p, .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body p {
   padding-right: 10px;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active .ajax-body li,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active .ajax-body li,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active .ajax-body li,
-.page-sessions .view-sessions .view-content .presentation.active .ajax-body li,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body li,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body li,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body li,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body li {
+.view-sessions .view-content .presentation.active .ajax-body li, .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body li {
   margin-right: 30px;
 }
-.page-program-sessions .view-sessions .view-content .presentation.active .ajax-body,
-.page-program-sessions-accepted .view-sessions .view-content .presentation.active .ajax-body,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .presentation.active .ajax-body,
-.page-sessions .view-sessions .view-content .presentation.active .ajax-body,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body,
-.page-sessions .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body {
+.view-sessions .view-content .presentation.active .ajax-body, .view-id-cod_schedule_mobile .view-content .presentation.active .ajax-body {
   height: 275px;
   overflow: hidden;
 }
-.page-program-sessions .view-sessions .view-content .session,
-.page-program-sessions-accepted .view-sessions .view-content .session,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session,
-.page-sessions .view-sessions .view-content .session,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session {
+.view-sessions .view-content .session, .view-id-cod_schedule_mobile .view-content .session {
   width: 92%;
   height: 150px;
 }
-.page-program-sessions .view-sessions .view-content .session .presenter,
-.page-program-sessions-accepted .view-sessions .view-content .session .presenter,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presenter,
-.page-sessions .view-sessions .view-content .session .presenter,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presenter,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presenter,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presenter,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presenter {
+.view-sessions .view-content .session .presenter, .view-id-cod_schedule_mobile .view-content .session .presenter {
   float: right !important;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner,
-.page-sessions .view-sessions .view-content .session .presentation-inner,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner {
+.view-sessions .view-content .session .presentation-inner, .view-id-cod_schedule_mobile .view-content .session .presentation-inner {
   width: 100% !important;
   max-height: 150px;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-info,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-info,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-info,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-info,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info {
+.view-sessions .view-content .session .presentation-inner .session-info, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info {
   width: 100%;
   float: left;
   max-height: 150px;
+  height: 142px;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-info h5.title,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-info h5.title,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-info h5.title,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-info h5.title,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info h5.title,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info h5.title,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info h5.title,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info h5.title {
-  max-width: 85%;
+.view-sessions .view-content .session .presentation-inner .session-info h5.title, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info h5.title {
+  max-width: 58%;
   font-size: 15px;
-  width: 100%;
+  width: 58%;
   font-size: 15px;
   float: left;
   height: 70px;
@@ -1735,197 +1629,82 @@ div.error {
   height: 72px;
   overflow: hidden;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-info .question,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-info .question,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-info .question,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-info .question,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info .question,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info .question,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info .question,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info .question {
+.view-sessions .view-content .session .presentation-inner .session-info .question, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-info .question {
   padding-left: 24px;
   display: none;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-meta,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-meta,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta {
+.view-sessions .view-content .session .presentation-inner .session-meta, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta {
   width: 100%;
   float: left;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image {
+.view-sessions .view-content .session .presentation-inner .session-meta .speaker-image, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image {
   float: right !important;
   position: relative;
   bottom: 78px;
   width: 30px;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image img,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image img,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image img,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image img {
+.view-sessions .view-content .session .presentation-inner .session-meta .speaker-image img, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .speaker-image img {
   height: 30px;
   width: auto;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .load-space,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .load-space,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-meta .load-space,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-meta .load-space,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space {
+.view-sessions .view-content .session .presentation-inner .session-meta .load-space, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space {
   display: block;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .load-space .load-container,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .load-space .load-container,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-meta .load-space .load-container,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-meta .load-space .load-container,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space .load-container,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space .load-container,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space .load-container,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space .load-container {
+.view-sessions .view-content .session .presentation-inner .session-meta .load-space .load-container, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .load-space .load-container {
   display: block;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .schedule-add,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .schedule-add,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-meta .schedule-add,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-meta .schedule-add,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .schedule-add,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .schedule-add,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .schedule-add,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .schedule-add {
+.view-sessions .view-content .session .presentation-inner .session-meta .schedule-add, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .schedule-add {
   position: relative;
   left: 25px;
 }
-.page-program-sessions .view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl,
-.page-program-sessions-accepted .view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl,
-.page-program-session-schedule-your-schedule .view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl,
-.page-sessions .view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl,
-.page-program-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .exp-lvl,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .exp-lvl,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .exp-lvl,
-.page-sessions .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .exp-lvl {
+.view-sessions .view-content .session .presentation-inner .session-meta .exp-lvl, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .exp-lvl {
   display: block;
   position: relative;
   right: 0px;
   width: 100px;
   top: 28px;
 }
-.page-program-sessions .view-sessions .views-widget select,
-.page-program-sessions-accepted .view-sessions .views-widget select,
-.page-program-session-schedule-your-schedule .view-sessions .views-widget select,
-.page-sessions .view-sessions .views-widget select,
-.page-program-sessions .view-id-cod_schedule_mobile .views-widget select,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-widget select,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-widget select,
-.page-sessions .view-id-cod_schedule_mobile .views-widget select {
+.view-sessions .view-content .session .presentation-inner .session-meta .field_track, .view-id-cod_schedule_mobile .view-content .session .presentation-inner .session-meta .field_track {
+  display: none;
+}
+.view-sessions .views-widget select, .view-id-cod_schedule_mobile .views-widget select {
   max-width: 350px;
 }
-.page-program-sessions .view-sessions .views-exposed-widget,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget,
-.page-sessions .view-sessions .views-exposed-widget,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget {
+.view-sessions .views-exposed-widget, .view-id-cod_schedule_mobile .views-exposed-widget {
   text-align: center;
   width: 100%;
   padding-right: 0px;
   padding-top: 6px;
 }
-.page-program-sessions .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one,
-.page-sessions .view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget #edit-field-experience-value-many-to-one,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget #edit-field-experience-value-many-to-one,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget #edit-field-experience-value-many-to-one,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget #edit-field-experience-value-many-to-one {
+.view-sessions .views-exposed-widget #edit-field-experience-value-many-to-one, .view-id-cod_schedule_mobile .views-exposed-widget #edit-field-experience-value-many-to-one {
   width: 50%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget #edit-submit-sessions,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget #edit-submit-sessions,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget #edit-submit-sessions,
-.page-sessions .view-sessions .views-exposed-widget #edit-submit-sessions,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget #edit-submit-sessions,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget #edit-submit-sessions,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget #edit-submit-sessions,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget #edit-submit-sessions {
+.view-sessions .views-exposed-widget #edit-submit-sessions, .view-id-cod_schedule_mobile .views-exposed-widget #edit-submit-sessions {
   margin-top: 10px;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper,
-.page-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper {
+.view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper, .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Code-wrapper {
   margin-right: 5%;
   margin-left: 5%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper,
-.page-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper {
+.view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper, .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Build-wrapper {
   margin-left: 5%;
   margin-right: 5%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper,
-.page-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper {
+.view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper, .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Design-wrapper {
   margin-right: 5%;
   margin-left: 5%;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper,
-.page-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper {
+.view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper, .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Business-wrapper {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 10px;
 }
-.page-program-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper,
-.page-program-sessions-accepted .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper,
-.page-program-session-schedule-your-schedule .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper,
-.page-sessions .view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper,
-.page-program-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper,
-.page-program-sessions-accepted .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper,
-.page-program-session-schedule-your-schedule .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper,
-.page-sessions .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper {
+.view-sessions .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper, .view-id-cod_schedule_mobile .views-exposed-widget div.bef-select-as-checkboxes #edit-field-track-value-many-to-one-Community-wrapper {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 10px;
 }
+/*}*/
 #header-zone-wrapper {
   height: 160px;
 }
@@ -1975,10 +1754,14 @@ div.error {
   border-bottom: 0px;
   background: #29ABE1;
 }
-#preface-middle #block-views-uc_products-block_1 {
+.front #preface-middle #block-views-attendees_attending-block_1 .views-summary {
+  position: relative;
+  left: 21%;
+}
+.front #preface-middle #block-block-10 {
   text-align: center;
 }
-#preface-middle #block-views-uc_products-block_1 .register-cta .stock {
+.front #preface-middle #block-block-10 .register-cta {
   float: none;
   width: 100%;
   font-size: 85px;
@@ -1986,6 +1769,7 @@ div.error {
   line-height: 25px;
   margin-top: 25px;
   padding-right: 0px;
+  text-align: center;
 }
 #view-id-attendees-page_1 #views-exposed-form-attendees-page-1 .views-exposed-widget {
   width: 95%;
@@ -2067,9 +1851,8 @@ div.error {
 
 }
 #view-id-sponsors_mobile-block_10 .views-accordion h3.accordion-header {
-  padding-top: 0px;
+  padding: 5px 16px !important;
   width: 90%;
-  padding-bottom: 0px;
   background: #545454;
   font-family: GillSans, Helvetica, Arial, sans-serif;
   font-size: 18px;
