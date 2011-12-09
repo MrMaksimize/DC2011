@@ -2233,6 +2233,7 @@ a.callout.register:link {
 	position: relative;
 	width: 100%;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .register-cta .stock,
