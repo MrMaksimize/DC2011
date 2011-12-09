@@ -1332,7 +1332,8 @@ a.more-link:visited {
 h1.title {
   margin-left: 0px;
   text-align: center;
-  margin-bottom: 0px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 #content-tabs {
   text-align: center;
@@ -1442,6 +1443,9 @@ div.error {
 }
 .view-sessions .question {
   display: none;
+}
+.view-sessions h3.title {
+  width: 92%;
 }
 .view-sessions h5.title {
   max-width: 100%;
@@ -1874,6 +1878,10 @@ div.error {
   display: block;
 }
 /*sponsors footer*/
+#block-views-sponsors_mobile-block_10 {
+  overflow: hidden;
+  width: 100%;
+}
 #block-views-sponsors_mobile-block_10 .view-content {
   background: white;
 }
@@ -1968,3 +1976,4 @@ div.error {
   font-size: 10px;
   line-height: 10px;
 }
+/*body.wide {width:480px !important;}*/

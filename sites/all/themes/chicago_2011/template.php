@@ -184,8 +184,7 @@ function chicago_2011_preprocess_page(&$vars, $hook)
   //  $vars['styles'] = drupal_get_css();
   //$vars['main_menu_links']      = theme('links', $vars['primary_links'], array('class' => 'links main-menu'));
   //$vars['secondary_menu_links'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-menu'));
-  $vars['head'] = $vars['head'] . '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=NO"/>';
-  //drupal_add_js('sites/all/themes/chicago_2011/js/textSizer.js');
+  $vars['head'] = $vars['head'] . '<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">';
   drupal_add_js('sites/all/themes/chicago_2011/js/jquery.fittext.js');
   drupal_add_js('sites/all/themes/chicago_2011/js/mobile_grid_response.js');
   $response_settings = array(
