@@ -2315,6 +2315,9 @@ a.callout.register:link {
 	box-shadow: 1px 1px 5px #333333 inset;
 	display: inline-block;
 	margin-top: 12px;
+	/* For the display message */
+	color: #fff;
+	padding: 3em 2em;
 }
 
 .countdown {
