@@ -74,7 +74,7 @@ function displayCountDown(){
 	}
 	
 	else { //else if target date/time met
-		var displaystring="" //Don't display any text
+		var displaystring="DrupalCamp Chicago is A-Go!" //Don't display any text
 	}
 	
 	return displaystring
