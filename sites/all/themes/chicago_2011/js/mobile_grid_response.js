@@ -6,12 +6,12 @@ Drupal.behaviors.dc2011Behavior = function (context) {
     Drupal.settings.dc2011.counter ++;
     window.addEventListener('resize', resizeRespond, false);
     Drupal.settings.dc2011.location = window.location.protocol + "//" + window.location.host;
-
     /*sessions*/
     console.log('behavior active');
     resizeRespond();
   }
 }
+
 function clickBinder(){
        if ($('body').hasClass('page-program-session-schedule')){
       console.log('init sess sched');
@@ -42,7 +42,7 @@ function clickBinder(){
         return false;
       });
     }
-    if ($('body').hasClass('page-program-sessions-accepted')||
+    /*if ($('body').hasClass('page-program-sessions-accepted')||
         $('body').hasClass('page-program-sessions')||
         $('body').hasClass('page-program-sessions-proposed')||
         $('body').hasClass('page-sessions')){
@@ -59,7 +59,7 @@ function clickBinder(){
         sessionLoad(parent, parentH5, link_clicked);
         return false;
       });
-    }
+    }*/
     if ($('body').hasClass('page-program-session-schedule-your-schedule')){
       console.log('init sess sched');
       $('.your-schedule-mobile h5.title a').bind('click', function(event){
@@ -217,9 +217,14 @@ function contextMocker(context){
   console.log('contextMocker ' + context);
   menuToDropdown('#site-menu', '.main-menu', context);
   //implement fit text operations
-  if (context != 'full'){
+  fitTexter(context);
+}
+
+function fitTexter(context){
+if (context != 'full'){
     for (el in Drupal.settings.dc2011.fitTextEls){
       var t = el;
+      console.log('change text');
       console.log(Drupal.settings.dc2011.fitTextEls[el].el);
      $(Drupal.settings.dc2011.fitTextEls[el].el).fitText(1, {
         minFontSize: Drupal.settings.dc2011.fitTextEls[el].min,
@@ -231,6 +236,7 @@ function contextMocker(context){
 
 function contextHelper(context){
   menuToDropdown('#site-menu', '.main-menu', context);
+  fitTexter(context);
   //schedule
   //$('span.schedule-add .flag-wrapper a').text('');
   //$('h5.title a').fitText();
