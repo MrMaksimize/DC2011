@@ -1739,6 +1739,15 @@ h5.fullname {
 	right: 0;
 }
 
+.view-sessions .online {
+	margin-bottom: 16px;
+}
+
+.view-sessions .online .presentation-video {
+	float: left;
+	margin-right: 16px;
+}
+
 /* Session: Node Page
  *
  * Presenter(s) Block
