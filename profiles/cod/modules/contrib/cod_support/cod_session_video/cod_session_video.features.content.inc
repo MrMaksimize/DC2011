@@ -11,9 +11,10 @@ function cod_session_video_content_default_fields() {
     'field_name' => 'field_video',
     'type_name' => 'session',
     'display_settings' => array(
+      'weight' => '9',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -43,21 +44,27 @@ function cod_session_video_content_default_fields() {
     'widget_active' => '1',
     'type' => 'emvideo',
     'required' => '0',
-    'multiple' => '0',
+    'multiple' => '1',
     'module' => 'emvideo',
     'active' => '1',
     'widget' => array(
-      'video_width' => '425',
-      'video_height' => '350',
+      'video_width' => '600',
+      'video_height' => '450',
       'video_autoplay' => 0,
-      'preview_width' => '425',
+      'preview_width' => '500',
       'preview_height' => '350',
       'preview_autoplay' => 0,
       'thumbnail_width' => '120',
       'thumbnail_height' => '90',
       'thumbnail_default_path' => '',
-      'thumbnail_link_title' => 'See video',
-      'providers' => array(),
+      'thumbnail_link_title' => 'Watch the presentation video',
+      'meta_fields' => array(
+        'title' => 0,
+        'description' => 0,
+      ),
+      'providers' => array(
+        'vimeo' => 'vimeo',
+      ),
       'default_value' => array(
         '0' => array(
           'embed' => '',
@@ -66,7 +73,7 @@ function cod_session_video_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Video',
-      'weight' => '8',
+      'weight' => '9',
       'description' => '',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',

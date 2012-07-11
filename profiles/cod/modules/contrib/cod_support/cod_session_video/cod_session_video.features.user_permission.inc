@@ -10,7 +10,8 @@ function cod_session_video_user_default_permissions() {
   $permissions['edit field_video'] = array(
     'name' => 'edit field_video',
     'roles' => array(
-      '0' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
     ),
   );
 
@@ -18,8 +19,9 @@ function cod_session_video_user_default_permissions() {
   $permissions['view field_video'] = array(
     'name' => 'view field_video',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
