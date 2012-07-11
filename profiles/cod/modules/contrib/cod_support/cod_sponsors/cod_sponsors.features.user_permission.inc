@@ -10,8 +10,9 @@ function cod_sponsors_user_default_permissions() {
   $permissions['create sponsor content'] = array(
     'name' => 'create sponsor content',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'sponsor organizer',
     ),
   );
 
@@ -19,7 +20,8 @@ function cod_sponsors_user_default_permissions() {
   $permissions['delete any sponsor content'] = array(
     'name' => 'delete any sponsor content',
     'roles' => array(
-      '0' => 'sponsor organizer',
+      '0' => 'administrator',
+      '1' => 'sponsor organizer',
     ),
   );
 
@@ -27,7 +29,8 @@ function cod_sponsors_user_default_permissions() {
   $permissions['edit any sponsor content'] = array(
     'name' => 'edit any sponsor content',
     'roles' => array(
-      '0' => 'sponsor organizer',
+      '0' => 'administrator',
+      '1' => 'sponsor organizer',
     ),
   );
 
@@ -35,8 +38,10 @@ function cod_sponsors_user_default_permissions() {
   $permissions['edit field_logo'] = array(
     'name' => 'edit field_logo',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'sponsor',
+      '3' => 'sponsor organizer',
     ),
   );
 
@@ -44,8 +49,10 @@ function cod_sponsors_user_default_permissions() {
   $permissions['edit field_related_attendees'] = array(
     'name' => 'edit field_related_attendees',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'sponsor',
+      '3' => 'sponsor organizer',
     ),
   );
 
@@ -53,8 +60,10 @@ function cod_sponsors_user_default_permissions() {
   $permissions['edit field_url'] = array(
     'name' => 'edit field_url',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'sponsor organizer',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'sponsor',
+      '3' => 'sponsor organizer',
     ),
   );
 
@@ -62,8 +71,9 @@ function cod_sponsors_user_default_permissions() {
   $permissions['view field_logo'] = array(
     'name' => 'view field_logo',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -71,8 +81,9 @@ function cod_sponsors_user_default_permissions() {
   $permissions['view field_related_attendees'] = array(
     'name' => 'view field_related_attendees',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -80,8 +91,9 @@ function cod_sponsors_user_default_permissions() {
   $permissions['view field_sponsorship_level'] = array(
     'name' => 'view field_sponsorship_level',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -89,8 +101,9 @@ function cod_sponsors_user_default_permissions() {
   $permissions['view field_url'] = array(
     'name' => 'view field_url',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 

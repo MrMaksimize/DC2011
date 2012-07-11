@@ -18,6 +18,21 @@ function cod_sponsors_ctools_plugin_api() {
  */
 function cod_sponsors_imagecache_default_presets() {
   $items = array(
+    'sponsor_logo_220' => array(
+      'presetname' => 'sponsor_logo_220',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '220',
+            'height' => '',
+            'upscale' => 1,
+          ),
+        ),
+      ),
+    ),
     'sponsor_logo_bronze' => array(
       'presetname' => 'sponsor_logo_bronze',
       'actions' => array(
@@ -82,7 +97,7 @@ function cod_sponsors_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '125',
+            'width' => '200',
             'height' => '',
           ),
         ),
