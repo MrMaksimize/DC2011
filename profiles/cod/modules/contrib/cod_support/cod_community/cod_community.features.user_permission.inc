@@ -10,7 +10,8 @@ function cod_community_user_default_permissions() {
   $permissions['administer site-wide contact form'] = array(
     'name' => 'administer site-wide contact form',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 

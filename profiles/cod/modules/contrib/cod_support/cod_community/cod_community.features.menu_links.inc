@@ -22,7 +22,7 @@ function cod_community_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '1',
-    'weight' => '0',
+    'weight' => '-48',
   );
   // Translatables
   // Included for use with string extractors like potx.
