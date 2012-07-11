@@ -10,8 +10,9 @@ function cod_bof_user_default_permissions() {
   $permissions['delete any bof_session content'] = array(
     'name' => 'delete any bof_session content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -19,17 +20,9 @@ function cod_bof_user_default_permissions() {
   $permissions['edit any bof_session content'] = array(
     'name' => 'edit any bof_session content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
-    ),
-  );
-
-  // Exported permission: schedule bof_session
-  $permissions['schedule bof_session'] = array(
-    'name' => 'schedule bof_session',
-    'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
