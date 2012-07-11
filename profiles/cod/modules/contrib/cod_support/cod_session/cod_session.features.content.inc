@@ -136,9 +136,10 @@ function cod_session_content_default_fields() {
     'field_name' => 'field_room_session_capacity',
     'type_name' => 'room',
     'display_settings' => array(
+      'weight' => '-3',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -285,23 +286,30 @@ function cod_session_content_default_fields() {
     'widget_active' => '1',
     'type' => 'nodereference',
     'required' => '0',
-    'multiple' => '1',
+    'multiple' => '6',
     'module' => 'nodereference',
     'active' => '1',
     'referenceable_types' => array(
       'room' => 'room',
+      'badge' => 0,
       'bof_session' => 0,
       'event' => 0,
+      'faq' => 0,
+      'forum_post' => 0,
+      'forum' => 0,
+      'front_page_slideshow_image' => 0,
       'news' => 0,
       'page' => 0,
       'product' => 0,
       'schedule_item' => 0,
       'session' => 0,
       'sponsor' => 0,
+      'sponsorship' => 0,
       'time_slot' => 0,
+      'webform' => 0,
     ),
     'advanced_view' => '--',
-    'advanced_view_args' => '',
+    'advanced_view_args' => 'all',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => 60,
@@ -406,7 +414,7 @@ function cod_session_content_default_fields() {
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -496,7 +504,7 @@ advanced|Advanced',
     'widget' => array(
       'default_value' => array(
         '0' => array(
-          'value' => NULL,
+          'value' => '',
         ),
       ),
       'default_value_php' => NULL,
@@ -508,76 +516,15 @@ advanced|Advanced',
     ),
   );
 
-  // Exported field: field_speakers
-  $fields['session-field_speakers'] = array(
-    'field_name' => 'field_speakers',
+  // Exported field: field_questions_answered
+  $fields['session-field_questions_answered'] = array(
+    'field_name' => 'field_questions_answered',
     'type_name' => 'session',
     'display_settings' => array(
-      'weight' => '-3',
+      'weight' => '-1',
       'parent' => '',
       'label' => array(
         'format' => 'above',
-      ),
-      'teaser' => array(
-        'format' => 'user_full_name',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'user_full_name',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'userreference',
-    'required' => '0',
-    'multiple' => '1',
-    'module' => 'userreference',
-    'active' => '1',
-    'referenceable_roles' => array(
-      '2' => 0,
-      '4' => 0,
-      '3' => 0,
-      '5' => 0,
-    ),
-    'referenceable_status' => '1',
-    'advanced_view' => '',
-    'advanced_view_args' => '',
-    'widget' => array(
-      'autocomplete_match' => 'contains',
-      'size' => '40',
-      'reverse_link' => 1,
-      'default_value' => array(
-        '0' => array(
-          'uid' => NULL,
-          '_error_element' => 'default_value_widget][field_speakers][0][uid][uid',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Speaker(s)',
-      'weight' => '-3',
-      'description' => 'Add your username and optionally 1-5 additional speaker usernames.',
-      'type' => 'userreference_autocomplete',
-      'module' => 'userreference',
-    ),
-  );
-
-  // Exported field: field_session_room
-  $fields['session-field_session_room'] = array(
-    'field_name' => 'field_session_room',
-    'type_name' => 'session',
-    'display_settings' => array(
-      'weight' => 0,
-      'parent' => 'group_schedule',
-      'label' => array(
-        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -605,25 +552,95 @@ advanced|Advanced',
       ),
     ),
     'widget_active' => '1',
+    'type' => 'text',
+    'required' => '1',
+    'multiple' => '5',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '60',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_questions_answered][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'What questions will your session answer?',
+      'weight' => '-1',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_session_room
+  $fields['session-field_session_room'] = array(
+    'field_name' => 'field_session_room',
+    'type_name' => 'session',
+    'display_settings' => array(
+      'weight' => 0,
+      'parent' => 'group_schedule',
+      'label' => array(
+        'format' => 'inline',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
     'type' => 'nodereference',
     'required' => '0',
-    'multiple' => '1',
+    'multiple' => '6',
     'module' => 'nodereference',
     'active' => '1',
     'referenceable_types' => array(
       'room' => 'room',
+      'badge' => 0,
       'bof_session' => 0,
       'event' => 0,
+      'faq' => 0,
+      'forum_post' => 0,
+      'forum' => 0,
+      'front_page_slideshow_image' => 0,
       'news' => 0,
       'page' => 0,
       'product' => 0,
       'schedule_item' => 0,
       'session' => 0,
       'sponsor' => 0,
+      'sponsorship' => 0,
       'time_slot' => 0,
+      'webform' => 0,
     ),
     'advanced_view' => '--',
-    'advanced_view_args' => '',
+    'advanced_view_args' => 'all',
     'widget' => array(
       'autocomplete_match' => 'contains',
       'size' => 60,
@@ -656,7 +673,7 @@ advanced|Advanced',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -718,7 +735,7 @@ advanced|Advanced',
     'field_name' => 'field_slides',
     'type_name' => 'session',
     'display_settings' => array(
-      'weight' => '-1',
+      'weight' => 0,
       'parent' => '',
       'label' => array(
         'format' => 'above',
@@ -758,16 +775,77 @@ advanced|Advanced',
     'list_default' => 1,
     'description_field' => '0',
     'widget' => array(
-      'file_extensions' => 'ppt pdf odt odp',
+      'file_extensions' => 'ppt pptx pdf odt odp',
       'file_path' => 'slides',
       'progress_indicator' => 'bar',
       'max_filesize_per_file' => '',
       'max_filesize_per_node' => '',
       'label' => 'Slides',
-      'weight' => '-1',
+      'weight' => 0,
       'description' => 'Upload your slides here as a PDF, or link to them from the description. (This is typically done after your session.)',
       'type' => 'filefield_widget',
       'module' => 'filefield',
+    ),
+  );
+
+  // Exported field: field_speakers
+  $fields['session-field_speakers'] = array(
+    'field_name' => 'field_speakers',
+    'type_name' => 'session',
+    'display_settings' => array(
+      'weight' => '-3',
+      'parent' => '',
+      'label' => array(
+        'format' => 'inline',
+      ),
+      'teaser' => array(
+        'format' => 'user_full_name',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'userreference',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'userreference',
+    'active' => '1',
+    'referenceable_roles' => array(
+      '2' => 0,
+      '4' => 0,
+      '3' => 0,
+      '5' => 0,
+    ),
+    'referenceable_status' => '1',
+    'advanced_view' => '',
+    'advanced_view_args' => '',
+    'widget' => array(
+      'autocomplete_match' => 'contains',
+      'size' => '40',
+      'reverse_link' => 1,
+      'default_value' => array(
+        '0' => array(
+          'uid' => NULL,
+          '_error_element' => 'default_value_widget][field_speakers][0][uid][uid',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Speaker(s)',
+      'weight' => '-3',
+      'description' => 'Add your username and optionally 1-5 additional speaker usernames.',
+      'type' => 'userreference_autocomplete',
+      'module' => 'userreference',
     ),
   );
 
@@ -800,15 +878,17 @@ advanced|Advanced',
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '0',
+    'required' => '1',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
     'text_processing' => '0',
     'max_length' => '',
-    'allowed_values' => 'Track 1
-Track 2
-Track 3',
+    'allowed_values' => 'Code
+Build
+Design
+Business
+Community',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(
@@ -903,13 +983,14 @@ Track 3',
   t('Date and time');
   t('Experience level');
   t('Photo');
-  t('Speaker(s)');
   t('Room');
   t('Session capacity');
   t('Slides');
+  t('Speaker(s)');
   t('Status');
   t('Time slot');
   t('Track');
+  t('What questions will your session answer?');
 
   return $fields;
 }

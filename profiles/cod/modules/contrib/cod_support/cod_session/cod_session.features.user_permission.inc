@@ -10,8 +10,9 @@ function cod_session_user_default_permissions() {
   $permissions['create room content'] = array(
     'name' => 'create room content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -19,8 +20,9 @@ function cod_session_user_default_permissions() {
   $permissions['create schedule_item content'] = array(
     'name' => 'create schedule_item content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -28,8 +30,9 @@ function cod_session_user_default_permissions() {
   $permissions['create session content'] = array(
     'name' => 'create session content',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -37,7 +40,8 @@ function cod_session_user_default_permissions() {
   $permissions['create time_slot content'] = array(
     'name' => 'create time_slot content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -45,7 +49,8 @@ function cod_session_user_default_permissions() {
   $permissions['delete any room content'] = array(
     'name' => 'delete any room content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -53,7 +58,8 @@ function cod_session_user_default_permissions() {
   $permissions['delete any schedule_item content'] = array(
     'name' => 'delete any schedule_item content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -61,7 +67,8 @@ function cod_session_user_default_permissions() {
   $permissions['delete any session content'] = array(
     'name' => 'delete any session content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -69,7 +76,8 @@ function cod_session_user_default_permissions() {
   $permissions['delete any time_slot content'] = array(
     'name' => 'delete any time_slot content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -77,8 +85,9 @@ function cod_session_user_default_permissions() {
   $permissions['delete own room content'] = array(
     'name' => 'delete own room content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -86,8 +95,9 @@ function cod_session_user_default_permissions() {
   $permissions['delete own schedule_item content'] = array(
     'name' => 'delete own schedule_item content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -95,7 +105,8 @@ function cod_session_user_default_permissions() {
   $permissions['delete own session content'] = array(
     'name' => 'delete own session content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -103,7 +114,8 @@ function cod_session_user_default_permissions() {
   $permissions['delete own time_slot content'] = array(
     'name' => 'delete own time_slot content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -111,8 +123,9 @@ function cod_session_user_default_permissions() {
   $permissions['edit any room content'] = array(
     'name' => 'edit any room content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -120,7 +133,8 @@ function cod_session_user_default_permissions() {
   $permissions['edit any schedule_item content'] = array(
     'name' => 'edit any schedule_item content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -128,7 +142,8 @@ function cod_session_user_default_permissions() {
   $permissions['edit any session content'] = array(
     'name' => 'edit any session content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -136,7 +151,8 @@ function cod_session_user_default_permissions() {
   $permissions['edit any time_slot content'] = array(
     'name' => 'edit any time_slot content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -144,8 +160,9 @@ function cod_session_user_default_permissions() {
   $permissions['edit field_accepted'] = array(
     'name' => 'edit field_accepted',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -153,17 +170,8 @@ function cod_session_user_default_permissions() {
   $permissions['edit field_experience'] = array(
     'name' => 'edit field_experience',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'site administrator',
-    ),
-  );
-
-  // Exported permission: edit field_speakers
-  $permissions['edit field_speakers'] = array(
-    'name' => 'edit field_speakers',
-    'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'session organizer',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
       '2' => 'site administrator',
     ),
   );
@@ -172,9 +180,10 @@ function cod_session_user_default_permissions() {
   $permissions['edit field_session_room'] = array(
     'name' => 'edit field_session_room',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'session organizer',
-      '2' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'session organizer',
+      '3' => 'site administrator',
     ),
   );
 
@@ -182,7 +191,7 @@ function cod_session_user_default_permissions() {
   $permissions['edit field_session_slot'] = array(
     'name' => 'edit field_session_slot',
     'roles' => array(
-      '0' => 'authenticated user',
+      '0' => 'administrator',
       '1' => 'session organizer',
       '2' => 'site administrator',
     ),
@@ -192,8 +201,10 @@ function cod_session_user_default_permissions() {
   $permissions['edit field_slides'] = array(
     'name' => 'edit field_slides',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'content',
+      '3' => 'site administrator',
     ),
   );
 
@@ -201,8 +212,21 @@ function cod_session_user_default_permissions() {
   $permissions['edit field_slot_datetime'] = array(
     'name' => 'edit field_slot_datetime',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'content',
+      '2' => 'session organizer',
+      '3' => 'site administrator',
+    ),
+  );
+
+  // Exported permission: edit field_speakers
+  $permissions['edit field_speakers'] = array(
+    'name' => 'edit field_speakers',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'session organizer',
+      '3' => 'site administrator',
     ),
   );
 
@@ -210,8 +234,10 @@ function cod_session_user_default_permissions() {
   $permissions['edit field_track'] = array(
     'name' => 'edit field_track',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'session organizer',
+      '3' => 'site administrator',
     ),
   );
 
@@ -219,8 +245,9 @@ function cod_session_user_default_permissions() {
   $permissions['edit own room content'] = array(
     'name' => 'edit own room content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -228,8 +255,9 @@ function cod_session_user_default_permissions() {
   $permissions['edit own schedule_item content'] = array(
     'name' => 'edit own schedule_item content',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -237,8 +265,9 @@ function cod_session_user_default_permissions() {
   $permissions['edit own session content'] = array(
     'name' => 'edit own session content',
     'roles' => array(
-      '0' => 'authenticated user',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
+      '2' => 'site administrator',
     ),
   );
 
@@ -246,7 +275,8 @@ function cod_session_user_default_permissions() {
   $permissions['edit own time_slot content'] = array(
     'name' => 'edit own time_slot content',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -254,8 +284,9 @@ function cod_session_user_default_permissions() {
   $permissions['schedule schedule_item'] = array(
     'name' => 'schedule schedule_item',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -263,8 +294,9 @@ function cod_session_user_default_permissions() {
   $permissions['schedule session'] = array(
     'name' => 'schedule session',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
     ),
   );
 
@@ -272,8 +304,11 @@ function cod_session_user_default_permissions() {
   $permissions['view field_accepted'] = array(
     'name' => 'view field_accepted',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'session organizer',
+      '4' => 'site administrator',
     ),
   );
 
@@ -281,19 +316,10 @@ function cod_session_user_default_permissions() {
   $permissions['view field_experience'] = array(
     'name' => 'view field_experience',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'site administrator',
-    ),
-  );
-
-  // Exported permission: view field_speakers
-  $permissions['view field_speakers'] = array(
-    'name' => 'view field_speakers',
-    'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'site administrator',
     ),
   );
 
@@ -301,10 +327,11 @@ function cod_session_user_default_permissions() {
   $permissions['view field_session_room'] = array(
     'name' => 'view field_session_room',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'session organizer',
-      '3' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'session organizer',
+      '4' => 'site administrator',
     ),
   );
 
@@ -312,10 +339,11 @@ function cod_session_user_default_permissions() {
   $permissions['view field_session_slot'] = array(
     'name' => 'view field_session_slot',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'session organizer',
-      '3' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'session organizer',
+      '4' => 'site administrator',
     ),
   );
 
@@ -323,9 +351,11 @@ function cod_session_user_default_permissions() {
   $permissions['view field_slides'] = array(
     'name' => 'view field_slides',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'content',
+      '4' => 'site administrator',
     ),
   );
 
@@ -333,9 +363,22 @@ function cod_session_user_default_permissions() {
   $permissions['view field_slot_datetime'] = array(
     'name' => 'view field_slot_datetime',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'session organizer',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'content',
+      '4' => 'session organizer',
+      '5' => 'site administrator',
+    ),
+  );
+
+  // Exported permission: view field_speakers
+  $permissions['view field_speakers'] = array(
+    'name' => 'view field_speakers',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
       '3' => 'site administrator',
     ),
   );
@@ -344,10 +387,11 @@ function cod_session_user_default_permissions() {
   $permissions['view field_track'] = array(
     'name' => 'view field_track',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-      '2' => 'session organizer',
-      '3' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'session organizer',
+      '4' => 'site administrator',
     ),
   );
 
