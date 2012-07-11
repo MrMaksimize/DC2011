@@ -17,7 +17,7 @@ function cod_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'signup_admin_list_view';
-  $strongarm->value = 'cod_signup_user_vbo_admin_list:default';
+  $strongarm->value = 'signup_user_admin_list:default';
   $export['signup_admin_list_view'] = $strongarm;
 
   $strongarm = new stdClass;

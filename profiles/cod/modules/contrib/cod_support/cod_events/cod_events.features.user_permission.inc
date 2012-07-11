@@ -10,7 +10,8 @@ function cod_events_user_default_permissions() {
   $permissions['administer UC_Signup'] = array(
     'name' => 'administer UC_Signup',
     'roles' => array(
-      '0' => 'attendee manager',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
     ),
   );
 
@@ -18,7 +19,8 @@ function cod_events_user_default_permissions() {
   $permissions['administer all signups'] = array(
     'name' => 'administer all signups',
     'roles' => array(
-      '0' => 'attendee manager',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
     ),
   );
 
@@ -26,8 +28,9 @@ function cod_events_user_default_permissions() {
   $permissions['administer signups for own content'] = array(
     'name' => 'administer signups for own content',
     'roles' => array(
-      '0' => 'attendee manager',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -35,8 +38,9 @@ function cod_events_user_default_permissions() {
   $permissions['cancel own signups'] = array(
     'name' => 'cancel own signups',
     'roles' => array(
-      '0' => 'attendee manager',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -44,7 +48,8 @@ function cod_events_user_default_permissions() {
   $permissions['cancel signups'] = array(
     'name' => 'cancel signups',
     'roles' => array(
-      '0' => 'attendee manager',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
     ),
   );
 
@@ -52,7 +57,8 @@ function cod_events_user_default_permissions() {
   $permissions['edit own signups'] = array(
     'name' => 'edit own signups',
     'roles' => array(
-      '0' => 'attendee manager',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
     ),
   );
 
@@ -60,7 +66,8 @@ function cod_events_user_default_permissions() {
   $permissions['email all signed up users'] = array(
     'name' => 'email all signed up users',
     'roles' => array(
-      '0' => 'attendee manager',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
     ),
   );
 
@@ -68,7 +75,8 @@ function cod_events_user_default_permissions() {
   $permissions['email users signed up for own content'] = array(
     'name' => 'email users signed up for own content',
     'roles' => array(
-      '0' => 'attendee manager',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
     ),
   );
 
@@ -76,7 +84,7 @@ function cod_events_user_default_permissions() {
   $permissions['purchase signups for other users'] = array(
     'name' => 'purchase signups for other users',
     'roles' => array(
-      '0' => 'anonymous user',
+      '0' => 'administrator',
       '1' => 'authenticated user',
     ),
   );
@@ -85,8 +93,9 @@ function cod_events_user_default_permissions() {
   $permissions['sign up for content'] = array(
     'name' => 'sign up for content',
     'roles' => array(
-      '0' => 'attendee manager',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
+      '2' => 'authenticated user',
     ),
   );
 
@@ -94,7 +103,8 @@ function cod_events_user_default_permissions() {
   $permissions['view all signups'] = array(
     'name' => 'view all signups',
     'roles' => array(
-      '0' => 'attendee manager',
+      '0' => 'administrator',
+      '1' => 'attendee manager',
     ),
   );
 

@@ -1,4 +1,5 @@
 core = "6.x"
+datestamp = "1313163415"
 dependencies[] = "cod_base"
 dependencies[] = "date"
 dependencies[] = "date_api"
@@ -41,10 +42,5 @@ features[views][] = "cod_signup_user_vbo_admin_list"
 features[views_api][] = "api:2"
 name = "COD Events"
 package = "COD"
-project = "cod_events"
-; Information added by drupal.org packaging script on 2011-08-12
-version = "6.x-1.0-beta2"
-core = "6.x"
 project = "cod_support"
-datestamp = "1313163415"
-
+version = "6.x-1.0-beta2"
