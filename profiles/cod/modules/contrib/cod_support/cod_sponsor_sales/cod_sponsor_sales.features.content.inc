@@ -41,11 +41,10 @@ function cod_sponsor_sales_content_default_fields() {
     'active' => '1',
     'text_processing' => '0',
     'max_length' => '',
-    'allowed_values' => 'Platinum
-Gold
+    'allowed_values' => 'Gold
 Silver
 Bronze
-Media',
+Community',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(
