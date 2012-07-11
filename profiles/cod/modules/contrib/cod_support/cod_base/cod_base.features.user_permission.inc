@@ -10,22 +10,33 @@ function cod_base_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
   // Exported permission: access site reports
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: access user profiles
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'attendee',
+      '3' => 'attendee manager',
+      '4' => 'authenticated user',
+      '5' => 'session organizer',
+      '6' => 'site administrator',
+      '7' => 'speaker',
+      '8' => 'sponsor',
+      '9' => 'sponsor organizer',
     ),
   );
 
@@ -33,7 +44,8 @@ function cod_base_user_default_permissions() {
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -41,7 +53,8 @@ function cod_base_user_default_permissions() {
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -49,7 +62,8 @@ function cod_base_user_default_permissions() {
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -57,7 +71,8 @@ function cod_base_user_default_permissions() {
   $permissions['administer views'] = array(
     'name' => 'administer views',
     'roles' => array(
-      '0' => 'site administrator',
+      '0' => 'administrator',
+      '1' => 'site administrator',
     ),
   );
 
@@ -65,9 +80,10 @@ function cod_base_user_default_permissions() {
   $permissions['use admin toolbar'] = array(
     'name' => 'use admin toolbar',
     'roles' => array(
-      '0' => 'session organizer',
-      '1' => 'site administrator',
-      '2' => 'sponsor organizer',
+      '0' => 'administrator',
+      '1' => 'session organizer',
+      '2' => 'site administrator',
+      '3' => 'sponsor organizer',
     ),
   );
 
@@ -75,7 +91,8 @@ function cod_base_user_default_permissions() {
   $permissions['view own orders'] = array(
     'name' => 'view own orders',
     'roles' => array(
-      '0' => 'authenticated user',
+      '0' => 'administrator',
+      '1' => 'authenticated user',
     ),
   );
 

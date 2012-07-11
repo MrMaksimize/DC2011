@@ -12,9 +12,7 @@ function cod_base_menu_default_menu_links() {
     'router_path' => 'node/%',
     'link_title' => 'COD help',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => '0',
