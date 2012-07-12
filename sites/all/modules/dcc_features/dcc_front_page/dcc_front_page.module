@@ -1,0 +1,4 @@
+<?php
+
+// Drupal needs this blank file.
+include_once('dcc_front_page.features.inc');
