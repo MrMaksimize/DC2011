@@ -38,6 +38,30 @@ function dcc_about_community_user_default_permissions() {
     ),
   );
 
+  // Exported permission: administer faq
+  $permissions['administer faq'] = array(
+    'name' => 'administer faq',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: administer faq order
+  $permissions['administer faq order'] = array(
+    'name' => 'administer faq order',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: administer fasttoggle
+  $permissions['administer fasttoggle'] = array(
+    'name' => 'administer fasttoggle',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
   // Exported permission: administer forums
   $permissions['administer forums'] = array(
     'name' => 'administer forums',
@@ -190,6 +214,14 @@ function dcc_about_community_user_default_permissions() {
     ),
   );
 
+  // Exported permission: create faq
+  $permissions['create faq'] = array(
+    'name' => 'create faq',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
   // Exported permission: create forum topics
   $permissions['create forum topics'] = array(
     'name' => 'create forum topics',
@@ -308,9 +340,25 @@ function dcc_about_community_user_default_permissions() {
     ),
   );
 
+  // Exported permission: delete faq content
+  $permissions['delete faq content'] = array(
+    'name' => 'delete faq content',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
   // Exported permission: delete own badge content
   $permissions['delete own badge content'] = array(
     'name' => 'delete own badge content',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: delete own faq content
+  $permissions['delete own faq content'] = array(
+    'name' => 'delete own faq content',
     'roles' => array(
       '0' => 'administrator',
     ),
@@ -422,9 +470,49 @@ function dcc_about_community_user_default_permissions() {
     ),
   );
 
+  // Exported permission: edit faq
+  $permissions['edit faq'] = array(
+    'name' => 'edit faq',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: edit field_attribution_copy
+  $permissions['edit field_attribution_copy'] = array(
+    'name' => 'edit field_attribution_copy',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: edit field_attribution_link
+  $permissions['edit field_attribution_link'] = array(
+    'name' => 'edit field_attribution_link',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: edit field_image_cache
+  $permissions['edit field_image_cache'] = array(
+    'name' => 'edit field_image_cache',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
   // Exported permission: edit own badge content
   $permissions['edit own badge content'] = array(
     'name' => 'edit own badge content',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: edit own faq
+  $permissions['edit own faq'] = array(
+    'name' => 'edit own faq',
     'roles' => array(
       '0' => 'administrator',
     ),
@@ -486,6 +574,46 @@ function dcc_about_community_user_default_permissions() {
     'name' => 'submit latitude/longitude',
     'roles' => array(
       '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: view faq page
+  $permissions['view faq page'] = array(
+    'name' => 'view faq page',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_attribution_copy
+  $permissions['view field_attribution_copy'] = array(
+    'name' => 'view field_attribution_copy',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_attribution_link
+  $permissions['view field_attribution_link'] = array(
+    'name' => 'view field_attribution_link',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_image_cache
+  $permissions['view field_image_cache'] = array(
+    'name' => 'view field_image_cache',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
     ),
   );
 

@@ -1,0 +1,3 @@
+<?php
+
+include_once('ubercart_related.features.inc');

@@ -1,0 +1,3 @@
+<?php
+
+include_once('dcc_sponsors.features.inc');
