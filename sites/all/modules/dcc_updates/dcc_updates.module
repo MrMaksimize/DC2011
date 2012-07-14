@@ -1,0 +1,47 @@
+<?php
+
+// Drupal needs this blank file.
+/**
+ * Helper function install modules.
+ */
+function dcc_updates_install_modules($modules) {
+  $ret = array();
+  $modules = is_array($modules) ? $modules : array($modules);
+  drupal_install_modules($modules);
+  foreach($modules as $module) {
+    if (module_exists($module)) {
+      $ret[] = array('success' => TRUE, 'query' => $module . " was installed successfully.");
+    }
+    else {
+      $ret['#abort'] = array('#abort' => array('success' => FALSE, 'query' => $module . " failed to install."));
+      break;
+    }
+  }
+  return $ret;
+}
+
+/**
+ * Helper function to uninstall modules.
+ */
+function dcc_updates_uninstall_modules($modules) {
+  $ret = array();
+  $modules = is_array($modules) ? $modules : array($modules);
+  module_disable($modules);
+  foreach($modules as $module) {
+    drupal_uninstall_module($module);
+    if (!module_exists($module)) {
+      db_query("DELETE FROM {system} WHERE name = '" . $module . "' AND status = 0;");
+      if (db_result(db_query("SELECT COUNT(*) FROM {system} WHERE name = '" . $module . "';"))) {
+        $return['#abort'] = array('success' => FALSE, 'query' => 'Unable to remove all status=0 system rows.');
+      }
+      else {
+        $ret[] = array('success' => TRUE, 'query' => $module . " was uninstalled successfully.");
+      }
+    }
+    else {
+      $ret['#abort'] = array('success' => FALSE, 'query' => $module . " failed to uninstall.");
+      break;
+    }
+  }
+  return $ret;
+}

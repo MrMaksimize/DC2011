@@ -1,0 +1,16 @@
+<?php
+/**
+  Enable Features Modules
+**/
+function dcc_updates_update_60001() {
+  $modules = array(
+    'dcc_about_community',
+    'dcc_front_page',
+    'dcc_misc',
+    'dcc_sessions',
+    'dcc_sponsors',
+    'dcc_user',
+    'ubercart_related',
+  );
+  features_install_modules($modules);
+}
